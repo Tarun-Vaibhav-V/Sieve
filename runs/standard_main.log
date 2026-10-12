@@ -1,0 +1,4 @@
+run standard_main: 76 cases × 12 conditions × 1 repeats
+Planning C4 budgets (no model calls) ...
+  planned 76 cases in 104.2s
+Estimate: 3072 LLM calls (+ tool rounds), ~144 min wall-clock. 0 conversation-passes already complete (resume).

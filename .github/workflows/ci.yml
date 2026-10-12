@@ -1,0 +1,26 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11"]
+    env:
+      PYTHONWARNINGS: ignore
+      SIEVE_SKIP_HEAVY: "1"   # skips the one test that downloads the LLMLingua-2 model
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install (CPU-only torch)
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt pytest-cov
+      - name: Test suite (mock client, no GPU or Ollama needed)
+        run: python -m pytest -q tests --cov=sieve --cov-report=term --cov-report=xml
+      - name: Mock end-to-end smoke benchmark
+        run: python -m sieve --mock --tfidf --fallback-compressor --set runs_dir=/tmp/runs bench --tier smoke --repeats 1

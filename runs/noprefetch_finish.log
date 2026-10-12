@@ -1,0 +1,199 @@
+run standard_main2: 76 cases × 1 conditions × 1 repeats
+Estimate: 256 LLM calls (+ tool rounds), ~12 min wall-clock. 889 conversation-passes already complete (resume).
+r0 sieve_full+noprefetch    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 180/180 0:04:11
+done -> /Users/tarunvaibhavv/Desktop/sem5/daa/paper/sieve/runs/standard_main2/results.jsonl
+                                                                            All evaluation points                                                                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━┳━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ condition                ┃   n ┃   acc ┃ tok red % ┃ prompt tok ┃ TTFT med ┃ TTFT p95 ┃ total med ┃ processed ┃ reuse % ┃ atom rec ┃ expand rate ┃ overhead ms ┃ headroom ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│ baseline                 │ 180 │ 0.861 │       0.0 │       2747 │     1.72 │     8.75 │      2.40 │      1872 │   47.2% │    1.000 │        0.00 │           0 │     1349 │
+│ reference_bigctx         │ 180 │ 0.994 │       0.0 │       2747 │     2.29 │    19.21 │      3.50 │      2747 │   39.2% │    1.000 │        0.00 │           0 │     5445 │
+│ sieve_full               │ 180 │ 0.911 │      31.0 │       1703 │     1.23 │     5.85 │      1.94 │      1730 │   45.0% │    0.975 │        0.05 │          84 │     2393 │
+│ sieve_full+clf_heuristic │ 180 │ 0.917 │      32.6 │       1690 │     1.37 │     5.77 │      1.98 │      1763 │   43.3% │    0.975 │        0.08 │          85 │     2406 │
+│ sieve_full+core6         │ 180 │ 0.939 │      31.2 │       1710 │     1.42 │     5.48 │      2.00 │      1760 │   43.9% │    0.975 │        0.07 │         139 │     2386 │
+│ sieve_full+noledger      │ 180 │ 0.917 │      30.9 │       1698 │     2.54 │     6.04 │      3.23 │      1785 │   17.4% │    0.972 │        0.08 │         165 │     2398 │
+│ sieve_full+noprefetch    │ 180 │ 0.911 │      31.0 │       1703 │     1.64 │     7.01 │      2.49 │      1730 │   42.3% │    0.975 │        0.05 │          94 │     2393 │
+│ sieve_full+noverifier    │ 180 │ 0.850 │      32.6 │       1666 │     1.44 │     7.70 │      2.53 │      1711 │   41.2% │    0.968 │        0.06 │         101 │     2430 │
+│ sieve_nomemo             │ 180 │ 0.917 │      30.9 │       1698 │     3.41 │     8.07 │      4.60 │      1785 │   13.1% │    0.972 │        0.08 │        2022 │     2398 │
+│ sieve_rules              │ 180 │ 0.878 │      34.7 │       1646 │     1.41 │     5.24 │      2.01 │      1719 │   43.9% │    0.968 │        0.08 │          69 │     2450 │
+│ truncate                 │ 180 │ 0.444 │      58.7 │        999 │     0.46 │     6.29 │      0.85 │       885 │   16.7% │    0.707 │        0.00 │           0 │     3097 │
+│ uniform_lingua           │ 180 │ 0.778 │      33.6 │       1652 │     1.85 │     7.51 │      2.48 │      1534 │   34.5% │    0.979 │        0.00 │         957 │     2444 │
+└──────────────────────────┴─────┴───────┴───────────┴────────────┴──────────┴──────────┴───────────┴───────────┴─────────┴──────────┴─────────────┴─────────────┴──────────┘
+                                                             Cold points (first question of each conversation)                                                              
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━┳━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ condition                ┃  n ┃   acc ┃ tok red % ┃ prompt tok ┃ TTFT med ┃ TTFT p95 ┃ total med ┃ processed ┃ reuse % ┃ atom rec ┃ expand rate ┃ overhead ms ┃ headroom ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│ baseline                 │ 76 │ 0.868 │       0.0 │       2334 │     3.26 │     9.26 │      3.91 │      1626 │   12.3% │    1.000 │        0.00 │           0 │     1762 │
+│ reference_bigctx         │ 76 │ 1.000 │       0.0 │       2334 │     7.14 │    22.04 │      8.36 │      2334 │    0.0% │    1.000 │        0.00 │           0 │     5858 │
+│ sieve_full               │ 76 │ 0.947 │      28.2 │       1479 │     2.50 │     6.04 │      3.16 │      1432 │    1.8% │    0.980 │        0.01 │         146 │     2617 │
+│ sieve_full+clf_heuristic │ 76 │ 0.947 │      30.9 │       1456 │     2.73 │     6.32 │      3.38 │      1428 │    1.7% │    0.980 │        0.03 │         146 │     2640 │
+│ sieve_full+core6         │ 76 │ 0.947 │      28.7 │       1483 │     2.79 │     5.78 │      3.41 │      1454 │    1.7% │    0.980 │        0.03 │         254 │     2613 │
+│ sieve_full+noledger      │ 76 │ 0.947 │      28.2 │       1479 │     2.53 │     5.67 │      3.14 │      1432 │    1.5% │    0.980 │        0.01 │         140 │     2617 │
+│ sieve_full+noprefetch    │ 76 │ 0.947 │      28.2 │       1479 │     3.01 │     8.32 │      3.93 │      1432 │    1.5% │    0.980 │        0.01 │         153 │     2617 │
+│ sieve_full+noverifier    │ 76 │ 0.934 │      29.9 │       1442 │     3.51 │     8.66 │      4.31 │      1392 │    1.2% │    0.987 │        0.01 │         181 │     2654 │
+│ sieve_nomemo             │ 76 │ 0.947 │      28.2 │       1479 │     3.41 │     7.86 │      4.48 │      1432 │    1.1% │    0.980 │        0.01 │        1890 │     2617 │
+│ sieve_rules              │ 76 │ 0.908 │      33.1 │       1411 │     2.64 │     5.88 │      3.28 │      1380 │    1.5% │    0.987 │        0.03 │         123 │     2685 │
+│ truncate                 │ 76 │ 0.408 │      62.7 │        727 │     0.48 │     6.57 │      0.90 │       638 │    1.1% │    0.700 │        0.00 │           0 │     3369 │
+│ uniform_lingua           │ 76 │ 0.829 │      31.4 │       1427 │     3.19 │     8.34 │      4.47 │      1336 │    1.2% │    0.989 │        0.00 │        1314 │     2669 │
+└──────────────────────────┴────┴───────┴───────────┴────────────┴──────────┴──────────┴───────────┴───────────┴─────────┴──────────┴─────────────┴─────────────┴──────────┘
+                                                                                 Warm points                                                                                 
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━┳━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ condition                ┃   n ┃   acc ┃ tok red % ┃ prompt tok ┃ TTFT med ┃ TTFT p95 ┃ total med ┃ processed ┃ reuse % ┃ atom rec ┃ expand rate ┃ overhead ms ┃ headroom ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│ baseline                 │ 104 │ 0.856 │       0.0 │       3048 │     0.46 │     7.15 │      1.18 │      2052 │   72.7% │    1.000 │        0.00 │           0 │     1048 │
+│ reference_bigctx         │ 104 │ 0.990 │       0.0 │       3048 │     0.75 │     7.98 │      1.88 │      3048 │   67.9% │    1.000 │        0.00 │           0 │     5144 │
+│ sieve_full               │ 104 │ 0.885 │      33.1 │       1867 │     0.33 │     3.75 │      1.01 │      1947 │   76.6% │    0.971 │        0.08 │          38 │     2229 │
+│ sieve_full+clf_heuristic │ 104 │ 0.894 │      33.9 │       1860 │     0.53 │     4.61 │      1.15 │      2008 │   73.8% │    0.971 │        0.12 │          40 │     2236 │
+│ sieve_full+core6         │ 104 │ 0.933 │      33.0 │       1876 │     0.39 │     4.50 │      1.10 │      1984 │   74.8% │    0.971 │        0.10 │          55 │     2220 │
+│ sieve_full+noledger      │ 104 │ 0.894 │      32.9 │       1857 │     2.61 │     6.34 │      3.33 │      2043 │   29.0% │    0.966 │        0.12 │         184 │     2239 │
+│ sieve_full+noprefetch    │ 104 │ 0.885 │      33.1 │       1867 │     0.42 │     5.04 │      1.20 │      1947 │   72.1% │    0.971 │        0.08 │          52 │     2229 │
+│ sieve_full+noverifier    │ 104 │ 0.788 │      34.6 │       1830 │     0.44 │     6.29 │      1.53 │      1943 │   70.4% │    0.954 │        0.09 │          42 │     2266 │
+│ sieve_nomemo             │ 104 │ 0.894 │      32.9 │       1857 │     3.49 │     8.61 │      4.70 │      2043 │   21.9% │    0.966 │        0.12 │        2118 │     2239 │
+│ sieve_rules              │ 104 │ 0.856 │      35.8 │       1818 │     0.42 │     3.89 │      1.10 │      1967 │   74.9% │    0.954 │        0.12 │          30 │     2278 │
+│ truncate                 │ 104 │ 0.471 │      55.7 │       1197 │     0.42 │     6.11 │      0.85 │      1065 │   28.2% │    0.713 │        0.00 │           0 │     2899 │
+│ uniform_lingua           │ 104 │ 0.740 │      35.2 │       1816 │     0.43 │     6.66 │      1.31 │      1679 │   58.8% │    0.971 │        0.00 │         695 │     2280 │
+└──────────────────────────┴─────┴───────┴───────────┴────────────┴──────────┴──────────┴───────────┴───────────┴─────────┴──────────┴─────────────┴─────────────┴──────────┘
+Cumulative prompt tokens processed per conversation: baseline=2824, truncate=1517, uniform_lingua=2342, sieve_nomemo=3268, reference_bigctx=3552, sieve_full+noverifier=2102, sieve_full+noledger=3064, 
+sieve_full+clf_heuristic=2049, sieve_full+core6=2059, sieve_full=1981, sieve_rules=1940, sieve_full+noprefetch=2118
+Decode tok/s is expected to be roughly flat across conditions (it does not depend on the prompt): baseline=26.8, reference_bigctx=15.4, sieve_full=28.9, sieve_full+clf_heuristic=28.5, 
+sieve_full+core6=28.7, sieve_full+noledger=28.8, sieve_full+noprefetch=28.1, sieve_full+noverifier=16.4, sieve_nomemo=15.6, sieve_rules=28.7, truncate=27.4, uniform_lingua=17.4
+# claims.md — statements derived only from this run's logs
+
+- Model: `qwen3:14b`; num_ctx 4096; Ollama 0.32.15; workloads are synthetic (invented entities).
+
+- KV prefix reuse on this model/server: **observed** (cachetest). 
+
+## reference_bigctx vs baseline (paired, n=180)
+- Accuracy delta: +13.3 pp (95% CI +8.3 to +18.3)
+- Prompt-token reduction: +0.0% (95% CI +0.0 to +0.0)
+- Median TTFT delta: +0.46 s (95% CI +0.30 to +0.86)
+- Mean prompt tokens processed delta: +307 tok (95% CI +137 to +498)
+- Cold points only (n=76): median TTFT delta +2.14 s (95% CI +1.61 to +2.80)
+- Where baseline overflowed num_ctx (n=47): accuracy delta +51.1 pp (95% CI +36.2 to +66.0)
+
+## sieve_full vs baseline (paired, n=180)
+- Accuracy delta: +5.0 pp (95% CI -0.6 to +11.1)
+- Prompt-token reduction: +31.0% (95% CI +27.8 to +34.0)
+- Median TTFT delta: -0.25 s (95% CI -0.49 to -0.10)
+- Mean prompt tokens processed delta: -356 tok (95% CI -504 to -210)
+- Cold points only (n=76): median TTFT delta -1.12 s (95% CI -1.49 to -0.66)
+- Where baseline overflowed num_ctx (n=47): accuracy delta +36.2 pp (95% CI +19.1 to +53.2)
+
+## sieve_full+clf_heuristic vs baseline (paired, n=180)
+- Accuracy delta: +5.6 pp (95% CI +0.0 to +11.7)
+- Prompt-token reduction: +32.6% (95% CI +29.5 to +35.4)
+- Median TTFT delta: -0.21 s (95% CI -0.44 to -0.08)
+- Mean prompt tokens processed delta: -327 tok (95% CI -477 to -177)
+- Cold points only (n=76): median TTFT delta -1.18 s (95% CI -1.39 to -0.82)
+- Where baseline overflowed num_ctx (n=47): accuracy delta +38.3 pp (95% CI +21.3 to +55.3)
+
+## sieve_full+core6 vs baseline (paired, n=180)
+- Accuracy delta: +7.8 pp (95% CI +2.8 to +13.3)
+- Prompt-token reduction: +31.2% (95% CI +28.0 to +34.0)
+- Median TTFT delta: -0.23 s (95% CI -0.42 to -0.10)
+- Mean prompt tokens processed delta: -323 tok (95% CI -463 to -180)
+- Cold points only (n=76): median TTFT delta -1.01 s (95% CI -1.23 to -0.72)
+- Where baseline overflowed num_ctx (n=47): accuracy delta +38.3 pp (95% CI +21.3 to +55.3)
+
+## sieve_full+noledger vs baseline (paired, n=180)
+- Accuracy delta: +5.6 pp (95% CI +0.0 to +11.1)
+- Prompt-token reduction: +30.9% (95% CI +27.5 to +33.9)
+- Median TTFT delta: -0.06 s (95% CI -0.23 to +0.28)
+- Mean prompt tokens processed delta: +101 tok (95% CI -74 to +278)
+- Cold points only (n=76): median TTFT delta -0.99 s (95% CI -1.41 to -0.64)
+- Where baseline overflowed num_ctx (n=47): accuracy delta +34.0 pp (95% CI +17.0 to +51.1)
+
+## sieve_full+noprefetch vs baseline (paired, n=180)
+- Accuracy delta: +5.0 pp (95% CI -0.6 to +11.1)
+- Prompt-token reduction: +31.0% (95% CI +27.8 to +34.0)
+- Median TTFT delta: -0.10 s (95% CI -0.20 to -0.04)
+- Mean prompt tokens processed delta: -298 tok (95% CI -443 to -152)
+- Cold points only (n=76): median TTFT delta -0.75 s (95% CI -1.07 to -0.14)
+- Where baseline overflowed num_ctx (n=47): accuracy delta +36.2 pp (95% CI +19.1 to +53.2)
+
+## sieve_full+noverifier vs baseline (paired, n=180)
+- Accuracy delta: -1.1 pp (95% CI -7.8 to +5.6)
+- Prompt-token reduction: +32.6% (95% CI +29.3 to +35.7)
+- Median TTFT delta: +0.02 s (95% CI -0.11 to +0.08)
+- Mean prompt tokens processed delta: -305 tok (95% CI -442 to -166)
+- Cold points only (n=76): median TTFT delta -0.18 s (95% CI -0.44 to +0.06)
+- Where baseline overflowed num_ctx (n=47): accuracy delta +27.7 pp (95% CI +10.6 to +44.7)
+
+## sieve_nomemo vs baseline (paired, n=180)
+- Accuracy delta: +5.6 pp (95% CI +0.0 to +11.1)
+- Prompt-token reduction: +30.9% (95% CI +27.5 to +33.9)
+- Median TTFT delta: +0.40 s (95% CI +0.14 to +0.91)
+- Mean prompt tokens processed delta: +187 tok (95% CI +12 to +365)
+- Cold points only (n=76): median TTFT delta -0.20 s (95% CI -0.38 to +0.15)
+- Where baseline overflowed num_ctx (n=47): accuracy delta +34.0 pp (95% CI +17.0 to +51.1)
+
+## sieve_rules vs baseline (paired, n=180)
+- Accuracy delta: +1.7 pp (95% CI -5.0 to +7.8)
+- Prompt-token reduction: +34.7% (95% CI +31.5 to +37.5)
+- Median TTFT delta: -0.22 s (95% CI -0.45 to -0.09)
+- Mean prompt tokens processed delta: -374 tok (95% CI -509 to -233)
+- Cold points only (n=76): median TTFT delta -1.15 s (95% CI -1.47 to -0.92)
+- Where baseline overflowed num_ctx (n=47): accuracy delta +36.2 pp (95% CI +21.3 to +51.1)
+
+## truncate vs baseline (paired, n=180)
+- Accuracy delta: -41.7 pp (95% CI -48.9 to -34.4)
+- Prompt-token reduction: +58.7% (95% CI +53.4 to +63.6)
+- Median TTFT delta: +0.07 s (95% CI -0.02 to +0.09)
+- Mean prompt tokens processed delta: -552 tok (95% CI -701 to -409)
+- Cold points only (n=76): median TTFT delta -1.36 s (95% CI -2.32 to -0.58)
+- Where baseline overflowed num_ctx (n=47): accuracy delta -8.5 pp (95% CI -17.0 to -2.1)
+
+## uniform_lingua vs baseline (paired, n=180)
+- Accuracy delta: -8.3 pp (95% CI -13.9 to -2.8)
+- Prompt-token reduction: +33.6% (95% CI +30.4 to +36.5)
+- Median TTFT delta: -0.02 s (95% CI -0.06 to +0.03)
+- Mean prompt tokens processed delta: -204 tok (95% CI -339 to -64)
+- Cold points only (n=76): median TTFT delta -0.25 s (95% CI -0.61 to +0.05)
+- Where baseline overflowed num_ctx (n=47): accuracy delta -4.3 pp (95% CI -19.2 to +12.8)
+
+## Cache-vs-compress (ledger) evidence
+- Cumulative prompt tokens processed per conversation: sieve_full 1981 vs sieve_nomemo 3268 vs baseline 2824.
+- Mean prefix reuse: sieve_full 45.0% vs sieve_nomemo 13.1%.
+
+## Supported by this run
+- reference_bigctx accuracy is within -5 pp of baseline at the CI lower bound (+8.3 pp).
+- sieve_full reduces prompt tokens vs baseline (CI lower bound 27.8%).
+- sieve_full accuracy is within -5 pp of baseline at the CI lower bound (-0.6 pp).
+- sieve_full has lower median TTFT than baseline (CI upper bound -0.10 s).
+- sieve_full+clf_heuristic reduces prompt tokens vs baseline (CI lower bound 29.5%).
+- sieve_full+clf_heuristic accuracy is within -5 pp of baseline at the CI lower bound (+0.0 pp).
+- sieve_full+clf_heuristic has lower median TTFT than baseline (CI upper bound -0.08 s).
+- sieve_full+core6 reduces prompt tokens vs baseline (CI lower bound 28.0%).
+- sieve_full+core6 accuracy is within -5 pp of baseline at the CI lower bound (+2.8 pp).
+- sieve_full+core6 has lower median TTFT than baseline (CI upper bound -0.10 s).
+- sieve_full+noledger reduces prompt tokens vs baseline (CI lower bound 27.5%).
+- sieve_full+noledger accuracy is within -5 pp of baseline at the CI lower bound (+0.0 pp).
+- sieve_full+noprefetch reduces prompt tokens vs baseline (CI lower bound 27.8%).
+- sieve_full+noprefetch accuracy is within -5 pp of baseline at the CI lower bound (-0.6 pp).
+- sieve_full+noprefetch has lower median TTFT than baseline (CI upper bound -0.04 s).
+- sieve_full+noverifier reduces prompt tokens vs baseline (CI lower bound 29.3%).
+- sieve_nomemo reduces prompt tokens vs baseline (CI lower bound 27.5%).
+- sieve_nomemo accuracy is within -5 pp of baseline at the CI lower bound (+0.0 pp).
+- sieve_rules reduces prompt tokens vs baseline (CI lower bound 31.5%).
+- sieve_rules accuracy is within -5 pp of baseline at the CI lower bound (-5.0 pp).
+- sieve_rules has lower median TTFT than baseline (CI upper bound -0.09 s).
+- truncate reduces prompt tokens vs baseline (CI lower bound 53.4%).
+- uniform_lingua reduces prompt tokens vs baseline (CI lower bound 30.4%).
+- The ledger reduces cumulative prefill tokens relative to re-routing every turn (C4 < C5).
+
+## Not supported by this run
+- reference_bigctx reduces prompt tokens (CI includes 0).
+- reference_bigctx is faster than baseline in TTFT (CI upper bound +0.86 s >= 0).
+- sieve_full+noledger is faster than baseline in TTFT (CI upper bound +0.28 s >= 0).
+- sieve_full+noverifier preserves accuracy (CI lower bound -7.8 pp is below -5 pp).
+- sieve_full+noverifier is faster than baseline in TTFT (CI upper bound +0.08 s >= 0).
+- sieve_nomemo is faster than baseline in TTFT (CI upper bound +0.91 s >= 0).
+- truncate preserves accuracy (CI lower bound -48.9 pp is below -5 pp).
+- truncate is faster than baseline in TTFT (CI upper bound +0.09 s >= 0).
+- uniform_lingua preserves accuracy (CI lower bound -13.9 pp is below -5 pp).
+- uniform_lingua is faster than baseline in TTFT (CI upper bound +0.03 s >= 0).
+- Any claim about real-world (non-synthetic) conversations.
+- Any claim about models other than the one listed above.
+- Classifier training accuracy on heuristic labels (circular; never cited).
+
+wrote summary.json, claims.md, 5 PNGs in /Users/tarunvaibhavv/Desktop/sem5/daa/paper/sieve/runs/standard_main2

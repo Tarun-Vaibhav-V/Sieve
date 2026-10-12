@@ -1,0 +1,116 @@
+run smoke_real_r1: 12 cases × 6 conditions × 1 repeats
+Planning C4 budgets (no model calls) ...
+  planned 12 cases in 3.1s
+Estimate: 246 LLM calls (+ tool rounds), ~5 min wall-clock. 0 conversation-passes already complete (resume).
+r0 uniform_lingua           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 174/174 0:09:18
+done -> /Users/tarunvaibhavv/Desktop/sem5/daa/paper/sieve/runs/smoke_real_r1/results.jsonl
+                                                                      All evaluation points                                                                       
+┏━━━━━━━━━━━━━━━━┳━━━━┳━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ condition      ┃  n ┃   acc ┃ tok red % ┃ prompt tok ┃ TTFT med ┃ TTFT p95 ┃ total med ┃ processed ┃ reuse % ┃ atom rec ┃ expand rate ┃ overhead ms ┃ headroom ┃
+┡━━━━━━━━━━━━━━━━╇━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│ baseline       │ 29 │ 0.828 │       0.0 │       2921 │     1.55 │     8.19 │      1.68 │      1905 │   49.5% │    1.000 │        0.00 │           0 │     1175 │
+│ sieve_full     │ 29 │ 0.931 │      35.5 │       1699 │     1.67 │     4.98 │      2.33 │      1918 │   44.1% │    1.000 │        0.07 │          27 │     2397 │
+│ sieve_nomemo   │ 29 │ 0.931 │      36.7 │       1639 │     2.93 │     6.99 │      3.84 │      1780 │   17.0% │    1.000 │        0.07 │        1181 │     2457 │
+│ sieve_rules    │ 29 │ 0.828 │      36.8 │       1684 │     2.20 │     6.74 │      2.98 │      1944 │   40.1% │    1.000 │        0.10 │           5 │     2412 │
+│ truncate       │ 29 │ 0.517 │      57.2 │       1018 │     0.28 │     3.43 │      0.53 │      1018 │   31.7% │    0.736 │        0.00 │           0 │     3078 │
+│ uniform_lingua │ 29 │ 0.828 │      37.4 │       1649 │     2.20 │     6.04 │      2.70 │      1649 │   32.1% │    0.989 │        0.00 │         195 │     2447 │
+└────────────────┴────┴───────┴───────────┴────────────┴──────────┴──────────┴───────────┴───────────┴─────────┴──────────┴─────────────┴─────────────┴──────────┘
+                                                        Cold points (first question of each conversation)                                                         
+┏━━━━━━━━━━━━━━━━┳━━━━┳━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ condition      ┃  n ┃   acc ┃ tok red % ┃ prompt tok ┃ TTFT med ┃ TTFT p95 ┃ total med ┃ processed ┃ reuse % ┃ atom rec ┃ expand rate ┃ overhead ms ┃ headroom ┃
+┡━━━━━━━━━━━━━━━━╇━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│ baseline       │ 12 │ 0.833 │       0.0 │       2616 │     4.63 │     8.68 │      5.18 │      1697 │   16.2% │    1.000 │        0.00 │           0 │     1480 │
+│ sieve_full     │ 12 │ 1.000 │      35.1 │       1476 │     2.39 │     4.95 │      3.12 │      1475 │    0.0% │    1.000 │        0.00 │          43 │     2620 │
+│ sieve_nomemo   │ 12 │ 1.000 │      35.1 │       1476 │     3.21 │     7.05 │      4.07 │      1475 │    0.0% │    1.000 │        0.00 │        1107 │     2620 │
+│ sieve_rules    │ 12 │ 0.917 │      37.2 │       1457 │     3.78 │     6.64 │      4.69 │      1454 │    0.0% │    1.000 │        0.00 │           7 │     2639 │
+│ truncate       │ 12 │ 0.417 │      64.8 │        671 │     0.70 │     3.47 │      0.81 │       671 │    1.5% │    0.694 │        0.00 │           0 │     3425 │
+│ uniform_lingua │ 12 │ 0.917 │      37.2 │       1422 │     3.00 │     6.43 │      3.79 │      1422 │    0.0% │    1.000 │        0.00 │           2 │     2674 │
+└────────────────┴────┴───────┴───────────┴────────────┴──────────┴──────────┴───────────┴───────────┴─────────┴──────────┴─────────────┴─────────────┴──────────┘
+                                                                           Warm points                                                                            
+┏━━━━━━━━━━━━━━━━┳━━━━┳━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ condition      ┃  n ┃   acc ┃ tok red % ┃ prompt tok ┃ TTFT med ┃ TTFT p95 ┃ total med ┃ processed ┃ reuse % ┃ atom rec ┃ expand rate ┃ overhead ms ┃ headroom ┃
+┡━━━━━━━━━━━━━━━━╇━━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│ baseline       │ 17 │ 0.824 │       0.0 │       3136 │     0.44 │     6.50 │      1.30 │      2051 │   73.0% │    1.000 │        0.00 │           0 │      960 │
+│ sieve_full     │ 17 │ 0.882 │      35.8 │       1856 │     0.41 │     4.73 │      0.94 │      2231 │   75.2% │    1.000 │        0.12 │          16 │     2240 │
+│ sieve_nomemo   │ 17 │ 0.882 │      37.8 │       1754 │     2.00 │     6.60 │      2.93 │      1996 │   29.0% │    1.000 │        0.12 │        1234 │     2342 │
+│ sieve_rules    │ 17 │ 0.765 │      36.6 │       1844 │     0.52 │     6.32 │      1.25 │      2290 │   68.4% │    1.000 │        0.18 │           3 │     2252 │
+│ truncate       │ 17 │ 0.588 │      51.8 │       1264 │     0.28 │     2.86 │      0.53 │      1264 │   53.1% │    0.765 │        0.00 │           0 │     2832 │
+│ uniform_lingua │ 17 │ 0.765 │      37.5 │       1809 │     0.70 │     5.29 │      1.17 │      1809 │   54.7% │    0.980 │        0.00 │         332 │     2287 │
+└────────────────┴────┴───────┴───────────┴────────────┴──────────┴──────────┴───────────┴───────────┴─────────┴──────────┴─────────────┴─────────────┴──────────┘
+Cumulative prompt tokens processed per conversation: truncate=1246, sieve_full=2182, sieve_rules=2225, sieve_nomemo=3134, baseline=2896, uniform_lingua=2486
+Decode tok/s is expected to be roughly flat across conditions (it does not depend on the prompt): baseline=25.7, sieve_full=29.9, sieve_nomemo=23.8, sieve_rules=24.3, truncate=37.8, 
+uniform_lingua=25.7
+# claims.md — statements derived only from this run's logs
+
+- Model: `qwen3:14b`; num_ctx 4096; Ollama 0.32.15; workloads are synthetic (invented entities).
+
+- KV prefix reuse on this model/server: **observed** (cachetest). 
+
+## sieve_full vs baseline (paired, n=29)
+- Accuracy delta: +10.3 pp (95% CI -3.4 to +24.1)
+- Prompt-token reduction: +35.5% (95% CI +27.4 to +42.7)
+- Median TTFT delta: -0.41 s (95% CI -1.54 to -0.12)
+- Mean prompt tokens processed delta: -296 tok (95% CI -691 to +120)
+- Cold points only (n=12): median TTFT delta -1.67 s (95% CI -4.18 to -0.63)
+- Where baseline overflowed num_ctx (n=9): accuracy delta +33.3 pp (95% CI -11.1 to +77.8)
+
+## sieve_nomemo vs baseline (paired, n=29)
+- Accuracy delta: +10.3 pp (95% CI -3.4 to +24.1)
+- Prompt-token reduction: +36.7% (95% CI +28.6 to +44.3)
+- Median TTFT delta: +0.12 s (95% CI -0.28 to +1.36)
+- Mean prompt tokens processed delta: +99 tok (95% CI -350 to +532)
+- Cold points only (n=12): median TTFT delta -0.50 s (95% CI -3.09 to +0.58)
+- Where baseline overflowed num_ctx (n=9): accuracy delta +33.3 pp (95% CI -11.1 to +77.8)
+
+## sieve_rules vs baseline (paired, n=29)
+- Accuracy delta: +0.0 pp (95% CI -13.8 to +13.8)
+- Prompt-token reduction: +36.8% (95% CI +28.6 to +44.0)
+- Median TTFT delta: -0.04 s (95% CI -0.66 to +0.03)
+- Mean prompt tokens processed delta: -278 tok (95% CI -612 to +92)
+- Cold points only (n=12): median TTFT delta -0.86 s (95% CI -3.11 to +0.03)
+- Where baseline overflowed num_ctx (n=9): accuracy delta +11.1 pp (95% CI -22.2 to +44.4)
+
+## truncate vs baseline (paired, n=29)
+- Accuracy delta: -31.0 pp (95% CI -48.3 to -13.8)
+- Prompt-token reduction: +57.2% (95% CI +43.4 to +69.9)
+- Median TTFT delta: -0.62 s (95% CI -1.50 to -0.14)
+- Mean prompt tokens processed delta: -683 tok (95% CI -1028 to -355)
+- Cold points only (n=12): median TTFT delta -2.60 s (95% CI -5.37 to -1.17)
+- Where baseline overflowed num_ctx (n=9): accuracy delta +0.0 pp (95% CI +0.0 to +0.0)
+
+## uniform_lingua vs baseline (paired, n=29)
+- Accuracy delta: +0.0 pp (95% CI -13.8 to +13.8)
+- Prompt-token reduction: +37.4% (95% CI +29.3 to +44.6)
+- Median TTFT delta: -0.03 s (95% CI -0.73 to +0.01)
+- Mean prompt tokens processed delta: -170 tok (95% CI -552 to +225)
+- Cold points only (n=12): median TTFT delta -0.81 s (95% CI -3.49 to +0.01)
+- Where baseline overflowed num_ctx (n=9): accuracy delta +22.2 pp (95% CI +0.0 to +55.6)
+
+## Cache-vs-compress (ledger) evidence
+- Cumulative prompt tokens processed per conversation: sieve_full 2182 vs sieve_nomemo 3134 vs baseline 2896.
+- Mean prefix reuse: sieve_full 44.1% vs sieve_nomemo 17.0%.
+
+## Supported by this run
+- sieve_full reduces prompt tokens vs baseline (CI lower bound 27.4%).
+- sieve_full accuracy is within -5 pp of baseline at the CI lower bound (-3.4 pp).
+- sieve_full has lower median TTFT than baseline (CI upper bound -0.12 s).
+- sieve_nomemo reduces prompt tokens vs baseline (CI lower bound 28.6%).
+- sieve_nomemo accuracy is within -5 pp of baseline at the CI lower bound (-3.4 pp).
+- sieve_rules reduces prompt tokens vs baseline (CI lower bound 28.6%).
+- truncate reduces prompt tokens vs baseline (CI lower bound 43.4%).
+- truncate has lower median TTFT than baseline (CI upper bound -0.14 s).
+- uniform_lingua reduces prompt tokens vs baseline (CI lower bound 29.3%).
+- The ledger reduces cumulative prefill tokens relative to re-routing every turn (C4 < C5).
+
+## Not supported by this run
+- sieve_nomemo is faster than baseline in TTFT (CI upper bound +1.36 s >= 0).
+- sieve_rules preserves accuracy (CI lower bound -13.8 pp is below -5 pp).
+- sieve_rules is faster than baseline in TTFT (CI upper bound +0.03 s >= 0).
+- truncate preserves accuracy (CI lower bound -48.3 pp is below -5 pp).
+- uniform_lingua preserves accuracy (CI lower bound -13.8 pp is below -5 pp).
+- uniform_lingua is faster than baseline in TTFT (CI upper bound +0.01 s >= 0).
+- Any claim about real-world (non-synthetic) conversations.
+- Any claim about models other than the one listed above.
+- Classifier training accuracy on heuristic labels (circular; never cited).
+
+wrote summary.json, claims.md, 5 PNGs in /Users/tarunvaibhavv/Desktop/sem5/daa/paper/sieve/runs/smoke_real_r1

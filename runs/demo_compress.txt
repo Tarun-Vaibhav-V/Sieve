@@ -1,0 +1,117 @@
+────────────────────────────────────────────────────────────────────────────────────────── DEMO lane=compress ──────────────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────── demo:compress — evaluation point 0 (lookup_number) ──────────────────────────────────────────────────────────────────────────
+                                                                     sieve_full: segment decisions                                                                      
+┏━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━┓
+┃ seg ┃ role ┃ kind   ┃ tok→ ┃ →tok ┃ sys  ┃ last ┃ tok  ┃ rec  ┃ rep  ┃ qsim ┃ dig  ┃ ndup ┃ pexp ┃ p(ca/co/ex)    ┃ lane        ┃ ratio ┃ source              ┃ conf ┃
+┡━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━┩
+│ 0.0 │ syst │ system │ 43   │ 43   │ 1.00 │ 0.00 │ 0.11 │ 0.20 │ 0.00 │ 0.20 │ 0.00 │ 0.00 │ 0.00 │ -              │ cache       │ 1.0   │ R:system_cache      │ 1.00 │
+│ 1.0 │ user │ doc    │ 325  │ 157  │ 0.00 │ 1.00 │ 0.81 │ 0.10 │ 0.00 │ 0.18 │ 0.00 │ 0.00 │ 0.00 │ 0.01/0.98/0.00 │ compress    │ 0.5   │ classifier          │ 0.98 │
+│ 1.1 │ user │ doc    │ 264  │ 74   │ 0.00 │ 1.00 │ 0.66 │ 0.10 │ 0.00 │ 0.07 │ 0.00 │ 0.02 │ 0.00 │ 0.07/0.93/0.00 │ compress    │ 0.3   │ classifier          │ 0.93 │
+│ 1.2 │ user │ doc    │ 316  │ 282  │ 0.00 │ 1.00 │ 0.79 │ 0.10 │ 0.00 │ 0.09 │ 0.00 │ 0.03 │ 0.00 │ 0.00/1.00/0.00 │ compress    │ 0.9   │ classifier          │ 1.00 │
+│ 1.3 │ user │ doc    │ 306  │ 89   │ 0.00 │ 1.00 │ 0.77 │ 0.10 │ 0.00 │ 0.05 │ 0.00 │ 0.04 │ 0.00 │ 0.02/0.98/0.00 │ compress    │ 0.3   │ classifier          │ 0.98 │
+│ 1.4 │ user │ doc    │ 272  │ 77   │ 0.00 │ 1.00 │ 0.68 │ 0.10 │ 0.00 │ 0.09 │ 0.00 │ 0.04 │ 0.00 │ 0.02/0.97/0.00 │ compress    │ 0.3   │ classifier          │ 0.97 │
+│ 1.5 │ user │ doc    │ 357  │ 100  │ 0.00 │ 1.00 │ 0.89 │ 0.10 │ 0.00 │ 0.06 │ 0.00 │ 0.05 │ 0.00 │ 0.01/0.99/0.00 │ compress    │ 0.3   │ classifier          │ 0.99 │
+│ 1.6 │ user │ doc    │ 244  │ 71   │ 0.00 │ 1.00 │ 0.61 │ 0.10 │ 0.00 │ 0.09 │ 0.00 │ 0.05 │ 0.00 │ 0.02/0.98/0.00 │ compress    │ 0.3   │ classifier          │ 0.98 │
+│ 2.0 │ assi │ chat   │ 6    │ 6    │ 0.00 │ 1.00 │ 0.01 │ 0.10 │ 0.00 │ 0.23 │ 0.00 │ 0.00 │ 0.00 │ -              │ passthrough │ 1.0   │ R:short_passthrough │ 1.00 │
+│ 3.0 │ user │ query  │ 13   │ 13   │ 0.00 │ 1.00 │ 0.03 │ 0.00 │ 0.00 │ 1.00 │ 0.00 │ 0.00 │ 0.00 │ -              │ passthrough │ 1.0   │ R:current_query     │ 1.00 │
+└─────┴──────┴────────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴────────────────┴─────────────┴───────┴─────────────────────┴──────┘
+╭────────────────────────────────────────────────────────────────────────── sieve_full: token waterfall (before ░ / after █) ──────────────────────────────────────────────────────────────────────────╮
+│    0.0 ██████ 43→43                                                                                                                                                                                  │
+│    1.0 ████████████████████░░░░░░░░░░░░░░░░░░░░░░ 325→157                                                                                                                                            │
+│    1.1 ██████████░░░░░░░░░░░░░░░░░░░░░░░░ 264→74                                                                                                                                                     │
+│    1.2 ████████████████████████████████████░░░░░ 316→282                                                                                                                                             │
+│    1.3 ███████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 306→89                                                                                                                                                │
+│    1.4 ██████████░░░░░░░░░░░░░░░░░░░░░░░░░ 272→77                                                                                                                                                    │
+│    1.5 █████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 357→100                                                                                                                                        │
+│    1.6 █████████░░░░░░░░░░░░░░░░░░░░░░ 244→71                                                                                                                                                        │
+│    2.0 █ 6→6                                                                                                                                                                                         │
+│    3.0 ██ 13→13                                                                                                                                                                                      │
+│                                                                                                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────── sieve_full: prompt diff (red = removed, orange = stub/back-ref, cyan = added) ────────────────────────────────────────────────────────────╮
+│ <system> You are a precise assistant for the Brillax team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the         │
+│ conversation, reply exactly: Not mentioned.                                                                                                                                                          │
+│ <user> Please mentioned.                                                                                                                                                                             │
+│                                                                                                                                                                                                      │
+│ Note: some earlier context was replaced by stubs of the form [ref:ID | kind | size | summary | keys | ...]. If a stub may contain the answer, call the expand_context tool with that ID to read this │
+│ the full text before answering; never guess a stub's contents.                                                                                                                                       │
+│ <user> read project report carefully:                                                                                                                                                                │
+│                                                                                                                                                                                                      │
+│ It is worth repeating that the                                                                                                                                                                       │
+│  consolidated deployment depends on a iterative incident review. The quarterly migration revisits the critical rollout. Several teams noted that the preliminary quality gate still accelerates the  │
+│ rollout across the deliverable. Several teams noted that the rollout. shared feature flag still extends the inventory across the index. The manual review shapes the operational framework. Several  │
+│ teams noted that the secondary feature flag still constrains the escalation across the backlog. We should keep in mind that a internal benchmark rarely clarifies the access policy on its own. The  │
+│ policy. secondary pipeline validates the regional migration. The general consensus is that the audit is pending, although the cross-functional pending cross - functional stakeholder alignment      │
+│ remains open.                                                                                                                                                                                        │
+│                                                                                                                                                                                                      │
+│ None of this changes the fact that the open.                                                                                                                                                         │
+│  iterative interface needs a clear capacity review. If the change board stays ready, the ready automated architecture will need another framework. If the data contract stays delayed, the delayed   │
+│ quarterly schedule will need another checkpoint. The escalation contact for the Siarglaem service is Voutov Nennok. The general consensus is that the workflow is ready, although the ready          │
+│ distributed observability stack remains open. The general consensus is that the retrospective is healthy, although the healthy provisional feature flag remains open. Going forward, the rollout     │
+│ will inform the scalable stakeholder alignment for every inventory. From a cross-functional perspective, the alignment. audit clarifies the cost model more than the ledger does. It is worth        │
+│ repeating that the model. federated integration depends on a layered access policy. From a lightweight perspective, the inventory simplifies the support rotation more than the benchmark does. The  │
+│ general consensus is that the benchmark. ledger is pending, although the pending streamlined release train remains open.                                                                             │
+│                                                                                                                                                                                                      │
+│ None of this changes the fact that the modular contract needs a clear change board. The open.                                                                                                        │
+│                                                                                                                                                                                                      │
+│ modular contract. consolidated schedule protects the automated backlog. Going forward, the ledger will inform the operational feature flag for every schedule. As discussed earlier, the flag.       │
+│ onboarding flow documents the internal index and the roadmap. We should keep in mind that a streamlined dashboard rarely improves the data contract. capacity review. reinforces release train.      │
+│ manual index. handoff tactical flag. external migration sustainable capacity review.                                                                                                                 │
+│  data contract on its own. Several teams noted that the robust capacity review still improves the schedule across the template. From a internal perspective, the integration reinforces the release  │
+│ train more than the budget does. We should keep in mind that a manual index rarely unblocks the release train on its own. It is worth repeating that the holistic handoff depends on a tactical      │
+│ feature flag. It is worth repeating that the external migration depends on a sustainable capacity review.                                                                                            │
+│                                                                                                                                                                                                      │
+│ If the data contract stays deprecated, the deprecated lightweight report will need another cluster. The report. distributed rollout supports the robust scheduler. From a streamlined perspective,   │
+│ the framework streamlines the data contract more than the report does. In practice, our process protects the feature flag whenever the pipeline is outdated. Most of the feedback suggested that the │
+│ flag. incident review should unblock the distributed budget before the next deployment. None of this changes the fact that the budget. critical escalation needs a clear incident review. As         │
+│ discussed earlier, the escalation. access policy stabilizes the regional index and the roadmap.                                                                                                      │
+│                                                                                                                                                                                                      │
+│ Going forward, the integration will simplify the secondary data contract for every ledger. None of this changes the fact that the layered workflow needs a clear observability stack. The unified    │
+│ audit constrains the secondary escalation. The resilient policy simplifies the shared benchmark. We should keep in mind that a automated milestone rarely supports the data contract on its own.     │
+│ None of this changes the fact that the scalable rollout needs a clear incident review. None of this changes the fact that the shared registry needs a clear service mesh. None of this changes the   │
+│ fact that the internal audit needs a clear onboarding flow. It is worth repeating that the internal workflow depends on a baseline test matrix. Several teams noted that the scalable test matrix    │
+│ still validates the backlog across the deployment. If the stakeholder alignment stays pending, the external template will need another schedule. In practice, our architecture complicates the       │
+│ incident review whenever the module is stable.                                                                                                                                                       │
+│                                                                                                                                                                                                      │
+│ As stable.                                                                                                                                                                                           │
+│  As discussed earlier, the access policy extends the shared ledger and the migration. From a shared perspective, the interface documents the support rotation more than the escalation does. It is   │
+│ worth repeating that the asynchronous module depends on a asynchronous cost model. The weekly active users for Xoubryv was measured at 179,981 users. In practice, our framework documents the cost  │
+│ model whenever the process is delayed. The general consensus is that the backlog is pending, although the consolidated data contract remains open. If the quality gate stays outdated, the quarterly │
+│ initiative will need another review. We should keep in mind that a quarterly architecture rarely stabilizes the platform team on its own.                                                            │
+│                                                                                                                                                                                                      │
+│ If the vendor own.                                                                                                                                                                                   │
+│                                                                                                                                                                                                      │
+│ vendor                                                                                                                                                                                               │
+│ … (diff truncated; full diff in diff.txt)                                                                                                                                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                  sieve_full: verifier                                  
+┏━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ seg ┃ final ratio ┃ recall ┃ numeric recall ┃ retries ┃ reinflated ┃ lost on 1st try ┃
+┡━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ 1.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 1.1 │ 0.3         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 1.2 │ 0.9         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 1.3 │ 0.3         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 1.4 │ 0.3         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 1.5 │ 0.3         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 1.6 │ 0.3         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+└─────┴─────────────┴────────┴────────────────┴─────────┴────────────┴─────────────────┘
+sieve_full: no expansion
+                                               Q: What was the weekly active users measured for Xoubryv?                                               
+                                                              gold: ['179,981', '179981']                                                              
+┏━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━┓
+┃ condition  ┃ answer                                           ┃ correct ┃ tokens ┃ Δtok  ┃ TTFT s ┃ total s ┃ processed ┃ reuse % ┃ VRAM MB ┃ tools ┃
+┡━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━┩
+│ baseline   │ The weekly active users for Xoubryv was measured │ ✔       │ 2177   │ +0    │ 3.76   │ 4.55    │ 2177      │ 4       │ 9607    │ 0     │
+│            │ at 179,981 users.                                │         │        │       │        │         │           │         │         │       │
+│ sieve_full │ The weekly active users for Xoubryv were         │ ✔       │ 1002   │ -1175 │ 1.67   │ 2.44    │ 1002      │ 5       │ 9189    │ 0     │
+│            │ measured at 179,981 users.                       │         │        │       │        │         │           │         │         │       │
+└────────────┴──────────────────────────────────────────────────┴─────────┴────────┴───────┴────────┴─────────┴───────────┴─────────┴─────────┴───────┘
+        baseline per-turn TTFT ▁ 3.76s
+                                  Ledger (per evaluation turn)                                   
+┏━━━━━━┳━━━━━━━━━━┳━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓
+┃ turn ┃ replayed ┃ new ┃ epoch ┃ reason        ┃ epoch_id ┃ first changed msg ┃ rebuild tokens ┃
+┡━━━━━━╇━━━━━━━━━━╇━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩
+│ 2    │ 0        │ 10  │ ●     │ session_start │ 0        │ 0                 │ 1002           │
+└──────┴──────────┴─────┴───────┴───────────────┴──────────┴───────────────────┴────────────────┘
+      sieve_full per-turn TTFT ▁ 1.67s

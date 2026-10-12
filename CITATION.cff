@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use Sieve or its benchmark logs, please cite it as below."
+title: "Sieve: cache-aware, segment-level routing across compression, KV-prefix reuse and externalization for local LLM prompts"
+type: software
+authors:
+  - alias: "Tarun-Vaibhav-V"
+repository-code: "https://github.com/Tarun-Vaibhav-V/sieve"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-12"
+keywords: [large language models, prompt compression, KV cache, local inference, LLMLingua, Ollama]

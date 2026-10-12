@@ -1,0 +1,301 @@
+─────────────────────────────────────────────────────────────────────────────────────────── DEMO lane=cache ────────────────────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────── demo:cache — evaluation point 0 (lookup_number) ────────────────────────────────────────────────────────────────────────────
+                                                                     sieve_full: segment decisions                                                                      
+┏━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━┓
+┃ seg ┃ role ┃ kind   ┃ tok→ ┃ →tok ┃ sys  ┃ last ┃ tok  ┃ rec  ┃ rep  ┃ qsim ┃ dig  ┃ ndup ┃ pexp ┃ p(ca/co/ex)    ┃ lane        ┃ ratio ┃ source              ┃ conf ┃
+┡━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━┩
+│ 0.0 │ syst │ system │ 982  │ 982  │ 1.00 │ 0.00 │ 1.00 │ 0.20 │ 0.00 │ 0.07 │ 0.00 │ 0.00 │ 0.00 │ -              │ cache       │ 1.0   │ R:system_cache      │ 1.00 │
+│ 1.0 │ user │ doc    │ 319  │ 95   │ 0.00 │ 1.00 │ 0.80 │ 0.10 │ 0.00 │ 0.05 │ 0.00 │ 0.02 │ 0.00 │ 0.02/0.97/0.00 │ compress    │ 0.3   │ classifier          │ 0.97 │
+│ 1.1 │ user │ doc    │ 421  │ 378  │ 0.00 │ 1.00 │ 1.00 │ 0.10 │ 0.00 │ 0.18 │ 0.00 │ 0.03 │ 0.00 │ 0.00/1.00/0.00 │ compress    │ 0.9   │ classifier          │ 1.00 │
+│ 2.0 │ assi │ chat   │ 3    │ 3    │ 0.00 │ 1.00 │ 0.01 │ 0.10 │ 0.00 │ 0.03 │ 0.00 │ 0.00 │ 0.00 │ -              │ passthrough │ 1.0   │ R:short_passthrough │ 1.00 │
+│ 3.0 │ user │ query  │ 11   │ 11   │ 0.00 │ 1.00 │ 0.03 │ 0.00 │ 0.00 │ 1.00 │ 0.00 │ 0.00 │ 0.00 │ -              │ passthrough │ 1.0   │ R:current_query     │ 1.00 │
+└─────┴──────┴────────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴────────────────┴─────────────┴───────┴─────────────────────┴──────┘
+╭────────────────────────────────────────────────────────────────────────── sieve_full: token waterfall (before ░ / after █) ──────────────────────────────────────────────────────────────────────────╮
+│    0.0 ██████████████████████████████████████████████ 982→982                                                                                                                                        │
+│    1.0 ████░░░░░░░░░░░ 319→95                                                                                                                                                                        │
+│    1.1 ██████████████████░░ 421→378                                                                                                                                                                  │
+│    2.0  3→3                                                                                                                                                                                          │
+│    3.0 █ 11→11                                                                                                                                                                                       │
+│                                                                                                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────── sieve_full: prompt diff (red = removed, orange = stub/back-ref, cyan = added) ────────────────────────────────────────────────────────────╮
+│ <system> You are a precise assistant for the Drudoukru team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the       │
+│ conversation, reply exactly: Not mentioned.                                                                                                                                                          │
+│                                                                                                                                                                                                      │
+│ Operations handbook:                                                                                                                                                                                 │
+│                                                                                                                                                                                                      │
+│ Going forward, the checkpoint will validate the manual change board for every escalation. From a upstream perspective, the budget revisits the service mesh more than the escalation does. If the    │
+│ dependency graph stays healthy, the baseline roadmap will need another migration. In practice, our inventory unblocks the release train whenever the deployment is outdated. None of this changes    │
+│ the fact that the resilient contract needs a clear dependency graph. None of this changes the fact that the modular module needs a clear incident review. As discussed earlier, the support rotation │
+│ stabilizes the downstream contract and the scheduler. The general consensus is that the initiative is ready, although the distributed dependency graph remains open. It is worth repeating that the  │
+│ robust migration depends on a sustainable capacity review.                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ From a sustainable perspective, the process improves the platform team more than the forecast does. The weekly active users for Thyvsirn was measured at 300,334 users. Going forward, the index     │
+│ will reinforce the asynchronous service mesh for every ledger. If the data contract stays deprecated, the automated handoff will need another escalation. The asynchronous roadmap validates the     │
+│ legacy cache. If the service mesh stays saturated, the granular registry will need another framework. As discussed earlier, the sprint goal documents the provisional schedule and the gateway. We   │
+│ should keep in mind that a modular migration rarely reinforces the dependency graph on its own. Most of the feedback suggested that the access policy should validate the tactical rollout before    │
+│ the next retrospective. The general consensus is that the migration is blocked, although the baseline vendor assessment remains open. Several teams noted that the modular onboarding flow still     │
+│ protects the contract across the registry.                                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ Several teams noted that the manual sprint goal still extends the escalation across the deployment. Several teams noted that the adaptive quality gate still validates the policy across the index.  │
+│ As discussed earlier, the quality gate revisits the legacy report and the gateway. It is worth repeating that the shared contract depends on a federated platform team. Going forward, the migration │
+│ will extend the strategic quality gate for every workflow. Several teams noted that the adaptive feature flag still extends the gateway across the framework. It is worth repeating that the         │
+│ regional module depends on a scalable stakeholder alignment. We should keep in mind that a granular integration rarely stabilizes the dependency graph on its own. The general consensus is that the │
+│ retrospective is approved, although the dedicated data contract remains open. In practice, our registry validates the capacity review whenever the inventory is delayed.                             │
+│                                                                                                                                                                                                      │
+│ We should keep in mind that a sustainable benchmark rarely protects the sprint goal on its own. In practice, our module documents the sprint goal whenever the architecture is pending. If the       │
+│ platform team stays healthy, the dedicated initiative will need another deployment. From a streamlined perspective, the module simplifies the cost model more than the retrospective does. Most of   │
+│ the feedback suggested that the data contract should unblock the tactical escalation before the next cache. We should keep in mind that a distributed deployment rarely stabilizes the governance    │
+│ model on its own. Going forward, the handoff will streamline the critical dependency graph for every process. We should keep in mind that a downstream backlog rarely constrains the test matrix on  │
+│ its own.                                                                                                                                                                                             │
+│                                                                                                                                                                                                      │
+│ The general consensus is that the workflow is deprecated, although the consolidated onboarding flow remains open. As discussed earlier, the observability stack validates the secondary backlog and  │
+│ the pipeline. As discussed earlier, the support rotation informs the manual deployment and the inventory. Most of the feedback suggested that the quality gate should stabilize the resilient        │
+│ schedule before the next index. None of this changes the fact that the quarterly budget needs a clear capacity review. If the release train stays healthy, the baseline runbook will need another    │
+│ queue. Going forward, the schedule will protect the regional change board for every rollout. Several teams noted that the granular governance model still informs the ledger across the interface.   │
+│ In practice, our escalation simplifies the access policy whenever the proposal is outdated.                                                                                                          │
+│                                                                                                                                                                                                      │
+│ The resilient framework validates the quarterly index. From a operational perspective, the proposal constrains the support rotation more than the scheduler does. In practice, our rollout           │
+│ constrains the vendor assessment whenever the ledger is deprecated. If the observability stack stays pending, the granular report will need another cache. The distributed budget protects the       │
+│ downstream contract. Most of the feedback suggested that the change board should inform the upstream pipeline before the next handoff. In practice, our runbook protects the change board whenever   │
+│ the backlog is stable. Several teams noted that the upstream incident review still extends the milestone across the scheduler. Going forward, the roadmap will stabilize the strategic release train │
+│ for every runbook. The general consensus is that the escalation is blocked, although the automated observability stack remains open.                                                                 │
+│ <user> Reference document:                                                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ From open.                                                                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ Note: some earlier context was replaced by stubs of the form [ref:ID | kind | size | summary | keys | ...]. If a quarterly perspective, stub may contain the answer, call the expand_context tool    │
+│ with that ID to read the full text before answering; never guess a stub's contents.                                                                                                                  │
+│ <user>                                                                                                                                                                                               │
+│  workflow supports the data contract more than the scheduler does. We should keep in mind that a contract.                                                                                           │
+│ … (diff truncated; full diff in diff.txt)                                                                                                                                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                  sieve_full: verifier                                  
+┏━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ seg ┃ final ratio ┃ recall ┃ numeric recall ┃ retries ┃ reinflated ┃ lost on 1st try ┃
+┡━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ 1.0 │ 0.3         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 1.1 │ 0.9         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+└─────┴─────────────┴────────┴────────────────┴─────────┴────────────┴─────────────────┘
+sieve_full: no expansion
+                                                Q: What was the battery capacity measured for Muvurn?                                                 
+                                                               gold: ['5,043', '5043']                                                                
+┏━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━┓
+┃ condition  ┃ answer                                           ┃ correct ┃ tokens ┃ Δtok ┃ TTFT s ┃ total s ┃ processed ┃ reuse % ┃ VRAM MB ┃ tools ┃
+┡━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━┩
+│ baseline   │ The battery capacity for Muvurn was measured at  │ ✔       │ 1767   │ +0   │ 3.03   │ 3.70    │ 1767      │ 4       │ 9607    │ 0     │
+│            │ 5,043 mAh.                                       │         │        │      │        │         │           │         │         │       │
+│ sieve_full │ The battery capacity for Muvurn was measured at  │ ✔       │ 1559   │ -208 │ 2.75   │ 3.42    │ 1558      │ 1       │ 9189    │ 0     │
+│            │ 5,043 mAh.                                       │         │        │      │        │         │           │         │         │       │
+└────────────┴──────────────────────────────────────────────────┴─────────┴────────┴──────┴────────┴─────────┴───────────┴─────────┴─────────┴───────┘
+──────────────────────────────────────────────────────────────────────────── demo:cache — evaluation point 1 (lookup_name) ─────────────────────────────────────────────────────────────────────────────
+                                                                     sieve_full: segment decisions                                                                      
+┏━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━┓
+┃ seg ┃ role ┃ kind   ┃ tok→ ┃ →tok ┃ sys  ┃ last ┃ tok  ┃ rec  ┃ rep  ┃ qsim ┃ dig  ┃ ndup ┃ pexp ┃ p(ca/co/ex) ┃ lane        ┃ ratio ┃ source                 ┃ conf ┃
+┡━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━┩
+│ 0.0 │ syst │ system │ 982  │ 982  │ 1.00 │ 0.00 │ 1.00 │ 0.40 │ 0.00 │ 0.27 │ 0.00 │ 0.00 │ 0.00 │ -           │ cache       │ 1.0   │ ledger_replay          │ 1.00 │
+│ 1.0 │ user │ doc    │ 319  │ 95   │ 0.00 │ 0.00 │ 0.80 │ 0.30 │ 0.00 │ 0.36 │ 0.00 │ 0.02 │ 0.00 │ -           │ compress    │ 0.3   │ ledger_replay          │ 1.00 │
+│ 1.1 │ user │ doc    │ 421  │ 378  │ 0.00 │ 0.00 │ 1.00 │ 0.30 │ 0.00 │ 0.27 │ 0.00 │ 0.03 │ 0.00 │ -           │ compress    │ 0.9   │ ledger_replay          │ 1.00 │
+│ 2.0 │ assi │ chat   │ 3    │ 3    │ 0.00 │ 0.00 │ 0.01 │ 0.30 │ 0.00 │ 0.10 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ ledger_replay          │ 1.00 │
+│ 3.0 │ user │ query  │ 11   │ 11   │ 0.00 │ 0.00 │ 0.03 │ 0.20 │ 0.00 │ 0.16 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ ledger_replay          │ 1.00 │
+│ 4.0 │ assi │ chat   │ 17   │ 17   │ 0.00 │ 0.00 │ 0.04 │ 0.20 │ 0.00 │ 0.08 │ 0.09 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ R:short_passthrough    │ 1.00 │
+│ 5.0 │ user │ doc    │ 319  │ 24   │ 0.00 │ 1.00 │ 0.80 │ 0.10 │ 1.00 │ 0.36 │ 0.00 │ 0.00 │ 0.00 │ -           │ cache       │ 1.0   │ R:exact_repeat_backref │ 1.00 │
+│ 5.1 │ user │ doc    │ 421  │ 24   │ 0.00 │ 1.00 │ 1.00 │ 0.10 │ 1.00 │ 0.27 │ 0.00 │ 0.00 │ 0.00 │ -           │ cache       │ 1.0   │ R:exact_repeat_backref │ 1.00 │
+│ 6.0 │ assi │ chat   │ 3    │ 21   │ 0.00 │ 1.00 │ 0.01 │ 0.10 │ 1.00 │ 0.10 │ 0.00 │ 0.00 │ 0.00 │ -           │ cache       │ 1.0   │ R:exact_repeat_backref │ 1.00 │
+│ 7.0 │ user │ query  │ 13   │ 13   │ 0.00 │ 1.00 │ 0.03 │ 0.00 │ 0.00 │ 1.00 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ R:current_query        │ 1.00 │
+└─────┴──────┴────────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴─────────────┴─────────────┴───────┴────────────────────────┴──────┘
+╭────────────────────────────────────────────────────────────────────────── sieve_full: token waterfall (before ░ / after █) ──────────────────────────────────────────────────────────────────────────╮
+│    0.0 ██████████████████████████████████████████████ 982→982                                                                                                                                        │
+│    1.0 ████░░░░░░░░░░░ 319→95                                                                                                                                                                        │
+│    1.1 ██████████████████░░ 421→378                                                                                                                                                                  │
+│    2.0  3→3                                                                                                                                                                                          │
+│    3.0 █ 11→11                                                                                                                                                                                       │
+│    4.0 █ 17→17                                                                                                                                                                                       │
+│    5.0 █░░░░░░░░░░░░░░ 319→24                                                                                                                                                                        │
+│    5.1 █░░░░░░░░░░░░░░░░░░░ 421→24                                                                                                                                                                   │
+│    6.0 █ 3→21                                                                                                                                                                                        │
+│    7.0 █ 13→13                                                                                                                                                                                       │
+│                                                                                                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────── sieve_full: prompt diff (red = removed, orange = stub/back-ref, cyan = added) ────────────────────────────────────────────────────────────╮
+│ <system> You are a precise assistant for the Drudoukru team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the       │
+│ conversation, reply exactly: Not mentioned.                                                                                                                                                          │
+│                                                                                                                                                                                                      │
+│ Operations handbook:                                                                                                                                                                                 │
+│                                                                                                                                                                                                      │
+│ Going forward, the checkpoint will validate the manual change board for every escalation. From a upstream perspective, the budget revisits the service mesh more than the escalation does. If the    │
+│ dependency graph stays healthy, the baseline roadmap will need another migration. In practice, our inventory unblocks the release train whenever the deployment is outdated. None of this changes    │
+│ the fact that the resilient contract needs a clear dependency graph. None of this changes the fact that the modular module needs a clear incident review. As discussed earlier, the support rotation │
+│ stabilizes the downstream contract and the scheduler. The general consensus is that the initiative is ready, although the distributed dependency graph remains open. It is worth repeating that the  │
+│ robust migration depends on a sustainable capacity review.                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ From a sustainable perspective, the process improves the platform team more than the forecast does. The weekly active users for Thyvsirn was measured at 300,334 users. Going forward, the index     │
+│ will reinforce the asynchronous service mesh for every ledger. If the data contract stays deprecated, the automated handoff will need another escalation. The asynchronous roadmap validates the     │
+│ legacy cache. If the service mesh stays saturated, the granular registry will need another framework. As discussed earlier, the sprint goal documents the provisional schedule and the gateway. We   │
+│ should keep in mind that a modular migration rarely reinforces the dependency graph on its own. Most of the feedback suggested that the access policy should validate the tactical rollout before    │
+│ the next retrospective. The general consensus is that the migration is blocked, although the baseline vendor assessment remains open. Several teams noted that the modular onboarding flow still     │
+│ protects the contract across the registry.                                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ Several teams noted that the manual sprint goal still extends the escalation across the deployment. Several teams noted that the adaptive quality gate still validates the policy across the index.  │
+│ As discussed earlier, the quality gate revisits the legacy report and the gateway. It is worth repeating that the shared contract depends on a federated platform team. Going forward, the migration │
+│ will extend the strategic quality gate for every workflow. Several teams noted that the adaptive feature flag still extends the gateway across the framework. It is worth repeating that the         │
+│ regional module depends on a scalable stakeholder alignment. We should keep in mind that a granular integration rarely stabilizes the dependency graph on its own. The general consensus is that the │
+│ retrospective is approved, although the dedicated data contract remains open. In practice, our registry validates the capacity review whenever the inventory is delayed.                             │
+│                                                                                                                                                                                                      │
+│ We should keep in mind that a sustainable benchmark rarely protects the sprint goal on its own. In practice, our module documents the sprint goal whenever the architecture is pending. If the       │
+│ platform team stays healthy, the dedicated initiative will need another deployment. From a streamlined perspective, the module simplifies the cost model more than the retrospective does. Most of   │
+│ the feedback suggested that the data contract should unblock the tactical escalation before the next cache. We should keep in mind that a distributed deployment rarely stabilizes the governance    │
+│ model on its own. Going forward, the handoff will streamline the critical dependency graph for every process. We should keep in mind that a downstream backlog rarely constrains the test matrix on  │
+│ its own.                                                                                                                                                                                             │
+│                                                                                                                                                                                                      │
+│ The general consensus is that the workflow is deprecated, although the consolidated onboarding flow remains open. As discussed earlier, the observability stack validates the secondary backlog and  │
+│ the pipeline. As discussed earlier, the support rotation informs the manual deployment and the inventory. Most of the feedback suggested that the quality gate should stabilize the resilient        │
+│ schedule before the next index. None of this changes the fact that the quarterly budget needs a clear capacity review. If the release train stays healthy, the baseline runbook will need another    │
+│ queue. Going forward, the schedule will protect the regional change board for every rollout. Several teams noted that the granular governance model still informs the ledger across the interface.   │
+│ In practice, our escalation simplifies the access policy whenever the proposal is outdated.                                                                                                          │
+│                                                                                                                                                                                                      │
+│ The resilient framework validates the quarterly index. From a operational perspective, the proposal constrains the support rotation more than the scheduler does. In practice, our rollout           │
+│ constrains the vendor assessment whenever the ledger is deprecated. If the observability stack stays pending, the granular report will need another cache. The distributed budget protects the       │
+│ downstream contract. Most of the feedback suggested that the change board should inform the upstream pipeline before the next handoff. In practice, our runbook protects the change board whenever   │
+│ the backlog is stable. Several teams noted that the upstream incident review still extends the milestone across the scheduler. Going forward, the roadmap will stabilize the strategic release train │
+│ for every runbook. The general consensus is that the escalation is blocked, although the automated observability stack remains open.                                                                 │
+│ <user> Reference document:                                                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ From open.                                                                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ Note: some earlier context was replaced by stubs of the form [ref:ID | kind | size | summary | keys | ...]. If a quarterly perspective, stub may contain the answer, call the expand_context tool    │
+│ with that ID to read the full text before answering; never guess a stub's contents.                                                                                                                  │
+│ <user>                                                                                                                                                                                               │
+│  workflow supports the data contract more than the scheduler does. We should keep in mind that a contract.                                                                                           │
+│ … (diff truncated; full diff in diff.txt)                                                                                                                                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                  sieve_full: verifier                                  
+┏━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ seg ┃ final ratio ┃ recall ┃ numeric recall ┃ retries ┃ reinflated ┃ lost on 1st try ┃
+┡━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ 1.0 │ 0.3         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 1.1 │ 0.9         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+└─────┴─────────────┴────────┴────────────────┴─────────┴────────────┴─────────────────┘
+sieve_full: no expansion
+                                                Q: Who is the product lead for the Draekrousk service?                                                
+                                                      gold: ['Draenyl Kroumnaesk', 'Kroumnaesk']                                                      
+┏━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━┓
+┃ condition  ┃ answer                                           ┃ correct ┃ tokens ┃ Δtok ┃ TTFT s ┃ total s ┃ processed ┃ reuse % ┃ VRAM MB ┃ tools ┃
+┡━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━┩
+│ baseline   │ The product lead for the Draekrousk service is   │ ✔       │ 2560   │ +0   │ 1.66   │ 2.38    │ 2560      │ 64      │ 9607    │ 0     │
+│            │ Draenyl Kroumnaesk.                              │         │        │      │        │         │           │         │         │       │
+│ sieve_full │ Not mentioned.                                   │ ✘       │ 1678   │ -882 │ 0.42   │ 0.53    │ 1677      │ 86      │ 9189    │ 0     │
+└────────────┴──────────────────────────────────────────────────┴─────────┴────────┴──────┴────────┴─────────┴───────────┴─────────┴─────────┴───────┘
+─────────────────────────────────────────────────────────────────────────── demo:cache — evaluation point 2 (lookup_number) ────────────────────────────────────────────────────────────────────────────
+                                                                    sieve_full: segment decisions                                                                    
+┏━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━┓
+┃ seg ┃ role ┃ kind   ┃ tok→ ┃ →tok ┃ sys  ┃ last ┃ tok  ┃ rec  ┃ rep  ┃ qsim ┃ dig  ┃ ndup ┃ pexp ┃ p(ca/co/ex) ┃ lane        ┃ ratio ┃ source              ┃ conf ┃
+┡━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━┩
+│ 0.0 │ syst │ system │ 982  │ 982  │ 1.00 │ 0.00 │ 1.00 │ 0.50 │ 0.00 │ 0.20 │ 0.00 │ 0.00 │ 0.00 │ -           │ cache       │ 1.0   │ ledger_replay       │ 1.00 │
+│ 1.0 │ user │ doc    │ 319  │ 95   │ 0.00 │ 0.00 │ 0.80 │ 0.40 │ 0.00 │ 0.16 │ 0.00 │ 0.02 │ 0.00 │ -           │ compress    │ 0.3   │ ledger_replay       │ 1.00 │
+│ 1.1 │ user │ doc    │ 421  │ 378  │ 0.00 │ 0.00 │ 1.00 │ 0.40 │ 0.00 │ 0.17 │ 0.00 │ 0.03 │ 0.00 │ -           │ compress    │ 0.9   │ ledger_replay       │ 1.00 │
+│ 2.0 │ assi │ chat   │ 3    │ 3    │ 0.00 │ 0.00 │ 0.01 │ 0.40 │ 0.00 │ 0.07 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ ledger_replay       │ 1.00 │
+│ 3.0 │ user │ query  │ 11   │ 11   │ 0.00 │ 0.00 │ 0.03 │ 0.30 │ 0.00 │ 0.42 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ ledger_replay       │ 1.00 │
+│ 4.0 │ assi │ chat   │ 17   │ 17   │ 0.00 │ 0.00 │ 0.04 │ 0.30 │ 0.00 │ 0.19 │ 0.09 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ ledger_replay       │ 1.00 │
+│ 5.0 │ user │ doc    │ 319  │ 24   │ 0.00 │ 0.00 │ 0.80 │ 0.20 │ 1.00 │ 0.16 │ 0.00 │ 0.00 │ 0.00 │ -           │ cache       │ 1.0   │ ledger_replay↩      │ 1.00 │
+│ 5.1 │ user │ doc    │ 421  │ 24   │ 0.00 │ 0.00 │ 1.00 │ 0.20 │ 1.00 │ 0.17 │ 0.00 │ 0.00 │ 0.00 │ -           │ cache       │ 1.0   │ ledger_replay↩      │ 1.00 │
+│ 6.0 │ assi │ chat   │ 3    │ 21   │ 0.00 │ 0.00 │ 0.01 │ 0.20 │ 1.00 │ 0.07 │ 0.00 │ 0.00 │ 0.00 │ -           │ cache       │ 1.0   │ ledger_replay↩      │ 1.00 │
+│ 7.0 │ user │ query  │ 13   │ 13   │ 0.00 │ 1.00 │ 0.03 │ 0.10 │ 0.00 │ 0.29 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ ledger_replay       │ 1.00 │
+│ 8.0 │ assi │ chat   │ 18   │ 18   │ 0.00 │ 1.00 │ 0.04 │ 0.10 │ 0.00 │ 0.14 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ R:short_passthrough │ 1.00 │
+│ 9.0 │ user │ query  │ 13   │ 13   │ 0.00 │ 1.00 │ 0.03 │ 0.00 │ 0.00 │ 1.00 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ R:current_query     │ 1.00 │
+└─────┴──────┴────────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴─────────────┴─────────────┴───────┴─────────────────────┴──────┘
+╭────────────────────────────────────────────────────────────────────────── sieve_full: token waterfall (before ░ / after █) ──────────────────────────────────────────────────────────────────────────╮
+│    0.0 ██████████████████████████████████████████████ 982→982                                                                                                                                        │
+│    1.0 ████░░░░░░░░░░░ 319→95                                                                                                                                                                        │
+│    1.1 ██████████████████░░ 421→378                                                                                                                                                                  │
+│    2.0  3→3                                                                                                                                                                                          │
+│    3.0 █ 11→11                                                                                                                                                                                       │
+│    4.0 █ 17→17                                                                                                                                                                                       │
+│    5.0 █░░░░░░░░░░░░░░ 319→24                                                                                                                                                                        │
+│    5.1 █░░░░░░░░░░░░░░░░░░░ 421→24                                                                                                                                                                   │
+│    6.0 █ 3→21                                                                                                                                                                                        │
+│    7.0 █ 13→13                                                                                                                                                                                       │
+│    8.0 █ 18→18                                                                                                                                                                                       │
+│    9.0 █ 13→13                                                                                                                                                                                       │
+│                                                                                                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────── sieve_full: prompt diff (red = removed, orange = stub/back-ref, cyan = added) ────────────────────────────────────────────────────────────╮
+│ <system> You are a precise assistant for the Drudoukru team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the       │
+│ conversation, reply exactly: Not mentioned.                                                                                                                                                          │
+│                                                                                                                                                                                                      │
+│ Operations handbook:                                                                                                                                                                                 │
+│                                                                                                                                                                                                      │
+│ Going forward, the checkpoint will validate the manual change board for every escalation. From a upstream perspective, the budget revisits the service mesh more than the escalation does. If the    │
+│ dependency graph stays healthy, the baseline roadmap will need another migration. In practice, our inventory unblocks the release train whenever the deployment is outdated. None of this changes    │
+│ the fact that the resilient contract needs a clear dependency graph. None of this changes the fact that the modular module needs a clear incident review. As discussed earlier, the support rotation │
+│ stabilizes the downstream contract and the scheduler. The general consensus is that the initiative is ready, although the distributed dependency graph remains open. It is worth repeating that the  │
+│ robust migration depends on a sustainable capacity review.                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ From a sustainable perspective, the process improves the platform team more than the forecast does. The weekly active users for Thyvsirn was measured at 300,334 users. Going forward, the index     │
+│ will reinforce the asynchronous service mesh for every ledger. If the data contract stays deprecated, the automated handoff will need another escalation. The asynchronous roadmap validates the     │
+│ legacy cache. If the service mesh stays saturated, the granular registry will need another framework. As discussed earlier, the sprint goal documents the provisional schedule and the gateway. We   │
+│ should keep in mind that a modular migration rarely reinforces the dependency graph on its own. Most of the feedback suggested that the access policy should validate the tactical rollout before    │
+│ the next retrospective. The general consensus is that the migration is blocked, although the baseline vendor assessment remains open. Several teams noted that the modular onboarding flow still     │
+│ protects the contract across the registry.                                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ Several teams noted that the manual sprint goal still extends the escalation across the deployment. Several teams noted that the adaptive quality gate still validates the policy across the index.  │
+│ As discussed earlier, the quality gate revisits the legacy report and the gateway. It is worth repeating that the shared contract depends on a federated platform team. Going forward, the migration │
+│ will extend the strategic quality gate for every workflow. Several teams noted that the adaptive feature flag still extends the gateway across the framework. It is worth repeating that the         │
+│ regional module depends on a scalable stakeholder alignment. We should keep in mind that a granular integration rarely stabilizes the dependency graph on its own. The general consensus is that the │
+│ retrospective is approved, although the dedicated data contract remains open. In practice, our registry validates the capacity review whenever the inventory is delayed.                             │
+│                                                                                                                                                                                                      │
+│ We should keep in mind that a sustainable benchmark rarely protects the sprint goal on its own. In practice, our module documents the sprint goal whenever the architecture is pending. If the       │
+│ platform team stays healthy, the dedicated initiative will need another deployment. From a streamlined perspective, the module simplifies the cost model more than the retrospective does. Most of   │
+│ the feedback suggested that the data contract should unblock the tactical escalation before the next cache. We should keep in mind that a distributed deployment rarely stabilizes the governance    │
+│ model on its own. Going forward, the handoff will streamline the critical dependency graph for every process. We should keep in mind that a downstream backlog rarely constrains the test matrix on  │
+│ its own.                                                                                                                                                                                             │
+│                                                                                                                                                                                                      │
+│ The general consensus is that the workflow is deprecated, although the consolidated onboarding flow remains open. As discussed earlier, the observability stack validates the secondary backlog and  │
+│ the pipeline. As discussed earlier, the support rotation informs the manual deployment and the inventory. Most of the feedback suggested that the quality gate should stabilize the resilient        │
+│ schedule before the next index. None of this changes the fact that the quarterly budget needs a clear capacity review. If the release train stays healthy, the baseline runbook will need another    │
+│ queue. Going forward, the schedule will protect the regional change board for every rollout. Several teams noted that the granular governance model still informs the ledger across the interface.   │
+│ In practice, our escalation simplifies the access policy whenever the proposal is outdated.                                                                                                          │
+│                                                                                                                                                                                                      │
+│ The resilient framework validates the quarterly index. From a operational perspective, the proposal constrains the support rotation more than the scheduler does. In practice, our rollout           │
+│ constrains the vendor assessment whenever the ledger is deprecated. If the observability stack stays pending, the granular report will need another cache. The distributed budget protects the       │
+│ downstream contract. Most of the feedback suggested that the change board should inform the upstream pipeline before the next handoff. In practice, our runbook protects the change board whenever   │
+│ the backlog is stable. Several teams noted that the upstream incident review still extends the milestone across the scheduler. Going forward, the roadmap will stabilize the strategic release train │
+│ for every runbook. The general consensus is that the escalation is blocked, although the automated observability stack remains open.                                                                 │
+│ <user> Reference document:                                                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ From open.                                                                                                                                                                                           │
+│                                                                                                                                                                                                      │
+│ Note: some earlier context was replaced by stubs of the form [ref:ID | kind | size | summary | keys | ...]. If a quarterly perspective, stub may contain the answer, call the expand_context tool    │
+│ with that ID to read the full text before answering; never guess a stub's contents.                                                                                                                  │
+│ <user>                                                                                                                                                                                               │
+│  workflow supports the data contract more than the scheduler does. We should keep in mind that a contract.                                                                                           │
+│ … (diff truncated; full diff in diff.txt)                                                                                                                                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                  sieve_full: verifier                                  
+┏━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ seg ┃ final ratio ┃ recall ┃ numeric recall ┃ retries ┃ reinflated ┃ lost on 1st try ┃
+┡━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ 1.0 │ 0.3         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 1.1 │ 0.9         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+└─────┴─────────────┴────────┴────────────────┴─────────┴────────────┴─────────────────┘
+sieve_full: no expansion
+                                              Q: What was the weekly active users measured for Thyvsirn?                                              
+                                                             gold: ['300,334', '300334']                                                              
+┏━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━┓
+┃ condition  ┃ answer                                           ┃ correct ┃ tokens ┃ Δtok ┃ TTFT s ┃ total s ┃ processed ┃ reuse % ┃ VRAM MB ┃ tools ┃
+┡━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━┩
+│ baseline   │ The weekly active users for Thyvsirn was         │ ✔       │ 2601   │ +0   │ 0.21   │ 0.90    │ 2601      │ 96      │ 9607    │ 0     │
+│            │ 300,334.                                         │         │        │      │        │         │           │         │         │       │
+│ sieve_full │ The weekly active users for Thyvsirn was         │ ✔       │ 1719   │ -882 │ 0.20   │ 0.98    │ 1718      │ 94      │ 9189    │ 0     │
+│            │ measured at 300,334 users.                       │         │        │      │        │         │           │         │         │       │
+└────────────┴──────────────────────────────────────────────────┴─────────┴────────┴──────┴────────┴─────────┴───────────┴─────────┴─────────┴───────┘
+        baseline per-turn TTFT ▇▄▁ 3.03s 1.66s 0.21s
+                                  Ledger (per evaluation turn)                                   
+┏━━━━━━┳━━━━━━━━━━┳━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓
+┃ turn ┃ replayed ┃ new ┃ epoch ┃ reason        ┃ epoch_id ┃ first changed msg ┃ rebuild tokens ┃
+┡━━━━━━╇━━━━━━━━━━╇━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩
+│ 2    │ 0        │ 5   │ ●     │ session_start │ 0        │ 0                 │ 1559           │
+│ 4    │ 5        │ 5   │       │               │ 0        │ 4                 │ 130            │
+│ 5    │ 10       │ 2   │       │               │ 0        │ 8                 │ 52             │
+└──────┴──────────┴─────┴───────┴───────────────┴──────────┴───────────────────┴────────────────┘
+      sieve_full per-turn TTFT ▇▁▁ 2.75s 0.42s 0.20s

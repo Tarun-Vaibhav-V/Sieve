@@ -1,0 +1,40 @@
+# Sieve configuration. Every key can be overridden with --set key=value on the CLI.
+model: "qwen3:14b"           # spec default qwen3.5:9b; see DECISIONS.md D1
+ollama_host: "http://localhost:11434"
+num_ctx: 4096
+num_predict: 64
+temperature: 0
+seed: 0
+think: false
+keep_alive: "30m"
+reserve_output_tokens: 256
+budget_fraction: 0.80
+epoch_trigger_fraction: 0.80
+epoch_hysteresis: 0.85       # after an epoch, aim for this share of the trigger point
+compressor_model: "microsoft/llmlingua-2-bert-base-multilingual-cased-meetingbank"
+tokenizer_model: "Qwen/Qwen3-14B"
+embed_model: "sentence-transformers/all-MiniLM-L6-v2"
+ratio_buckets: [0.3, 0.5, 0.7, 0.9, 1.0]
+min_ratio_by_kind: {system: 1.0, instruction: 0.9, doc: 0.3, chat: 0.4, tool_result: 0.3, attachment: 0.3, query: 1.0}
+min_segment_tokens: 40
+tool_mode: "hybrid"
+prefetch_sim_threshold: 0.75
+expansion_budget_tokens: 1200
+max_tool_rounds: 2
+classifier_conf_threshold: 0.55
+cost_matrix: {needed_externalized: 5, needless_compress_of_externalizable: 1, cache_confusion: 1, default: 1}
+summary_mode: "extractive"
+verifier_min_recall: 1.0
+verifier_overall_min_recall: 0.9
+verifier_min_context_recall: 0.5   # relation words around each atom must survive (DECISIONS D12)
+verifier_max_retries: 3
+pynvml_sample_ms: 200
+chunk_min_tokens: 150
+chunk_max_tokens: 400
+neardup_jaccard: 0.85
+classifier_labels: "oracle"   # which trained model sieve_full uses
+train_seeds: [1001, 1002, 1003, 1004, 1005, 1006]
+# User-extensible rules, checked after the built-in protected rules.
+# match keys: kind, role, tag, contains (substring); action: lane + ratio
+extra_rules:
+  - {name: force_externalize_tag, match: {tag: force_externalize}, lane: externalize, ratio: 1.0}

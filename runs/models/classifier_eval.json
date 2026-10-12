@@ -1,0 +1,340 @@
+{
+  "n_rows": 14586,
+  "n_groups": 456,
+  "routers": {
+    "clf_oracle": {
+      "per_lane": {
+        "cache": {
+          "precision": 0.967,
+          "recall": 1.0,
+          "f1": 0.983,
+          "support": 1651
+        },
+        "compress": {
+          "precision": 0.979,
+          "recall": 0.988,
+          "f1": 0.984,
+          "support": 11520
+        },
+        "externalize": {
+          "precision": 0.937,
+          "recall": 0.828,
+          "f1": 0.879,
+          "support": 1415
+        }
+      },
+      "macro_f1": 0.949,
+      "confusion": [
+        [
+          1651,
+          0,
+          0
+        ],
+        [
+          57,
+          11384,
+          79
+        ],
+        [
+          0,
+          243,
+          1172
+        ]
+      ],
+      "ratio_mae": 0.023,
+      "dangerous_errors": 79,
+      "n_needed": 1897,
+      "externalize_rate": 0.086
+    },
+    "clf_heuristic": {
+      "per_lane": {
+        "cache": {
+          "precision": 0.964,
+          "recall": 1.0,
+          "f1": 0.982,
+          "support": 1651
+        },
+        "compress": {
+          "precision": 0.981,
+          "recall": 0.955,
+          "f1": 0.968,
+          "support": 11520
+        },
+        "externalize": {
+          "precision": 0.726,
+          "recall": 0.847,
+          "f1": 0.782,
+          "support": 1415
+        }
+      },
+      "macro_f1": 0.91,
+      "confusion": [
+        [
+          1651,
+          0,
+          0
+        ],
+        [
+          61,
+          11006,
+          453
+        ],
+        [
+          1,
+          215,
+          1199
+        ]
+      ],
+      "ratio_mae": 0.055,
+      "dangerous_errors": 146,
+      "n_needed": 1897,
+      "externalize_rate": 0.113
+    },
+    "clf_oracle_core6": {
+      "per_lane": {
+        "cache": {
+          "precision": 0.965,
+          "recall": 1.0,
+          "f1": 0.982,
+          "support": 1651
+        },
+        "compress": {
+          "precision": 0.98,
+          "recall": 0.983,
+          "f1": 0.982,
+          "support": 11520
+        },
+        "externalize": {
+          "precision": 0.896,
+          "recall": 0.838,
+          "f1": 0.866,
+          "support": 1415
+        }
+      },
+      "macro_f1": 0.943,
+      "confusion": [
+        [
+          1651,
+          0,
+          0
+        ],
+        [
+          60,
+          11323,
+          137
+        ],
+        [
+          0,
+          229,
+          1186
+        ]
+      ],
+      "ratio_mae": 0.044,
+      "dangerous_errors": 137,
+      "n_needed": 1897,
+      "externalize_rate": 0.091
+    },
+    "rules_only": {
+      "per_lane": {
+        "cache": {
+          "precision": 0.972,
+          "recall": 1.0,
+          "f1": 0.986,
+          "support": 1651
+        },
+        "compress": {
+          "precision": 0.89,
+          "recall": 0.996,
+          "f1": 0.94,
+          "support": 11520
+        },
+        "externalize": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1415
+        }
+      },
+      "macro_f1": 0.642,
+      "confusion": [
+        [
+          1651,
+          0,
+          0
+        ],
+        [
+          48,
+          11472,
+          0
+        ],
+        [
+          0,
+          1415,
+          0
+        ]
+      ],
+      "ratio_mae": 0.367,
+      "dangerous_errors": 0,
+      "n_needed": 1897,
+      "externalize_rate": 0.0
+    },
+    "heuristic_labeller": {
+      "per_lane": {
+        "cache": {
+          "precision": 0.972,
+          "recall": 1.0,
+          "f1": 0.986,
+          "support": 1651
+        },
+        "compress": {
+          "precision": 0.981,
+          "recall": 0.956,
+          "f1": 0.968,
+          "support": 11520
+        },
+        "externalize": {
+          "precision": 0.726,
+          "recall": 0.848,
+          "f1": 0.782,
+          "support": 1415
+        }
+      },
+      "macro_f1": 0.912,
+      "confusion": [
+        [
+          1651,
+          0,
+          0
+        ],
+        [
+          48,
+          11018,
+          454
+        ],
+        [
+          0,
+          215,
+          1200
+        ]
+      ],
+      "ratio_mae": 0.052,
+      "dangerous_errors": 147,
+      "n_needed": 1897,
+      "externalize_rate": 0.113
+    }
+  },
+  "label_dist": {
+    "cache": 1651,
+    "compress": 11520,
+    "externalize": 1415
+  },
+  "calibration": [
+    {
+      "bin": "0.40-0.50",
+      "n": 1,
+      "accuracy": 0.0,
+      "mean_conf": 0.491
+    },
+    {
+      "bin": "0.50-0.60",
+      "n": 42,
+      "accuracy": 0.476,
+      "mean_conf": 0.551
+    },
+    {
+      "bin": "0.60-0.70",
+      "n": 55,
+      "accuracy": 0.582,
+      "mean_conf": 0.649
+    },
+    {
+      "bin": "0.70-0.80",
+      "n": 72,
+      "accuracy": 0.625,
+      "mean_conf": 0.749
+    },
+    {
+      "bin": "0.80-0.90",
+      "n": 162,
+      "accuracy": 0.895,
+      "mean_conf": 0.859
+    },
+    {
+      "bin": "0.90-1.00",
+      "n": 14254,
+      "accuracy": 0.991,
+      "mean_conf": 0.993
+    }
+  ],
+  "below_conf_threshold": 22,
+  "inference_ms_per_segment": 0.0073,
+  "feature_importances": [
+    [
+      "recency_norm",
+      0.2614
+    ],
+    [
+      "repeat_count",
+      0.233
+    ],
+    [
+      "kind_system",
+      0.1856
+    ],
+    [
+      "token_count_norm",
+      0.154
+    ],
+    [
+      "is_system",
+      0.1225
+    ],
+    [
+      "near_dup_score",
+      0.0235
+    ],
+    [
+      "kind_chat",
+      0.0098
+    ],
+    [
+      "query_similarity",
+      0.0044
+    ],
+    [
+      "digit_density",
+      0.0042
+    ],
+    [
+      "kind_doc",
+      0.0013
+    ],
+    [
+      "is_last_turn",
+      0.0001
+    ],
+    [
+      "kind_tool_result",
+      0.0001
+    ],
+    [
+      "kind_instruction",
+      0.0
+    ],
+    [
+      "kind_attachment",
+      0.0
+    ],
+    [
+      "kind_query",
+      0.0
+    ],
+    [
+      "prior_expand_count",
+      0.0
+    ]
+  ],
+  "note": "Ground truth = oracle labels from workload gold. Heuristic-label training accuracy is circular and is not reported as a result. All numbers are on held-out conversations (GroupKFold).",
+  "train_cases": 456,
+  "similarity": "minilm"
+}

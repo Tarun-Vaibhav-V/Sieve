@@ -1,0 +1,792 @@
+{
+ "metrics": {
+  "run_id": "demo",
+  "condition": "sieve_full",
+  "family": "D",
+  "case_id": "demo:cache",
+  "eval_point": 1,
+  "repeat": 0,
+  "cold": false,
+  "question_type": "lookup_name",
+  "length_bucket": "mid",
+  "num_ctx": 4096,
+  "tokens_raw_total": 2560,
+  "tokens_final_total": 1678,
+  "tokens_saved": 882,
+  "compression_ratio": 0.6555,
+  "canonicalizer_tokens_saved": 0,
+  "context_utilization": 0.4097,
+  "output_headroom": 2418,
+  "baseline_overflow": false,
+  "hard_truncation": false,
+  "prompt_eval_count": 1677,
+  "first_prompt_eval_count": 1677,
+  "prefix_reuse_pct": 0.8607,
+  "prefix_reuse_method": "timing",
+  "prefix_reuse_pct_count": 0.0006,
+  "prefix_reuse_pct_timing": 0.8607,
+  "first_prompt_eval_s": 0.413579,
+  "predicted_cold_prefill_s": 2.9695678440885764,
+  "tokens_processed_est": 234,
+  "prompt_eval_s": 0.413579,
+  "load_s": 0.000715041,
+  "ttft_s": 0.4218089169999999,
+  "total_s": 0.5281699169999996,
+  "decode_tps": 37.572444369299554,
+  "eval_count": 4,
+  "sieve_overhead_ms": {
+   "segment": 1.59,
+   "classify": 0.02,
+   "compress": 0.0,
+   "verify": 0.0,
+   "assemble": 0.03
+  },
+  "gpu_pct": 1.0,
+  "vram_peak_mb": 9189.479998588562,
+  "vram_source": "ollama_ps(size_vram)",
+  "lanes": {
+   "compress": 6,
+   "cache": 4,
+   "externalize": 0
+  },
+  "epoch_id": 0,
+  "epoch_reason": null,
+  "rebuild_tokens": 130,
+  "memo_hits": 0,
+  "reinflations": 0,
+  "tool_rounds": 0,
+  "expansions": [],
+  "missed_expansions": 0,
+  "wasted_expansions": 0,
+  "prefetch_count": 0,
+  "needed_externalized": 0,
+  "unanswered_tool_call": false,
+  "correct": false,
+  "atom_recall": 1.0,
+  "atom_recall_with_tools": 1.0,
+  "thinking_leak": false,
+  "approx_tokens": false,
+  "compressor_fallback": false,
+  "mock": false,
+  "uniform_rate": null,
+  "dropped_messages": null,
+  "rounds": [
+   {
+    "ttft_s": 0.4218089169999999,
+    "total_s": 0.5281699169999996,
+    "prompt_eval_count": 1677,
+    "prompt_eval_s": 0.413579,
+    "eval_count": 4,
+    "eval_s": 0.106461,
+    "load_s": 0.000715041,
+    "decode_tps": 37.572444369299554,
+    "vram_peak_mb": 9189.479998588562,
+    "thinking_leak": false,
+    "done_reason": "stop",
+    "tool_calls": []
+   }
+  ],
+  "_plan": {
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are a precise assistant for the Drudoukru team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the conversation, reply exactly: Not mentioned.\n\nOperations handbook:\n\nGoing forward, the checkpoint will validate the manual change board for every escalation. From a upstream perspective, the budget revisits the service mesh more than the escalation does. If the dependency graph stays healthy, the baseline roadmap will need another migration. In practice, our inventory unblocks the release train whenever the deployment is outdated. None of this changes the fact that the resilient contract needs a clear dependency graph. None of this changes the fact that the modular module needs a clear incident review. As discussed earlier, the support rotation stabilizes the downstream contract and the scheduler. The general consensus is that the initiative is ready, although the distributed dependency graph remains open. It is worth repeating that the robust migration depends on a sustainable capacity review.\n\nFrom a sustainable perspective, the process improves the platform team more than the forecast does. The weekly active users for Thyvsirn was measured at 300,334 users. Going forward, the index will reinforce the asynchronous service mesh for every ledger. If the data contract stays deprecated, the automated handoff will need another escalation. The asynchronous roadmap validates the legacy cache. If the service mesh stays saturated, the granular registry will need another framework. As discussed earlier, the sprint goal documents the provisional schedule and the gateway. We should keep in mind that a modular migration rarely reinforces the dependency graph on its own. Most of the feedback suggested that the access policy should validate the tactical rollout before the next retrospective. The general consensus is that the migration is blocked, although the baseline vendor assessment remains open. Several teams noted that the modular onboarding flow still protects the contract across the registry.\n\nSeveral teams noted that the manual sprint goal still extends the escalation across the deployment. Several teams noted that the adaptive quality gate still validates the policy across the index. As discussed earlier, the quality gate revisits the legacy report and the gateway. It is worth repeating that the shared contract depends on a federated platform team. Going forward, the migration will extend the strategic quality gate for every workflow. Several teams noted that the adaptive feature flag still extends the gateway across the framework. It is worth repeating that the regional module depends on a scalable stakeholder alignment. We should keep in mind that a granular integration rarely stabilizes the dependency graph on its own. The general consensus is that the retrospective is approved, although the dedicated data contract remains open. In practice, our registry validates the capacity review whenever the inventory is delayed.\n\nWe should keep in mind that a sustainable benchmark rarely protects the sprint goal on its own. In practice, our module documents the sprint goal whenever the architecture is pending. If the platform team stays healthy, the dedicated initiative will need another deployment. From a streamlined perspective, the module simplifies the cost model more than the retrospective does. Most of the feedback suggested that the data contract should unblock the tactical escalation before the next cache. We should keep in mind that a distributed deployment rarely stabilizes the governance model on its own. Going forward, the handoff will streamline the critical dependency graph for every process. We should keep in mind that a downstream backlog rarely constrains the test matrix on its own.\n\nThe general consensus is that the workflow is deprecated, although the consolidated onboarding flow remains open. As discussed earlier, the observability stack validates the secondary backlog and the pipeline. As discussed earlier, the support rotation informs the manual deployment and the inventory. Most of the feedback suggested that the quality gate should stabilize the resilient schedule before the next index. None of this changes the fact that the quarterly budget needs a clear capacity review. If the release train stays healthy, the baseline runbook will need another queue. Going forward, the schedule will protect the regional change board for every rollout. Several teams noted that the granular governance model still informs the ledger across the interface. In practice, our escalation simplifies the access policy whenever the proposal is outdated.\n\nThe resilient framework validates the quarterly index. From a operational perspective, the proposal constrains the support rotation more than the scheduler does. In practice, our rollout constrains the vendor assessment whenever the ledger is deprecated. If the observability stack stays pending, the granular report will need another cache. The distributed budget protects the downstream contract. Most of the feedback suggested that the change board should inform the upstream pipeline before the next handoff. In practice, our runbook protects the change board whenever the backlog is stable. Several teams noted that the upstream incident review still extends the milestone across the scheduler. Going forward, the roadmap will stabilize the strategic release train for every runbook. The general consensus is that the escalation is blocked, although the automated observability stack remains open.\n\nNote: some earlier context was replaced by stubs of the form [ref:ID | kind | size | summary | keys | ...]. If a stub may contain the answer, call the expand_context tool with that ID to read the full text before answering; never guess a stub's contents."
+    },
+    {
+     "role": "user",
+     "content": "\n workflow data contract. baseline dashboard matrix. Draekrousk Draenyl Kroumnaesk. regional cache escalation. runbook improves capacity review. granular module gate. internal interface. audit governance. matrix proposal. revisits distributed registry benchmark. framework pending cross - functional vendor assessment. \n dependency graph benchmark. checkpoint. modular gateway review. backlog. holistic support inventory. roadmap stakeholder alignment. cost model stabilizes scalable pipeline contract. service mesh validates migration.\n\ngeneral consensus is that the deliverable is outdated, although robust dependency graph remains open. Several teams noted that upstream service mesh still validates benchmark across the policy. battery capacity for Muvurn was measured at 5,043 mAh. If feature flag stays ready, iterative scheduler will need another framework. We should keep in mind that a modular runbook rarely shapes vendor assessment on its own. If vendor assessment stays stable, streamlined interface will need another backlog. general consensus is that the retrospective is stable, although shared onboarding flow remains open. Several teams noted lightweight quality gate still shapes the review across the registry. Several teams noted downstream dependency graph still accelerates escalation across the initiative. \n If service mesh stays healthy, baseline budget will need another scheduler. It is worth repeating regional architecture depends on a legacy stakeholder alignment. general consensus is that integration is outdated, although shared platform team remains open. As discussed earlier, cost model revisits the iterative budget and policy. resilient audit unblocks the dedicated forecast. From a sustainable perspective, scheduler reinforces quality gate more than inventory does. In practice, our contract stabilizes the service mesh whenever cache is approved. resilient module unblocks the critical rollout. If sprint goal stays ready, cross - functional cluster will need another review. \n general consensus is that integration is ready, although scalable dependency graph remains open. Several teams noted sustainable change board still informs the module across the schedule. It is worth repeating that preliminary report depends on a external support rotation. Most of feedback suggested that observability stack should unblock the legacy budget before the next template. If dependency graph stays ready, critical audit will need another pipeline. As discussed earlier, onboarding flow protects the streamlined integration and the report. \n In practice, our handoff revisits the dependency graph whenever registry is ready. None of this changes the fact that strategic gateway needs a clear access policy."
+    },
+    {
+     "role": "assistant",
+     "content": "Got it."
+    },
+    {
+     "role": "user",
+     "content": "What was the battery capacity measured for Muvurn?"
+    },
+    {
+     "role": "assistant",
+     "content": "The battery capacity for Muvurn was 5,043 mAh."
+    },
+    {
+     "role": "user",
+     "content": "[repeat: same content as ref:73c670c5df35 earlier in this conversation]\n\n[repeat: same content as ref:8dd75e6697e7 earlier in this conversation]"
+    },
+    {
+     "role": "assistant",
+     "content": "[repeat: same content as ref:5179dad09edb earlier in this conversation]"
+    },
+    {
+     "role": "user",
+     "content": "Who is the product lead for the Draekrousk service?"
+    }
+   ],
+   "tools": null,
+   "prompt_tokens": 1678,
+   "prompt_tokens_no_tail": 1678,
+   "segments": [
+    "Segment(id='e26ed27ee8f5', key='0.0', index=0, msg_index=0, part=0, role='system', kind='system', content=\"You are a precise assistant for the Drudoukru team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the conversation, reply exactly: Not mentioned.\\n\\nOperations handbook:\\n\\nGoing forward, the checkpoint will validate the manual change board for every escalation. From a upstream perspective, the budget revisits the service mesh more than the escalation does. If the dependency graph stays healthy, the baseline roadmap will need another migration. In practice, our inventory unblocks the release train whenever the deployment is outdated. None of this changes the fact that the resilient contract needs a clear dependency graph. None of this changes the fact that the modular module needs a clear incident review. As discussed earlier, the support rotation stabilizes the downstream contract and the scheduler. The general consensus is that the initiative is ready, although the distributed dependency graph remains open. It is worth repeating that the robust migration depends on a sustainable capacity review.\\n\\nFrom a sustainable perspective, the process improves the platform team more than the forecast does. The weekly active users for Thyvsirn was measured at 300,334 users. Going forward, the index will reinforce the asynchronous service mesh for every ledger. If the data contract stays deprecated, the automated handoff will need another escalation. The asynchronous roadmap validates the legacy cache. If the service mesh stays saturated, the granular registry will need another framework. As discussed earlier, the sprint goal documents the provisional schedule and the gateway. We should keep in mind that a modular migration rarely reinforces the dependency graph on its own. Most of the feedback suggested that the access policy should validate the tactical rollout before the next retrospective. The general consensus is that the migration is blocked, although the baseline vendor assessment remains open. Several teams noted that the modular onboarding flow still protects the contract across the registry.\\n\\nSeveral teams noted that the manual sprint goal still extends the escalation across the deployment. Several teams noted that the adaptive quality gate still validates the policy across the index. As discussed earlier, the quality gate revisits the legacy report and the gateway. It is worth repeating that the shared contract depends on a federated platform team. Going forward, the migration will extend the strategic quality gate for every workflow. Several teams noted that the adaptive feature flag still extends the gateway across the framework. It is worth repeating that the regional module depends on a scalable stakeholder alignment. We should keep in mind that a granular integration rarely stabilizes the dependency graph on its own. The general consensus is that the retrospective is approved, although the dedicated data contract remains open. In practice, our registry validates the capacity review whenever the inventory is delayed.\\n\\nWe should keep in mind that a sustainable benchmark rarely protects the sprint goal on its own. In practice, our module documents the sprint goal whenever the architecture is pending. If the platform team stays healthy, the dedicated initiative will need another deployment. From a streamlined perspective, the module simplifies the cost model more than the retrospective does. Most of the feedback suggested that the data contract should unblock the tactical escalation before the next cache. We should keep in mind that a distributed deployment rarely stabilizes the governance model on its own. Going forward, the handoff will streamline the critical dependency graph for every process. We should keep in mind that a downstream backlog rarely constrains the test matrix on its own.\\n\\nThe general consensus is that the workflow is deprecated, although the consolidated onboarding flow remains open. As discussed earlier, the observability stack validates the secondary backlog and the pipeline. As discussed earlier, the support rotation informs the manual deployment and the inventory. Most of the feedback suggested that the quality gate should stabilize the resilient schedule before the next index. None of this changes the fact that the quarterly budget needs a clear capacity review. If the release train stays healthy, the baseline runbook will need another queue. Going forward, the schedule will protect the regional change board for every rollout. Several teams noted that the granular governance model still informs the ledger across the interface. In practice, our escalation simplifies the access policy whenever the proposal is outdated.\\n\\nThe resilient framework validates the quarterly index. From a operational perspective, the proposal constrains the support rotation more than the scheduler does. In practice, our rollout constrains the vendor assessment whenever the ledger is deprecated. If the observability stack stays pending, the granular report will need another cache. The distributed budget protects the downstream contract. Most of the feedback suggested that the change board should inform the upstream pipeline before the next handoff. In practice, our runbook protects the change board whenever the backlog is stable. Several teams noted that the upstream incident review still extends the milestone across the scheduler. Going forward, the roadmap will stabilize the strategic release train for every runbook. The general consensus is that the escalation is blocked, although the automated observability stack remains open.\", tokens=982, sep='', tags={'static': True}, turn_index=0, mid='m00', features={'is_system': 1.0, 'is_last_turn': 0.0, 'token_count_norm': 1.0, 'recency_norm': 0.4, 'repeat_count': 0.0, 'query_similarity': 0.2699, 'digit_density': 0.0011, 'near_dup_score': 0.0, 'prior_expand_count': 0.0, 'turns_old': 4.0, 'kind_system': 1.0, 'kind_instruction': 0.0, 'kind_doc': 0.0, 'kind_chat': 0.0, 'kind_tool_result': 0.0, 'kind_attachment': 0.0, 'kind_query': 0.0}, dup_of=None, dup_type=None, repeat_count=0, near_dup_score=0.0, canon_tokens_before=982)",
+    "Segment(id='73c670c5df35', key='1.0', index=1, msg_index=1, part=0, role='user', kind='doc', content='Reference document:\\n\\nFrom a quarterly perspective, the workflow supports the data contract more than the scheduler does. We should keep in mind that a baseline dashboard rarely informs the test matrix on its own. The product lead for the Draekrousk service is Draenyl Kroumnaesk. The regional cache reinforces the operational escalation. In practice, our runbook improves the capacity review whenever the deliverable is pending. None of this changes the fact that the granular module needs a clear quality gate. None of this changes the fact that the internal interface needs a clear feature flag. Going forward, the audit will improve the legacy governance model for every architecture. Most of the feedback suggested that the test matrix should revisit the secondary proposal before the next integration. As discussed earlier, the governance model revisits the distributed registry and the benchmark. The general consensus is that the framework is pending, although the cross-functional vendor assessment remains open.\\n\\nMost of the feedback suggested that the dependency graph should streamline the quarterly benchmark before the next policy. Several teams noted that the strategic dependency graph still protects the checkpoint across the scheduler. We should keep in mind that a modular gateway rarely validates the capacity review on its own. Going forward, the backlog will document the strategic governance model for every dashboard. Several teams noted that the holistic support rotation still reinforces the inventory across the queue. From a strategic perspective, the roadmap extends the stakeholder alignment more than the dashboard does. As discussed earlier, the cost model stabilizes the scalable pipeline and the contract. As discussed earlier, the service mesh validates the preliminary deliverable and the migration.', tokens=319, sep='\\n\\n', tags={}, turn_index=1, mid='m01', features={'is_system': 0.0, 'is_last_turn': 0.0, 'token_count_norm': 0.7975, 'recency_norm': 0.3, 'repeat_count': 0.0, 'query_similarity': 0.3579, 'digit_density': 0.0, 'near_dup_score': 0.0205, 'prior_expand_count': 0.0, 'turns_old': 3.0, 'kind_system': 0.0, 'kind_instruction': 0.0, 'kind_doc': 1.0, 'kind_chat': 0.0, 'kind_tool_result': 0.0, 'kind_attachment': 0.0, 'kind_query': 0.0}, dup_of=None, dup_type=None, repeat_count=0, near_dup_score=0.02048780487804878, canon_tokens_before=740)",
+    "Segment(id='8dd75e6697e7', key='1.1', index=2, msg_index=1, part=1, role='user', kind='doc', content='The general consensus is that the deliverable is outdated, although the robust dependency graph remains open. Several teams noted that the upstream service mesh still validates the benchmark across the policy. The battery capacity for Muvurn was measured at 5,043 mAh. If the feature flag stays ready, the iterative scheduler will need another framework. We should keep in mind that a modular runbook rarely shapes the vendor assessment on its own. If the vendor assessment stays stable, the streamlined interface will need another backlog. The general consensus is that the retrospective is stable, although the shared onboarding flow remains open. Several teams noted that the lightweight quality gate still shapes the review across the registry. Several teams noted that the downstream dependency graph still accelerates the escalation across the initiative.\\n\\nIf the service mesh stays healthy, the baseline budget will need another scheduler. It is worth repeating that the regional architecture depends on a legacy stakeholder alignment. The general consensus is that the integration is outdated, although the shared platform team remains open. As discussed earlier, the cost model revisits the iterative budget and the policy. The resilient audit unblocks the dedicated forecast. From a sustainable perspective, the scheduler reinforces the quality gate more than the inventory does. In practice, our contract stabilizes the service mesh whenever the cache is approved. The resilient module unblocks the critical rollout. If the sprint goal stays ready, the cross-functional cluster will need another review.\\n\\nThe general consensus is that the integration is ready, although the scalable dependency graph remains open. Several teams noted that the sustainable change board still informs the module across the schedule. It is worth repeating that the preliminary report depends on a external support rotation. Most of the feedback suggested that the observability stack should unblock the legacy budget before the next template. If the dependency graph stays ready, the critical audit will need another pipeline. As discussed earlier, the onboarding flow protects the streamlined integration and the report.\\n\\nIn practice, our handoff revisits the dependency graph whenever the registry is ready. None of this changes the fact that the strategic gateway needs a clear access policy.', tokens=421, sep='', tags={}, turn_index=1, mid='m01', features={'is_system': 0.0, 'is_last_turn': 0.0, 'token_count_norm': 1.0, 'recency_norm': 0.3, 'repeat_count': 0.0, 'query_similarity': 0.2717, 'digit_density': 0.0017, 'near_dup_score': 0.0284, 'prior_expand_count': 0.0, 'turns_old': 3.0, 'kind_system': 0.0, 'kind_instruction': 0.0, 'kind_doc': 1.0, 'kind_chat': 0.0, 'kind_tool_result': 0.0, 'kind_attachment': 0.0, 'kind_query': 0.0}, dup_of=None, dup_type=None, repeat_count=0, near_dup_score=0.028362305580969808, canon_tokens_before=0)",
+    "Segment(id='5179dad09edb', key='2.0', index=3, msg_index=2, part=0, role='assistant', kind='chat', content='Got it.', tokens=3, sep='', tags={}, turn_index=1, mid='m02', features={'is_system': 0.0, 'is_last_turn': 0.0, 'token_count_norm': 0.0075, 'recency_norm': 0.3, 'repeat_count': 0.0, 'query_similarity': 0.1039, 'digit_density': 0.0, 'near_dup_score': 0.0, 'prior_expand_count': 0.0, 'turns_old': 3.0, 'kind_system': 0.0, 'kind_instruction': 0.0, 'kind_doc': 0.0, 'kind_chat': 1.0, 'kind_tool_result': 0.0, 'kind_attachment': 0.0, 'kind_query': 0.0}, dup_of=None, dup_type=None, repeat_count=0, near_dup_score=0.0, canon_tokens_before=3)",
+    "Segment(id='5a789b3c8612', key='3.0', index=4, msg_index=3, part=0, role='user', kind='query', content='What was the battery capacity measured for Muvurn?', tokens=11, sep='', tags={}, turn_index=2, mid='m03', features={'is_system': 0.0, 'is_last_turn': 0.0, 'token_count_norm': 0.0275, 'recency_norm': 0.2, 'repeat_count': 0.0, 'query_similarity': 0.1586, 'digit_density': 0.0, 'near_dup_score': 0.0, 'prior_expand_count': 0.0, 'turns_old': 2.0, 'kind_system': 0.0, 'kind_instruction': 0.0, 'kind_doc': 0.0, 'kind_chat': 0.0, 'kind_tool_result': 0.0, 'kind_attachment': 0.0, 'kind_query': 1.0}, dup_of=None, dup_type=None, repeat_count=0, near_dup_score=0.0, canon_tokens_before=11)",
+    "Segment(id='bf9562d99ef2', key='4.0', index=5, msg_index=4, part=0, role='assistant', kind='chat', content='The battery capacity for Muvurn was 5,043 mAh.', tokens=17, sep='', tags={}, turn_index=2, mid='m04', features={'is_system': 0.0, 'is_last_turn': 0.0, 'token_count_norm': 0.0425, 'recency_norm': 0.2, 'repeat_count': 0.0, 'query_similarity': 0.0818, 'digit_density': 0.087, 'near_dup_score': 0.0, 'prior_expand_count': 0.0, 'turns_old': 2.0, 'kind_system': 0.0, 'kind_instruction': 0.0, 'kind_doc': 0.0, 'kind_chat': 1.0, 'kind_tool_result': 0.0, 'kind_attachment': 0.0, 'kind_query': 0.0}, dup_of=None, dup_type=None, repeat_count=0, near_dup_score=0.0, canon_tokens_before=17)",
+    "Segment(id='73c670c5df35', key='5.0', index=6, msg_index=5, part=0, role='user', kind='doc', content='Reference document:\\n\\nFrom a quarterly perspective, the workflow supports the data contract more than the scheduler does. We should keep in mind that a baseline dashboard rarely informs the test matrix on its own. The product lead for the Draekrousk service is Draenyl Kroumnaesk. The regional cache reinforces the operational escalation. In practice, our runbook improves the capacity review whenever the deliverable is pending. None of this changes the fact that the granular module needs a clear quality gate. None of this changes the fact that the internal interface needs a clear feature flag. Going forward, the audit will improve the legacy governance model for every architecture. Most of the feedback suggested that the test matrix should revisit the secondary proposal before the next integration. As discussed earlier, the governance model revisits the distributed registry and the benchmark. The general consensus is that the framework is pending, although the cross-functional vendor assessment remains open.\\n\\nMost of the feedback suggested that the dependency graph should streamline the quarterly benchmark before the next policy. Several teams noted that the strategic dependency graph still protects the checkpoint across the scheduler. We should keep in mind that a modular gateway rarely validates the capacity review on its own. Going forward, the backlog will document the strategic governance model for every dashboard. Several teams noted that the holistic support rotation still reinforces the inventory across the queue. From a strategic perspective, the roadmap extends the stakeholder alignment more than the dashboard does. As discussed earlier, the cost model stabilizes the scalable pipeline and the contract. As discussed earlier, the service mesh validates the preliminary deliverable and the migration.', tokens=319, sep='\\n\\n', tags={}, turn_index=3, mid='m05', features={'is_system': 0.0, 'is_last_turn': 1.0, 'token_count_norm': 0.7975, 'recency_norm': 0.1, 'repeat_count': 1.0, 'query_similarity': 0.3579, 'digit_density': 0.0, 'near_dup_score': 0.0, 'prior_expand_count': 0.0, 'turns_old': 1.0, 'kind_system': 0.0, 'kind_instruction': 0.0, 'kind_doc': 1.0, 'kind_chat': 0.0, 'kind_tool_result': 0.0, 'kind_attachment': 0.0, 'kind_query': 0.0}, dup_of='1.0', dup_type='exact', repeat_count=1, near_dup_score=0.0, canon_tokens_before=740)",
+    "Segment(id='8dd75e6697e7', key='5.1', index=7, msg_index=5, part=1, role='user', kind='doc', content='The general consensus is that the deliverable is outdated, although the robust dependency graph remains open. Several teams noted that the upstream service mesh still validates the benchmark across the policy. The battery capacity for Muvurn was measured at 5,043 mAh. If the feature flag stays ready, the iterative scheduler will need another framework. We should keep in mind that a modular runbook rarely shapes the vendor assessment on its own. If the vendor assessment stays stable, the streamlined interface will need another backlog. The general consensus is that the retrospective is stable, although the shared onboarding flow remains open. Several teams noted that the lightweight quality gate still shapes the review across the registry. Several teams noted that the downstream dependency graph still accelerates the escalation across the initiative.\\n\\nIf the service mesh stays healthy, the baseline budget will need another scheduler. It is worth repeating that the regional architecture depends on a legacy stakeholder alignment. The general consensus is that the integration is outdated, although the shared platform team remains open. As discussed earlier, the cost model revisits the iterative budget and the policy. The resilient audit unblocks the dedicated forecast. From a sustainable perspective, the scheduler reinforces the quality gate more than the inventory does. In practice, our contract stabilizes the service mesh whenever the cache is approved. The resilient module unblocks the critical rollout. If the sprint goal stays ready, the cross-functional cluster will need another review.\\n\\nThe general consensus is that the integration is ready, although the scalable dependency graph remains open. Several teams noted that the sustainable change board still informs the module across the schedule. It is worth repeating that the preliminary report depends on a external support rotation. Most of the feedback suggested that the observability stack should unblock the legacy budget before the next template. If the dependency graph stays ready, the critical audit will need another pipeline. As discussed earlier, the onboarding flow protects the streamlined integration and the report.\\n\\nIn practice, our handoff revisits the dependency graph whenever the registry is ready. None of this changes the fact that the strategic gateway needs a clear access policy.', tokens=421, sep='', tags={}, turn_index=3, mid='m05', features={'is_system': 0.0, 'is_last_turn': 1.0, 'token_count_norm': 1.0, 'recency_norm': 0.1, 'repeat_count': 1.0, 'query_similarity': 0.2717, 'digit_density': 0.0017, 'near_dup_score': 0.0, 'prior_expand_count': 0.0, 'turns_old': 1.0, 'kind_system': 0.0, 'kind_instruction': 0.0, 'kind_doc': 1.0, 'kind_chat': 0.0, 'kind_tool_result': 0.0, 'kind_attachment': 0.0, 'kind_query': 0.0}, dup_of='1.1', dup_type='exact', repeat_count=1, near_dup_score=0.0, canon_tokens_before=0)",
+    "Segment(id='5179dad09edb', key='6.0', index=8, msg_index=6, part=0, role='assistant', kind='chat', content='Got it.', tokens=3, sep='', tags={}, turn_index=3, mid='m06', features={'is_system': 0.0, 'is_last_turn': 1.0, 'token_count_norm': 0.0075, 'recency_norm': 0.1, 'repeat_count': 1.0, 'query_similarity': 0.1039, 'digit_density': 0.0, 'near_dup_score': 0.0, 'prior_expand_count': 0.0, 'turns_old': 1.0, 'kind_system': 0.0, 'kind_instruction': 0.0, 'kind_doc': 0.0, 'kind_chat': 1.0, 'kind_tool_result': 0.0, 'kind_attachment': 0.0, 'kind_query': 0.0}, dup_of='2.0', dup_type='exact', repeat_count=1, near_dup_score=0.0, canon_tokens_before=3)",
+    "Segment(id='8bcaf8daf504', key='7.0', index=9, msg_index=7, part=0, role='user', kind='query', content='Who is the product lead for the Draekrousk service?', tokens=13, sep='', tags={}, turn_index=4, mid='m07', features={'is_system': 0.0, 'is_last_turn': 1.0, 'token_count_norm': 0.0325, 'recency_norm': 0.0, 'repeat_count': 0.0, 'query_similarity': 1.0, 'digit_density': 0.0, 'near_dup_score': 0.0, 'prior_expand_count': 0.0, 'turns_old': 0.0, 'kind_system': 0.0, 'kind_instruction': 0.0, 'kind_doc': 0.0, 'kind_chat': 0.0, 'kind_tool_result': 0.0, 'kind_attachment': 0.0, 'kind_query': 1.0}, dup_of=None, dup_type=None, repeat_count=0, near_dup_score=0.0, canon_tokens_before=13)"
+   ],
+   "decisions": {
+    "0.0": "Decision(segment_id='e26ed27ee8f5', key='0.0', source='ledger_replay', lane='cache', ratio=1.0, probs={}, confidence=1.0, expected_cost=None, reasons=[], backref=None, forbid_externalize=False, protected=False)",
+    "1.0": "Decision(segment_id='73c670c5df35', key='1.0', source='ledger_replay', lane='compress', ratio=0.3, probs={}, confidence=1.0, expected_cost=None, reasons=[], backref=None, forbid_externalize=False, protected=False)",
+    "1.1": "Decision(segment_id='8dd75e6697e7', key='1.1', source='ledger_replay', lane='compress', ratio=0.9, probs={}, confidence=1.0, expected_cost=None, reasons=[], backref=None, forbid_externalize=False, protected=False)",
+    "2.0": "Decision(segment_id='5179dad09edb', key='2.0', source='ledger_replay', lane='compress', ratio=1.0, probs={}, confidence=1.0, expected_cost=None, reasons=[], backref=None, forbid_externalize=False, protected=False)",
+    "3.0": "Decision(segment_id='5a789b3c8612', key='3.0', source='ledger_replay', lane='compress', ratio=1.0, probs={}, confidence=1.0, expected_cost=None, reasons=[], backref=None, forbid_externalize=False, protected=False)",
+    "4.0": "Decision(segment_id='bf9562d99ef2', key='4.0', source='rule:short_passthrough', lane='compress', ratio=1.0, probs={}, confidence=1.0, expected_cost=None, reasons=['short_passthrough'], backref=None, forbid_externalize=False, protected=False)",
+    "5.0": "Decision(segment_id='73c670c5df35', key='5.0', source='rule:exact_repeat_backref', lane='cache', ratio=1.0, probs={}, confidence=1.0, expected_cost=None, reasons=['exact_repeat_backref'], backref='1.0', forbid_externalize=False, protected=True)",
+    "5.1": "Decision(segment_id='8dd75e6697e7', key='5.1', source='rule:exact_repeat_backref', lane='cache', ratio=1.0, probs={}, confidence=1.0, expected_cost=None, reasons=['exact_repeat_backref'], backref='1.1', forbid_externalize=False, protected=True)",
+    "6.0": "Decision(segment_id='5179dad09edb', key='6.0', source='rule:exact_repeat_backref', lane='cache', ratio=1.0, probs={}, confidence=1.0, expected_cost=None, reasons=['exact_repeat_backref'], backref='2.0', forbid_externalize=False, protected=True)",
+    "7.0": "Decision(segment_id='8bcaf8daf504', key='7.0', source='rule:current_query', lane='compress', ratio=1.0, probs={}, confidence=1.0, expected_cost=None, reasons=['current_query'], backref=None, forbid_externalize=False, protected=True)"
+   },
+   "emitted": {
+    "0.0": "Emitted(segment_id='e26ed27ee8f5', key='0.0', lane='cache', ratio=1.0, text=\"You are a precise assistant for the Drudoukru team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the conversation, reply exactly: Not mentioned.\\n\\nOperations handbook:\\n\\nGoing forward, the checkpoint will validate the manual change board for every escalation. From a upstream perspective, the budget revisits the service mesh more than the escalation does. If the dependency graph stays healthy, the baseline roadmap will need another migration. In practice, our inventory unblocks the release train whenever the deployment is outdated. None of this changes the fact that the resilient contract needs a clear dependency graph. None of this changes the fact that the modular module needs a clear incident review. As discussed earlier, the support rotation stabilizes the downstream contract and the scheduler. The general consensus is that the initiative is ready, although the distributed dependency graph remains open. It is worth repeating that the robust migration depends on a sustainable capacity review.\\n\\nFrom a sustainable perspective, the process improves the platform team more than the forecast does. The weekly active users for Thyvsirn was measured at 300,334 users. Going forward, the index will reinforce the asynchronous service mesh for every ledger. If the data contract stays deprecated, the automated handoff will need another escalation. The asynchronous roadmap validates the legacy cache. If the service mesh stays saturated, the granular registry will need another framework. As discussed earlier, the sprint goal documents the provisional schedule and the gateway. We should keep in mind that a modular migration rarely reinforces the dependency graph on its own. Most of the feedback suggested that the access policy should validate the tactical rollout before the next retrospective. The general consensus is that the migration is blocked, although the baseline vendor assessment remains open. Several teams noted that the modular onboarding flow still protects the contract across the registry.\\n\\nSeveral teams noted that the manual sprint goal still extends the escalation across the deployment. Several teams noted that the adaptive quality gate still validates the policy across the index. As discussed earlier, the quality gate revisits the legacy report and the gateway. It is worth repeating that the shared contract depends on a federated platform team. Going forward, the migration will extend the strategic quality gate for every workflow. Several teams noted that the adaptive feature flag still extends the gateway across the framework. It is worth repeating that the regional module depends on a scalable stakeholder alignment. We should keep in mind that a granular integration rarely stabilizes the dependency graph on its own. The general consensus is that the retrospective is approved, although the dedicated data contract remains open. In practice, our registry validates the capacity review whenever the inventory is delayed.\\n\\nWe should keep in mind that a sustainable benchmark rarely protects the sprint goal on its own. In practice, our module documents the sprint goal whenever the architecture is pending. If the platform team stays healthy, the dedicated initiative will need another deployment. From a streamlined perspective, the module simplifies the cost model more than the retrospective does. Most of the feedback suggested that the data contract should unblock the tactical escalation before the next cache. We should keep in mind that a distributed deployment rarely stabilizes the governance model on its own. Going forward, the handoff will streamline the critical dependency graph for every process. We should keep in mind that a downstream backlog rarely constrains the test matrix on its own.\\n\\nThe general consensus is that the workflow is deprecated, although the consolidated onboarding flow remains open. As discussed earlier, the observability stack validates the secondary backlog and the pipeline. As discussed earlier, the support rotation informs the manual deployment and the inventory. Most of the feedback suggested that the quality gate should stabilize the resilient schedule before the next index. None of this changes the fact that the quarterly budget needs a clear capacity review. If the release train stays healthy, the baseline runbook will need another queue. Going forward, the schedule will protect the regional change board for every rollout. Several teams noted that the granular governance model still informs the ledger across the interface. In practice, our escalation simplifies the access policy whenever the proposal is outdated.\\n\\nThe resilient framework validates the quarterly index. From a operational perspective, the proposal constrains the support rotation more than the scheduler does. In practice, our rollout constrains the vendor assessment whenever the ledger is deprecated. If the observability stack stays pending, the granular report will need another cache. The distributed budget protects the downstream contract. Most of the feedback suggested that the change board should inform the upstream pipeline before the next handoff. In practice, our runbook protects the change board whenever the backlog is stable. Several teams noted that the upstream incident review still extends the milestone across the scheduler. Going forward, the roadmap will stabilize the strategic release train for every runbook. The general consensus is that the escalation is blocked, although the automated observability stack remains open.\", tokens=982, source='rule:system_cache', compressor_fallback=False, verifier=None, backref=None, pinned=False, dropped=False)",
+    "1.0": "Emitted(segment_id='73c670c5df35', key='1.0', lane='compress', ratio=0.3, text='\\n workflow data contract. baseline dashboard matrix. Draekrousk Draenyl Kroumnaesk. regional cache escalation. runbook improves capacity review. granular module gate. internal interface. audit governance. matrix proposal. revisits distributed registry benchmark. framework pending cross - functional vendor assessment. \\n dependency graph benchmark. checkpoint. modular gateway review. backlog. holistic support inventory. roadmap stakeholder alignment. cost model stabilizes scalable pipeline contract. service mesh validates migration.', tokens=95, source='classifier', compressor_fallback=False, verifier={'recall': 1.0, 'numeric_recall': 1.0, 'retries': 0, 'reinflated': False, 'lost': []}, backref=None, pinned=False, dropped=False)",
+    "1.1": "Emitted(segment_id='8dd75e6697e7', key='1.1', lane='compress', ratio=0.9, text='general consensus is that the deliverable is outdated, although robust dependency graph remains open. Several teams noted that upstream service mesh still validates benchmark across the policy. battery capacity for Muvurn was measured at 5,043 mAh. If feature flag stays ready, iterative scheduler will need another framework. We should keep in mind that a modular runbook rarely shapes vendor assessment on its own. If vendor assessment stays stable, streamlined interface will need another backlog. general consensus is that the retrospective is stable, although shared onboarding flow remains open. Several teams noted lightweight quality gate still shapes the review across the registry. Several teams noted downstream dependency graph still accelerates escalation across the initiative. \\n If service mesh stays healthy, baseline budget will need another scheduler. It is worth repeating regional architecture depends on a legacy stakeholder alignment. general consensus is that integration is outdated, although shared platform team remains open. As discussed earlier, cost model revisits the iterative budget and policy. resilient audit unblocks the dedicated forecast. From a sustainable perspective, scheduler reinforces quality gate more than inventory does. In practice, our contract stabilizes the service mesh whenever cache is approved. resilient module unblocks the critical rollout. If sprint goal stays ready, cross - functional cluster will need another review. \\n general consensus is that integration is ready, although scalable dependency graph remains open. Several teams noted sustainable change board still informs the module across the schedule. It is worth repeating that preliminary report depends on a external support rotation. Most of feedback suggested that observability stack should unblock the legacy budget before the next template. If dependency graph stays ready, critical audit will need another pipeline. As discussed earlier, onboarding flow protects the streamlined integration and the report. \\n In practice, our handoff revisits the dependency graph whenever registry is ready. None of this changes the fact that strategic gateway needs a clear access policy.', tokens=378, source='classifier', compressor_fallback=False, verifier={'recall': 1.0, 'numeric_recall': 1.0, 'retries': 0, 'reinflated': False, 'lost': []}, backref=None, pinned=False, dropped=False)",
+    "2.0": "Emitted(segment_id='5179dad09edb', key='2.0', lane='compress', ratio=1.0, text='Got it.', tokens=3, source='rule:short_passthrough', compressor_fallback=False, verifier=None, backref=None, pinned=False, dropped=False)",
+    "3.0": "Emitted(segment_id='5a789b3c8612', key='3.0', lane='compress', ratio=1.0, text='What was the battery capacity measured for Muvurn?', tokens=11, source='rule:current_query', compressor_fallback=False, verifier=None, backref=None, pinned=False, dropped=False)",
+    "4.0": "Emitted(segment_id='bf9562d99ef2', key='4.0', lane='compress', ratio=1.0, text='The battery capacity for Muvurn was 5,043 mAh.', tokens=17, source='rule:short_passthrough', compressor_fallback=False, verifier=None, backref=None, pinned=False, dropped=False)",
+    "5.0": "Emitted(segment_id='73c670c5df35', key='5.0', lane='cache', ratio=1.0, text='[repeat: same content as ref:73c670c5df35 earlier in this conversation]', tokens=24, source='rule:exact_repeat_backref', compressor_fallback=False, verifier=None, backref='1.0', pinned=False, dropped=False)",
+    "5.1": "Emitted(segment_id='8dd75e6697e7', key='5.1', lane='cache', ratio=1.0, text='[repeat: same content as ref:8dd75e6697e7 earlier in this conversation]', tokens=24, source='rule:exact_repeat_backref', compressor_fallback=False, verifier=None, backref='1.1', pinned=False, dropped=False)",
+    "6.0": "Emitted(segment_id='5179dad09edb', key='6.0', lane='cache', ratio=1.0, text='[repeat: same content as ref:5179dad09edb earlier in this conversation]', tokens=21, source='rule:exact_repeat_backref', compressor_fallback=False, verifier=None, backref='2.0', pinned=False, dropped=False)",
+    "7.0": "Emitted(segment_id='8bcaf8daf504', key='7.0', lane='compress', ratio=1.0, text='Who is the product lead for the Draekrousk service?', tokens=13, source='rule:current_query', compressor_fallback=False, verifier=None, backref=None, pinned=False, dropped=False)"
+   },
+   "groups": {},
+   "epoch_id": 0,
+   "epoch_reason": null,
+   "rebuild_tokens": 130,
+   "first_changed_msg": 4,
+   "replayed": [
+    "0.0",
+    "1.0",
+    "1.1",
+    "2.0",
+    "3.0"
+   ],
+   "new": [
+    "4.0",
+    "5.0",
+    "5.1",
+    "6.0",
+    "7.0"
+   ],
+   "alloc": null,
+   "hard_truncation": false,
+   "prefetched": [],
+   "lanes": {
+    "compress": 6,
+    "cache": 4,
+    "externalize": 0
+   },
+   "timers": {
+    "segment": 1.585708000000352,
+    "classify": 0.021333999999484377,
+    "compress": 0.0,
+    "verify": 0.0,
+    "assemble": 0.033833999999899333,
+    "memo_hits": 0,
+    "reinflations": 0
+   },
+   "canonicalizer_tokens_saved": 0,
+   "compressor_fallback": false,
+   "memo_hits": 0,
+   "reinflations": 0,
+   "context_utilization": 0.4097,
+   "output_headroom": 2418
+  },
+  "_raw": [
+   {
+    "role": "system",
+    "content": "You are a precise assistant for the Drudoukru team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the conversation, reply exactly: Not mentioned.\n\nOperations handbook:\n\nGoing forward, the checkpoint will validate the manual change board for every escalation. From a upstream perspective, the budget revisits the service mesh more than the escalation does. If the dependency graph stays healthy, the baseline roadmap will need another migration. In practice, our inventory unblocks the release train whenever the deployment is outdated. None of this changes the fact that the resilient contract needs a clear dependency graph. None of this changes the fact that the modular module needs a clear incident review. As discussed earlier, the support rotation stabilizes the downstream contract and the scheduler. The general consensus is that the initiative is ready, although the distributed dependency graph remains open. It is worth repeating that the robust migration depends on a sustainable capacity review.\n\nFrom a sustainable perspective, the process improves the platform team more than the forecast does. The weekly active users for Thyvsirn was measured at 300,334 users. Going forward, the index will reinforce the asynchronous service mesh for every ledger. If the data contract stays deprecated, the automated handoff will need another escalation. The asynchronous roadmap validates the legacy cache. If the service mesh stays saturated, the granular registry will need another framework. As discussed earlier, the sprint goal documents the provisional schedule and the gateway. We should keep in mind that a modular migration rarely reinforces the dependency graph on its own. Most of the feedback suggested that the access policy should validate the tactical rollout before the next retrospective. The general consensus is that the migration is blocked, although the baseline vendor assessment remains open. Several teams noted that the modular onboarding flow still protects the contract across the registry.\n\nSeveral teams noted that the manual sprint goal still extends the escalation across the deployment. Several teams noted that the adaptive quality gate still validates the policy across the index. As discussed earlier, the quality gate revisits the legacy report and the gateway. It is worth repeating that the shared contract depends on a federated platform team. Going forward, the migration will extend the strategic quality gate for every workflow. Several teams noted that the adaptive feature flag still extends the gateway across the framework. It is worth repeating that the regional module depends on a scalable stakeholder alignment. We should keep in mind that a granular integration rarely stabilizes the dependency graph on its own. The general consensus is that the retrospective is approved, although the dedicated data contract remains open. In practice, our registry validates the capacity review whenever the inventory is delayed.\n\nWe should keep in mind that a sustainable benchmark rarely protects the sprint goal on its own. In practice, our module documents the sprint goal whenever the architecture is pending. If the platform team stays healthy, the dedicated initiative will need another deployment. From a streamlined perspective, the module simplifies the cost model more than the retrospective does. Most of the feedback suggested that the data contract should unblock the tactical escalation before the next cache. We should keep in mind that a distributed deployment rarely stabilizes the governance model on its own. Going forward, the handoff will streamline the critical dependency graph for every process. We should keep in mind that a downstream backlog rarely constrains the test matrix on its own.\n\nThe general consensus is that the workflow is deprecated, although the consolidated onboarding flow remains open. As discussed earlier, the observability stack validates the secondary backlog and the pipeline. As discussed earlier, the support rotation informs the manual deployment and the inventory. Most of the feedback suggested that the quality gate should stabilize the resilient schedule before the next index. None of this changes the fact that the quarterly budget needs a clear capacity review. If the release train stays healthy, the baseline runbook will need another queue. Going forward, the schedule will protect the regional change board for every rollout. Several teams noted that the granular governance model still informs the ledger across the interface. In practice, our escalation simplifies the access policy whenever the proposal is outdated.\n\nThe resilient framework validates the quarterly index. From a operational perspective, the proposal constrains the support rotation more than the scheduler does. In practice, our rollout constrains the vendor assessment whenever the ledger is deprecated. If the observability stack stays pending, the granular report will need another cache. The distributed budget protects the downstream contract. Most of the feedback suggested that the change board should inform the upstream pipeline before the next handoff. In practice, our runbook protects the change board whenever the backlog is stable. Several teams noted that the upstream incident review still extends the milestone across the scheduler. Going forward, the roadmap will stabilize the strategic release train for every runbook. The general consensus is that the escalation is blocked, although the automated observability stack remains open."
+   },
+   {
+    "role": "user",
+    "content": "Reference document:\n\nFrom a quarterly perspective, the workflow supports the data contract more than the scheduler does. We should keep in mind that a baseline dashboard rarely informs the test matrix on its own. The product lead for the Draekrousk service is Draenyl Kroumnaesk. The regional cache reinforces the operational escalation. In practice, our runbook improves the capacity review whenever the deliverable is pending. None of this changes the fact that the granular module needs a clear quality gate. None of this changes the fact that the internal interface needs a clear feature flag. Going forward, the audit will improve the legacy governance model for every architecture. Most of the feedback suggested that the test matrix should revisit the secondary proposal before the next integration. As discussed earlier, the governance model revisits the distributed registry and the benchmark. The general consensus is that the framework is pending, although the cross-functional vendor assessment remains open.\n\nMost of the feedback suggested that the dependency graph should streamline the quarterly benchmark before the next policy. Several teams noted that the strategic dependency graph still protects the checkpoint across the scheduler. We should keep in mind that a modular gateway rarely validates the capacity review on its own. Going forward, the backlog will document the strategic governance model for every dashboard. Several teams noted that the holistic support rotation still reinforces the inventory across the queue. From a strategic perspective, the roadmap extends the stakeholder alignment more than the dashboard does. As discussed earlier, the cost model stabilizes the scalable pipeline and the contract. As discussed earlier, the service mesh validates the preliminary deliverable and the migration.\n\nThe general consensus is that the deliverable is outdated, although the robust dependency graph remains open. Several teams noted that the upstream service mesh still validates the benchmark across the policy. The battery capacity for Muvurn was measured at 5,043 mAh. If the feature flag stays ready, the iterative scheduler will need another framework. We should keep in mind that a modular runbook rarely shapes the vendor assessment on its own. If the vendor assessment stays stable, the streamlined interface will need another backlog. The general consensus is that the retrospective is stable, although the shared onboarding flow remains open. Several teams noted that the lightweight quality gate still shapes the review across the registry. Several teams noted that the downstream dependency graph still accelerates the escalation across the initiative.\n\nIf the service mesh stays healthy, the baseline budget will need another scheduler. It is worth repeating that the regional architecture depends on a legacy stakeholder alignment. The general consensus is that the integration is outdated, although the shared platform team remains open. As discussed earlier, the cost model revisits the iterative budget and the policy. The resilient audit unblocks the dedicated forecast. From a sustainable perspective, the scheduler reinforces the quality gate more than the inventory does. In practice, our contract stabilizes the service mesh whenever the cache is approved. The resilient module unblocks the critical rollout. If the sprint goal stays ready, the cross-functional cluster will need another review.\n\nThe general consensus is that the integration is ready, although the scalable dependency graph remains open. Several teams noted that the sustainable change board still informs the module across the schedule. It is worth repeating that the preliminary report depends on a external support rotation. Most of the feedback suggested that the observability stack should unblock the legacy budget before the next template. If the dependency graph stays ready, the critical audit will need another pipeline. As discussed earlier, the onboarding flow protects the streamlined integration and the report.\n\nIn practice, our handoff revisits the dependency graph whenever the registry is ready. None of this changes the fact that the strategic gateway needs a clear access policy."
+   },
+   {
+    "role": "assistant",
+    "content": "Got it."
+   },
+   {
+    "role": "user",
+    "content": "What was the battery capacity measured for Muvurn?"
+   },
+   {
+    "role": "assistant",
+    "content": "The battery capacity for Muvurn was 5,043 mAh."
+   },
+   {
+    "role": "user",
+    "content": "Reference document:\n\nFrom a quarterly perspective, the workflow supports the data contract more than the scheduler does. We should keep in mind that a baseline dashboard rarely informs the test matrix on its own. The product lead for the Draekrousk service is Draenyl Kroumnaesk. The regional cache reinforces the operational escalation. In practice, our runbook improves the capacity review whenever the deliverable is pending. None of this changes the fact that the granular module needs a clear quality gate. None of this changes the fact that the internal interface needs a clear feature flag. Going forward, the audit will improve the legacy governance model for every architecture. Most of the feedback suggested that the test matrix should revisit the secondary proposal before the next integration. As discussed earlier, the governance model revisits the distributed registry and the benchmark. The general consensus is that the framework is pending, although the cross-functional vendor assessment remains open.\n\nMost of the feedback suggested that the dependency graph should streamline the quarterly benchmark before the next policy. Several teams noted that the strategic dependency graph still protects the checkpoint across the scheduler. We should keep in mind that a modular gateway rarely validates the capacity review on its own. Going forward, the backlog will document the strategic governance model for every dashboard. Several teams noted that the holistic support rotation still reinforces the inventory across the queue. From a strategic perspective, the roadmap extends the stakeholder alignment more than the dashboard does. As discussed earlier, the cost model stabilizes the scalable pipeline and the contract. As discussed earlier, the service mesh validates the preliminary deliverable and the migration.\n\nThe general consensus is that the deliverable is outdated, although the robust dependency graph remains open. Several teams noted that the upstream service mesh still validates the benchmark across the policy. The battery capacity for Muvurn was measured at 5,043 mAh. If the feature flag stays ready, the iterative scheduler will need another framework. We should keep in mind that a modular runbook rarely shapes the vendor assessment on its own. If the vendor assessment stays stable, the streamlined interface will need another backlog. The general consensus is that the retrospective is stable, although the shared onboarding flow remains open. Several teams noted that the lightweight quality gate still shapes the review across the registry. Several teams noted that the downstream dependency graph still accelerates the escalation across the initiative.\n\nIf the service mesh stays healthy, the baseline budget will need another scheduler. It is worth repeating that the regional architecture depends on a legacy stakeholder alignment. The general consensus is that the integration is outdated, although the shared platform team remains open. As discussed earlier, the cost model revisits the iterative budget and the policy. The resilient audit unblocks the dedicated forecast. From a sustainable perspective, the scheduler reinforces the quality gate more than the inventory does. In practice, our contract stabilizes the service mesh whenever the cache is approved. The resilient module unblocks the critical rollout. If the sprint goal stays ready, the cross-functional cluster will need another review.\n\nThe general consensus is that the integration is ready, although the scalable dependency graph remains open. Several teams noted that the sustainable change board still informs the module across the schedule. It is worth repeating that the preliminary report depends on a external support rotation. Most of the feedback suggested that the observability stack should unblock the legacy budget before the next template. If the dependency graph stays ready, the critical audit will need another pipeline. As discussed earlier, the onboarding flow protects the streamlined integration and the report.\n\nIn practice, our handoff revisits the dependency graph whenever the registry is ready. None of this changes the fact that the strategic gateway needs a clear access policy."
+   },
+   {
+    "role": "assistant",
+    "content": "Got it."
+   },
+   {
+    "role": "user",
+    "content": "Who is the product lead for the Draekrousk service?"
+   }
+  ],
+  "_out": {
+   "answer": "Not mentioned.",
+   "rounds": [
+    "ChatResult(content='Not mentioned.', tool_calls=[], thinking='', thinking_leak=False, ttft_s=0.4218089169999999, total_s=0.5281699169999996, prompt_eval_count=1677, prompt_eval_s=0.413579, eval_count=4, eval_s=0.106461, load_s=0.000715041, total_duration_s=0.527230541, decode_tps=37.572444369299554, vram_peak_mb=9189.479998588562, vram_source='ollama_ps(size_vram)', done_reason='stop', raw_final={'model': 'qwen3:14b', 'created_at': '2026-10-08T03:30:23.320898Z', 'done': True, 'done_reason': 'stop', 'total_duration': 527230541, 'load_duration': 715041, 'prompt_eval_count': 1677, 'prompt_eval_duration': 413579000, 'eval_count': 4, 'eval_duration': 106461000})"
+   ],
+   "tool_rounds": 0,
+   "expansions": [],
+   "ttft_s": 0.4218089169999999,
+   "total_s": 0.5281699169999996,
+   "prompt_eval_count": 1677,
+   "first_prompt_eval_count": 1677,
+   "prompt_eval_s": 0.413579,
+   "eval_count": 4,
+   "load_s": 0.000715041,
+   "decode_tps": 37.572444369299554,
+   "vram_peak_mb": 9189.479998588562,
+   "vram_source": "ollama_ps(size_vram)",
+   "thinking_leak": false,
+   "unanswered_tool_call": false,
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are a precise assistant for the Drudoukru team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the conversation, reply exactly: Not mentioned.\n\nOperations handbook:\n\nGoing forward, the checkpoint will validate the manual change board for every escalation. From a upstream perspective, the budget revisits the service mesh more than the escalation does. If the dependency graph stays healthy, the baseline roadmap will need another migration. In practice, our inventory unblocks the release train whenever the deployment is outdated. None of this changes the fact that the resilient contract needs a clear dependency graph. None of this changes the fact that the modular module needs a clear incident review. As discussed earlier, the support rotation stabilizes the downstream contract and the scheduler. The general consensus is that the initiative is ready, although the distributed dependency graph remains open. It is worth repeating that the robust migration depends on a sustainable capacity review.\n\nFrom a sustainable perspective, the process improves the platform team more than the forecast does. The weekly active users for Thyvsirn was measured at 300,334 users. Going forward, the index will reinforce the asynchronous service mesh for every ledger. If the data contract stays deprecated, the automated handoff will need another escalation. The asynchronous roadmap validates the legacy cache. If the service mesh stays saturated, the granular registry will need another framework. As discussed earlier, the sprint goal documents the provisional schedule and the gateway. We should keep in mind that a modular migration rarely reinforces the dependency graph on its own. Most of the feedback suggested that the access policy should validate the tactical rollout before the next retrospective. The general consensus is that the migration is blocked, although the baseline vendor assessment remains open. Several teams noted that the modular onboarding flow still protects the contract across the registry.\n\nSeveral teams noted that the manual sprint goal still extends the escalation across the deployment. Several teams noted that the adaptive quality gate still validates the policy across the index. As discussed earlier, the quality gate revisits the legacy report and the gateway. It is worth repeating that the shared contract depends on a federated platform team. Going forward, the migration will extend the strategic quality gate for every workflow. Several teams noted that the adaptive feature flag still extends the gateway across the framework. It is worth repeating that the regional module depends on a scalable stakeholder alignment. We should keep in mind that a granular integration rarely stabilizes the dependency graph on its own. The general consensus is that the retrospective is approved, although the dedicated data contract remains open. In practice, our registry validates the capacity review whenever the inventory is delayed.\n\nWe should keep in mind that a sustainable benchmark rarely protects the sprint goal on its own. In practice, our module documents the sprint goal whenever the architecture is pending. If the platform team stays healthy, the dedicated initiative will need another deployment. From a streamlined perspective, the module simplifies the cost model more than the retrospective does. Most of the feedback suggested that the data contract should unblock the tactical escalation before the next cache. We should keep in mind that a distributed deployment rarely stabilizes the governance model on its own. Going forward, the handoff will streamline the critical dependency graph for every process. We should keep in mind that a downstream backlog rarely constrains the test matrix on its own.\n\nThe general consensus is that the workflow is deprecated, although the consolidated onboarding flow remains open. As discussed earlier, the observability stack validates the secondary backlog and the pipeline. As discussed earlier, the support rotation informs the manual deployment and the inventory. Most of the feedback suggested that the quality gate should stabilize the resilient schedule before the next index. None of this changes the fact that the quarterly budget needs a clear capacity review. If the release train stays healthy, the baseline runbook will need another queue. Going forward, the schedule will protect the regional change board for every rollout. Several teams noted that the granular governance model still informs the ledger across the interface. In practice, our escalation simplifies the access policy whenever the proposal is outdated.\n\nThe resilient framework validates the quarterly index. From a operational perspective, the proposal constrains the support rotation more than the scheduler does. In practice, our rollout constrains the vendor assessment whenever the ledger is deprecated. If the observability stack stays pending, the granular report will need another cache. The distributed budget protects the downstream contract. Most of the feedback suggested that the change board should inform the upstream pipeline before the next handoff. In practice, our runbook protects the change board whenever the backlog is stable. Several teams noted that the upstream incident review still extends the milestone across the scheduler. Going forward, the roadmap will stabilize the strategic release train for every runbook. The general consensus is that the escalation is blocked, although the automated observability stack remains open.\n\nNote: some earlier context was replaced by stubs of the form [ref:ID | kind | size | summary | keys | ...]. If a stub may contain the answer, call the expand_context tool with that ID to read the full text before answering; never guess a stub's contents."
+    },
+    {
+     "role": "user",
+     "content": "\n workflow data contract. baseline dashboard matrix. Draekrousk Draenyl Kroumnaesk. regional cache escalation. runbook improves capacity review. granular module gate. internal interface. audit governance. matrix proposal. revisits distributed registry benchmark. framework pending cross - functional vendor assessment. \n dependency graph benchmark. checkpoint. modular gateway review. backlog. holistic support inventory. roadmap stakeholder alignment. cost model stabilizes scalable pipeline contract. service mesh validates migration.\n\ngeneral consensus is that the deliverable is outdated, although robust dependency graph remains open. Several teams noted that upstream service mesh still validates benchmark across the policy. battery capacity for Muvurn was measured at 5,043 mAh. If feature flag stays ready, iterative scheduler will need another framework. We should keep in mind that a modular runbook rarely shapes vendor assessment on its own. If vendor assessment stays stable, streamlined interface will need another backlog. general consensus is that the retrospective is stable, although shared onboarding flow remains open. Several teams noted lightweight quality gate still shapes the review across the registry. Several teams noted downstream dependency graph still accelerates escalation across the initiative. \n If service mesh stays healthy, baseline budget will need another scheduler. It is worth repeating regional architecture depends on a legacy stakeholder alignment. general consensus is that integration is outdated, although shared platform team remains open. As discussed earlier, cost model revisits the iterative budget and policy. resilient audit unblocks the dedicated forecast. From a sustainable perspective, scheduler reinforces quality gate more than inventory does. In practice, our contract stabilizes the service mesh whenever cache is approved. resilient module unblocks the critical rollout. If sprint goal stays ready, cross - functional cluster will need another review. \n general consensus is that integration is ready, although scalable dependency graph remains open. Several teams noted sustainable change board still informs the module across the schedule. It is worth repeating that preliminary report depends on a external support rotation. Most of feedback suggested that observability stack should unblock the legacy budget before the next template. If dependency graph stays ready, critical audit will need another pipeline. As discussed earlier, onboarding flow protects the streamlined integration and the report. \n In practice, our handoff revisits the dependency graph whenever registry is ready. None of this changes the fact that strategic gateway needs a clear access policy."
+    },
+    {
+     "role": "assistant",
+     "content": "Got it."
+    },
+    {
+     "role": "user",
+     "content": "What was the battery capacity measured for Muvurn?"
+    },
+    {
+     "role": "assistant",
+     "content": "The battery capacity for Muvurn was 5,043 mAh."
+    },
+    {
+     "role": "user",
+     "content": "[repeat: same content as ref:73c670c5df35 earlier in this conversation]\n\n[repeat: same content as ref:8dd75e6697e7 earlier in this conversation]"
+    },
+    {
+     "role": "assistant",
+     "content": "[repeat: same content as ref:5179dad09edb earlier in this conversation]"
+    },
+    {
+     "role": "user",
+     "content": "Who is the product lead for the Draekrousk service?"
+    }
+   ]
+  }
+ },
+ "segments": [
+  {
+   "key": "0.0",
+   "id": "e26ed27ee8f5",
+   "role": "system",
+   "kind": "system",
+   "turn": 0,
+   "tokens_before": 982,
+   "tokens_after": 982,
+   "features": {
+    "is_system": 1.0,
+    "is_last_turn": 0.0,
+    "token_count_norm": 1.0,
+    "recency_norm": 0.4,
+    "repeat_count": 0.0,
+    "query_similarity": 0.2699,
+    "digit_density": 0.0011,
+    "near_dup_score": 0.0,
+    "prior_expand_count": 0.0,
+    "turns_old": 4.0,
+    "kind_system": 1.0,
+    "kind_instruction": 0.0,
+    "kind_doc": 0.0,
+    "kind_chat": 0.0,
+    "kind_tool_result": 0.0,
+    "kind_attachment": 0.0,
+    "kind_query": 0.0
+   },
+   "dup_of": null,
+   "dup_type": null,
+   "decision": {
+    "source": "ledger_replay",
+    "lane": "cache",
+    "ratio": 1.0,
+    "probs": {},
+    "confidence": 1.0,
+    "expected_cost": null,
+    "reasons": [],
+    "backref": null
+   },
+   "emitted": {
+    "lane": "cache",
+    "ratio": 1.0,
+    "verifier": null,
+    "dropped": false,
+    "text": "You are a precise assistant for the Drudoukru team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the conversation, reply exactly: Not mentioned.\n\nOperations handbook:\n\nGoing forward, the checkpoint will validate the manual change board for every escalation. From a upstream perspective, the budget revisits the service mesh more than the escalation does. If the dependency graph stays healthy, the baseline roadmap will need another migration. In practice, our inventory unblocks the release train whenever the deployme ..."
+   }
+  },
+  {
+   "key": "1.0",
+   "id": "73c670c5df35",
+   "role": "user",
+   "kind": "doc",
+   "turn": 1,
+   "tokens_before": 319,
+   "tokens_after": 95,
+   "features": {
+    "is_system": 0.0,
+    "is_last_turn": 0.0,
+    "token_count_norm": 0.7975,
+    "recency_norm": 0.3,
+    "repeat_count": 0.0,
+    "query_similarity": 0.3579,
+    "digit_density": 0.0,
+    "near_dup_score": 0.0205,
+    "prior_expand_count": 0.0,
+    "turns_old": 3.0,
+    "kind_system": 0.0,
+    "kind_instruction": 0.0,
+    "kind_doc": 1.0,
+    "kind_chat": 0.0,
+    "kind_tool_result": 0.0,
+    "kind_attachment": 0.0,
+    "kind_query": 0.0
+   },
+   "dup_of": null,
+   "dup_type": null,
+   "decision": {
+    "source": "ledger_replay",
+    "lane": "compress",
+    "ratio": 0.3,
+    "probs": {},
+    "confidence": 1.0,
+    "expected_cost": null,
+    "reasons": [],
+    "backref": null
+   },
+   "emitted": {
+    "lane": "compress",
+    "ratio": 0.3,
+    "verifier": {
+     "recall": 1.0,
+     "numeric_recall": 1.0,
+     "retries": 0,
+     "reinflated": false,
+     "lost": []
+    },
+    "dropped": false,
+    "text": "\n workflow data contract. baseline dashboard matrix. Draekrousk Draenyl Kroumnaesk. regional cache escalation. runbook improves capacity review. granular module gate. internal interface. audit governance. matrix proposal. revisits distributed registry benchmark. framework pending cross - functional vendor assessment. \n dependency graph benchmark. checkpoint. modular gateway review. backlog. holistic support inventory. roadmap stakeholder alignment. cost model stabilizes scalable pipeline contract. service mesh validates migration."
+   }
+  },
+  {
+   "key": "1.1",
+   "id": "8dd75e6697e7",
+   "role": "user",
+   "kind": "doc",
+   "turn": 1,
+   "tokens_before": 421,
+   "tokens_after": 378,
+   "features": {
+    "is_system": 0.0,
+    "is_last_turn": 0.0,
+    "token_count_norm": 1.0,
+    "recency_norm": 0.3,
+    "repeat_count": 0.0,
+    "query_similarity": 0.2717,
+    "digit_density": 0.0017,
+    "near_dup_score": 0.0284,
+    "prior_expand_count": 0.0,
+    "turns_old": 3.0,
+    "kind_system": 0.0,
+    "kind_instruction": 0.0,
+    "kind_doc": 1.0,
+    "kind_chat": 0.0,
+    "kind_tool_result": 0.0,
+    "kind_attachment": 0.0,
+    "kind_query": 0.0
+   },
+   "dup_of": null,
+   "dup_type": null,
+   "decision": {
+    "source": "ledger_replay",
+    "lane": "compress",
+    "ratio": 0.9,
+    "probs": {},
+    "confidence": 1.0,
+    "expected_cost": null,
+    "reasons": [],
+    "backref": null
+   },
+   "emitted": {
+    "lane": "compress",
+    "ratio": 0.9,
+    "verifier": {
+     "recall": 1.0,
+     "numeric_recall": 1.0,
+     "retries": 0,
+     "reinflated": false,
+     "lost": []
+    },
+    "dropped": false,
+    "text": "general consensus is that the deliverable is outdated, although robust dependency graph remains open. Several teams noted that upstream service mesh still validates benchmark across the policy. battery capacity for Muvurn was measured at 5,043 mAh. If feature flag stays ready, iterative scheduler will need another framework. We should keep in mind that a modular runbook rarely shapes vendor assessment on its own. If vendor assessment stays stable, streamlined interface will need another backlog. general consensus is that the retrospective is stable, although shared onboarding flow remains open ..."
+   }
+  },
+  {
+   "key": "2.0",
+   "id": "5179dad09edb",
+   "role": "assistant",
+   "kind": "chat",
+   "turn": 1,
+   "tokens_before": 3,
+   "tokens_after": 3,
+   "features": {
+    "is_system": 0.0,
+    "is_last_turn": 0.0,
+    "token_count_norm": 0.0075,
+    "recency_norm": 0.3,
+    "repeat_count": 0.0,
+    "query_similarity": 0.1039,
+    "digit_density": 0.0,
+    "near_dup_score": 0.0,
+    "prior_expand_count": 0.0,
+    "turns_old": 3.0,
+    "kind_system": 0.0,
+    "kind_instruction": 0.0,
+    "kind_doc": 0.0,
+    "kind_chat": 1.0,
+    "kind_tool_result": 0.0,
+    "kind_attachment": 0.0,
+    "kind_query": 0.0
+   },
+   "dup_of": null,
+   "dup_type": null,
+   "decision": {
+    "source": "ledger_replay",
+    "lane": "compress",
+    "ratio": 1.0,
+    "probs": {},
+    "confidence": 1.0,
+    "expected_cost": null,
+    "reasons": [],
+    "backref": null
+   },
+   "emitted": {
+    "lane": "compress",
+    "ratio": 1.0,
+    "verifier": null,
+    "dropped": false,
+    "text": "Got it."
+   }
+  },
+  {
+   "key": "3.0",
+   "id": "5a789b3c8612",
+   "role": "user",
+   "kind": "query",
+   "turn": 2,
+   "tokens_before": 11,
+   "tokens_after": 11,
+   "features": {
+    "is_system": 0.0,
+    "is_last_turn": 0.0,
+    "token_count_norm": 0.0275,
+    "recency_norm": 0.2,
+    "repeat_count": 0.0,
+    "query_similarity": 0.1586,
+    "digit_density": 0.0,
+    "near_dup_score": 0.0,
+    "prior_expand_count": 0.0,
+    "turns_old": 2.0,
+    "kind_system": 0.0,
+    "kind_instruction": 0.0,
+    "kind_doc": 0.0,
+    "kind_chat": 0.0,
+    "kind_tool_result": 0.0,
+    "kind_attachment": 0.0,
+    "kind_query": 1.0
+   },
+   "dup_of": null,
+   "dup_type": null,
+   "decision": {
+    "source": "ledger_replay",
+    "lane": "compress",
+    "ratio": 1.0,
+    "probs": {},
+    "confidence": 1.0,
+    "expected_cost": null,
+    "reasons": [],
+    "backref": null
+   },
+   "emitted": {
+    "lane": "compress",
+    "ratio": 1.0,
+    "verifier": null,
+    "dropped": false,
+    "text": "What was the battery capacity measured for Muvurn?"
+   }
+  },
+  {
+   "key": "4.0",
+   "id": "bf9562d99ef2",
+   "role": "assistant",
+   "kind": "chat",
+   "turn": 2,
+   "tokens_before": 17,
+   "tokens_after": 17,
+   "features": {
+    "is_system": 0.0,
+    "is_last_turn": 0.0,
+    "token_count_norm": 0.0425,
+    "recency_norm": 0.2,
+    "repeat_count": 0.0,
+    "query_similarity": 0.0818,
+    "digit_density": 0.087,
+    "near_dup_score": 0.0,
+    "prior_expand_count": 0.0,
+    "turns_old": 2.0,
+    "kind_system": 0.0,
+    "kind_instruction": 0.0,
+    "kind_doc": 0.0,
+    "kind_chat": 1.0,
+    "kind_tool_result": 0.0,
+    "kind_attachment": 0.0,
+    "kind_query": 0.0
+   },
+   "dup_of": null,
+   "dup_type": null,
+   "decision": {
+    "source": "rule:short_passthrough",
+    "lane": "compress",
+    "ratio": 1.0,
+    "probs": {},
+    "confidence": 1.0,
+    "expected_cost": null,
+    "reasons": [
+     "short_passthrough"
+    ],
+    "backref": null
+   },
+   "emitted": {
+    "lane": "compress",
+    "ratio": 1.0,
+    "verifier": null,
+    "dropped": false,
+    "text": "The battery capacity for Muvurn was 5,043 mAh."
+   }
+  },
+  {
+   "key": "5.0",
+   "id": "73c670c5df35",
+   "role": "user",
+   "kind": "doc",
+   "turn": 3,
+   "tokens_before": 319,
+   "tokens_after": 24,
+   "features": {
+    "is_system": 0.0,
+    "is_last_turn": 1.0,
+    "token_count_norm": 0.7975,
+    "recency_norm": 0.1,
+    "repeat_count": 1.0,
+    "query_similarity": 0.3579,
+    "digit_density": 0.0,
+    "near_dup_score": 0.0,
+    "prior_expand_count": 0.0,
+    "turns_old": 1.0,
+    "kind_system": 0.0,
+    "kind_instruction": 0.0,
+    "kind_doc": 1.0,
+    "kind_chat": 0.0,
+    "kind_tool_result": 0.0,
+    "kind_attachment": 0.0,
+    "kind_query": 0.0
+   },
+   "dup_of": "1.0",
+   "dup_type": "exact",
+   "decision": {
+    "source": "rule:exact_repeat_backref",
+    "lane": "cache",
+    "ratio": 1.0,
+    "probs": {},
+    "confidence": 1.0,
+    "expected_cost": null,
+    "reasons": [
+     "exact_repeat_backref"
+    ],
+    "backref": "1.0"
+   },
+   "emitted": {
+    "lane": "cache",
+    "ratio": 1.0,
+    "verifier": null,
+    "dropped": false,
+    "text": "[repeat: same content as ref:73c670c5df35 earlier in this conversation]"
+   }
+  },
+  {
+   "key": "5.1",
+   "id": "8dd75e6697e7",
+   "role": "user",
+   "kind": "doc",
+   "turn": 3,
+   "tokens_before": 421,
+   "tokens_after": 24,
+   "features": {
+    "is_system": 0.0,
+    "is_last_turn": 1.0,
+    "token_count_norm": 1.0,
+    "recency_norm": 0.1,
+    "repeat_count": 1.0,
+    "query_similarity": 0.2717,
+    "digit_density": 0.0017,
+    "near_dup_score": 0.0,
+    "prior_expand_count": 0.0,
+    "turns_old": 1.0,
+    "kind_system": 0.0,
+    "kind_instruction": 0.0,
+    "kind_doc": 1.0,
+    "kind_chat": 0.0,
+    "kind_tool_result": 0.0,
+    "kind_attachment": 0.0,
+    "kind_query": 0.0
+   },
+   "dup_of": "1.1",
+   "dup_type": "exact",
+   "decision": {
+    "source": "rule:exact_repeat_backref",
+    "lane": "cache",
+    "ratio": 1.0,
+    "probs": {},
+    "confidence": 1.0,
+    "expected_cost": null,
+    "reasons": [
+     "exact_repeat_backref"
+    ],
+    "backref": "1.1"
+   },
+   "emitted": {
+    "lane": "cache",
+    "ratio": 1.0,
+    "verifier": null,
+    "dropped": false,
+    "text": "[repeat: same content as ref:8dd75e6697e7 earlier in this conversation]"
+   }
+  },
+  {
+   "key": "6.0",
+   "id": "5179dad09edb",
+   "role": "assistant",
+   "kind": "chat",
+   "turn": 3,
+   "tokens_before": 3,
+   "tokens_after": 21,
+   "features": {
+    "is_system": 0.0,
+    "is_last_turn": 1.0,
+    "token_count_norm": 0.0075,
+    "recency_norm": 0.1,
+    "repeat_count": 1.0,
+    "query_similarity": 0.1039,
+    "digit_density": 0.0,
+    "near_dup_score": 0.0,
+    "prior_expand_count": 0.0,
+    "turns_old": 1.0,
+    "kind_system": 0.0,
+    "kind_instruction": 0.0,
+    "kind_doc": 0.0,
+    "kind_chat": 1.0,
+    "kind_tool_result": 0.0,
+    "kind_attachment": 0.0,
+    "kind_query": 0.0
+   },
+   "dup_of": "2.0",
+   "dup_type": "exact",
+   "decision": {
+    "source": "rule:exact_repeat_backref",
+    "lane": "cache",
+    "ratio": 1.0,
+    "probs": {},
+    "confidence": 1.0,
+    "expected_cost": null,
+    "reasons": [
+     "exact_repeat_backref"
+    ],
+    "backref": "2.0"
+   },
+   "emitted": {
+    "lane": "cache",
+    "ratio": 1.0,
+    "verifier": null,
+    "dropped": false,
+    "text": "[repeat: same content as ref:5179dad09edb earlier in this conversation]"
+   }
+  },
+  {
+   "key": "7.0",
+   "id": "8bcaf8daf504",
+   "role": "user",
+   "kind": "query",
+   "turn": 4,
+   "tokens_before": 13,
+   "tokens_after": 13,
+   "features": {
+    "is_system": 0.0,
+    "is_last_turn": 1.0,
+    "token_count_norm": 0.0325,
+    "recency_norm": 0.0,
+    "repeat_count": 0.0,
+    "query_similarity": 1.0,
+    "digit_density": 0.0,
+    "near_dup_score": 0.0,
+    "prior_expand_count": 0.0,
+    "turns_old": 0.0,
+    "kind_system": 0.0,
+    "kind_instruction": 0.0,
+    "kind_doc": 0.0,
+    "kind_chat": 0.0,
+    "kind_tool_result": 0.0,
+    "kind_attachment": 0.0,
+    "kind_query": 1.0
+   },
+   "dup_of": null,
+   "dup_type": null,
+   "decision": {
+    "source": "rule:current_query",
+    "lane": "compress",
+    "ratio": 1.0,
+    "probs": {},
+    "confidence": 1.0,
+    "expected_cost": null,
+    "reasons": [
+     "current_query"
+    ],
+    "backref": null
+   },
+   "emitted": {
+    "lane": "compress",
+    "ratio": 1.0,
+    "verifier": null,
+    "dropped": false,
+    "text": "Who is the product lead for the Draekrousk service?"
+   }
+  }
+ ],
+ "alloc": null,
+ "tool_messages": [],
+ "prefetched": []
+}

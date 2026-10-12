@@ -1,0 +1,304 @@
+──────────────────────────────────────────────────────────────────────────────────────── DEMO lane=externalize ─────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────────── demo:externalize — evaluation point 0 (lookup_name) ──────────────────────────────────────────────────────────────────────────
+                                                                      sieve_full: segment decisions                                                                      
+┏━━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━┓
+┃ seg  ┃ role ┃ kind   ┃ tok→ ┃ →tok ┃ sys  ┃ last ┃ tok  ┃ rec  ┃ rep  ┃ qsim ┃ dig  ┃ ndup ┃ pexp ┃ p(ca/co/ex)    ┃ lane        ┃ ratio ┃ source              ┃ conf ┃
+┡━━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━┩
+│ 0.0  │ syst │ system │ 45   │ 45   │ 1.00 │ 0.00 │ 0.11 │ 1.00 │ 0.00 │ 0.15 │ 0.00 │ 0.00 │ 0.00 │ -              │ cache       │ 1.0   │ R:system_cache      │ 1.00 │
+│ 1.0  │ user │ doc    │ 296  │ 80   │ 0.00 │ 0.00 │ 0.74 │ 1.00 │ 0.00 │ 0.15 │ 0.00 │ 0.00 │ 0.00 │ 0.00/0.04/0.96 │ externalize │ 1.0   │ classifier          │ 0.96 │
+│ 1.1  │ user │ doc    │ 382  │ 83   │ 0.00 │ 0.00 │ 0.95 │ 1.00 │ 0.00 │ 0.06 │ 0.00 │ 0.02 │ 0.00 │ 0.00/0.01/0.99 │ externalize │ 1.0   │ classifier          │ 0.99 │
+│ 1.2  │ user │ doc    │ 336  │ 83   │ 0.00 │ 0.00 │ 0.84 │ 1.00 │ 0.00 │ 0.11 │ 0.00 │ 0.04 │ 0.00 │ 0.00/0.00/1.00 │ externalize │ 1.0   │ classifier          │ 1.00 │
+│ 1.3  │ user │ doc    │ 107  │ 68   │ 0.00 │ 0.00 │ 0.27 │ 1.00 │ 0.00 │ 0.20 │ 0.00 │ 0.03 │ 0.00 │ 0.00/0.00/1.00 │ compress    │ 0.7   │ classifier          │ 1.00 │
+│ 2.0  │ assi │ chat   │ 49   │ 21   │ 0.00 │ 0.00 │ 0.12 │ 1.00 │ 0.00 │ 0.13 │ 0.00 │ 0.02 │ 0.00 │ 0.00/0.99/0.01 │ compress    │ 0.5   │ classifier          │ 0.99 │
+│ 3.0  │ user │ chat   │ 50   │ 24   │ 0.00 │ 0.00 │ 0.12 │ 0.90 │ 0.00 │ 0.10 │ 0.00 │ 0.01 │ 0.00 │ 0.01/0.99/0.00 │ compress    │ 0.5   │ classifier          │ 0.99 │
+│ 4.0  │ assi │ chat   │ 375  │ 76   │ 0.00 │ 0.00 │ 0.94 │ 0.90 │ 0.00 │ 0.13 │ 0.00 │ 0.04 │ 0.00 │ 0.00/0.00/1.00 │ externalize │ 1.0   │ classifier          │ 1.00 │
+│ 5.0  │ user │ chat   │ 13   │ 13   │ 0.00 │ 0.00 │ 0.03 │ 0.80 │ 0.00 │ 0.00 │ 0.00 │ 0.00 │ 0.00 │ -              │ passthrough │ 1.0   │ R:short_passthrough │ 1.00 │
+│ 6.0  │ assi │ chat   │ 375  │ 82   │ 0.00 │ 0.00 │ 0.94 │ 0.80 │ 0.00 │ 0.15 │ 0.00 │ 0.03 │ 0.00 │ 0.00/0.01/0.99 │ externalize │ 1.0   │ classifier          │ 0.99 │
+│ 7.0  │ user │ chat   │ 13   │ 13   │ 0.00 │ 0.00 │ 0.03 │ 0.70 │ 0.00 │ 0.00 │ 0.00 │ 0.00 │ 0.00 │ -              │ passthrough │ 1.0   │ R:short_passthrough │ 1.00 │
+│ 8.0  │ assi │ chat   │ 392  │ 81   │ 0.00 │ 0.00 │ 0.98 │ 0.70 │ 0.00 │ 0.15 │ 0.00 │ 0.04 │ 0.00 │ 0.00/0.00/1.00 │ externalize │ 1.0   │ classifier          │ 1.00 │
+│ 9.0  │ user │ chat   │ 13   │ 13   │ 0.00 │ 0.00 │ 0.03 │ 0.60 │ 0.00 │ 0.12 │ 0.00 │ 0.00 │ 0.00 │ -              │ passthrough │ 1.0   │ R:short_passthrough │ 1.00 │
+│ 10.0 │ assi │ chat   │ 373  │ 81   │ 0.00 │ 0.00 │ 0.93 │ 0.60 │ 0.00 │ 0.08 │ 0.00 │ 0.04 │ 0.00 │ 0.00/0.00/1.00 │ externalize │ 1.0   │ classifier          │ 1.00 │
+│ 11.0 │ user │ chat   │ 49   │ 23   │ 0.00 │ 0.00 │ 0.12 │ 0.50 │ 0.00 │ 0.13 │ 0.00 │ 0.04 │ 0.00 │ 0.00/1.00/0.00 │ compress    │ 0.5   │ classifier          │ 1.00 │
+│ 12.0 │ assi │ chat   │ 377  │ 177  │ 0.00 │ 0.00 │ 0.94 │ 0.50 │ 0.00 │ 0.08 │ 0.00 │ 0.04 │ 0.00 │ 0.00/0.99/0.00 │ compress    │ 0.5   │ classifier          │ 0.99 │
+│ 13.0 │ user │ chat   │ 50   │ 22   │ 0.00 │ 0.00 │ 0.12 │ 0.40 │ 0.00 │ 0.13 │ 0.00 │ 0.00 │ 0.00 │ 0.00/1.00/0.00 │ compress    │ 0.5   │ classifier          │ 1.00 │
+│ 14.0 │ assi │ chat   │ 370  │ 174  │ 0.00 │ 0.00 │ 0.93 │ 0.40 │ 0.00 │ 0.10 │ 0.00 │ 0.03 │ 0.00 │ 0.00/0.99/0.00 │ compress    │ 0.5   │ classifier          │ 0.99 │
+│ 15.0 │ user │ chat   │ 43   │ 20   │ 0.00 │ 0.00 │ 0.11 │ 0.30 │ 0.00 │ 0.11 │ 0.00 │ 0.03 │ 0.00 │ 0.00/1.00/0.00 │ compress    │ 0.5   │ classifier          │ 1.00 │
+│ 16.0 │ assi │ chat   │ 386  │ 183  │ 0.00 │ 0.00 │ 0.96 │ 0.30 │ 0.00 │ 0.20 │ 0.00 │ 0.04 │ 0.00 │ 0.00/1.00/0.00 │ compress    │ 0.5   │ classifier          │ 1.00 │
+│ 17.0 │ user │ chat   │ 46   │ 21   │ 0.00 │ 0.00 │ 0.12 │ 0.20 │ 0.00 │ 0.11 │ 0.00 │ 0.06 │ 0.00 │ 0.00/1.00/0.00 │ compress    │ 0.5   │ classifier          │ 1.00 │
+│ 18.0 │ assi │ chat   │ 362  │ 169  │ 0.00 │ 0.00 │ 0.91 │ 0.20 │ 0.00 │ 0.11 │ 0.00 │ 0.03 │ 0.00 │ 0.00/1.00/0.00 │ compress    │ 0.5   │ classifier          │ 1.00 │
+│ 19.0 │ user │ chat   │ 57   │ 51   │ 0.00 │ 1.00 │ 0.14 │ 0.10 │ 0.00 │ 0.62 │ 0.00 │ 0.03 │ 0.00 │ 0.00/1.00/0.00 │ compress    │ 0.9   │ classifier          │ 1.00 │
+│ 20.0 │ assi │ chat   │ 3    │ 3    │ 0.00 │ 1.00 │ 0.01 │ 0.10 │ 0.00 │ 0.09 │ 0.00 │ 0.00 │ 0.00 │ -              │ passthrough │ 1.0   │ R:short_passthrough │ 1.00 │
+│ 21.0 │ user │ query  │ 12   │ 12   │ 0.00 │ 1.00 │ 0.03 │ 0.00 │ 0.00 │ 1.00 │ 0.00 │ 0.00 │ 0.00 │ -              │ passthrough │ 1.0   │ R:current_query     │ 1.00 │
+└──────┴──────┴────────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴────────────────┴─────────────┴───────┴─────────────────────┴──────┘
+╭────────────────────────────────────────────────────────────────────────── sieve_full: token waterfall (before ░ / after █) ──────────────────────────────────────────────────────────────────────────╮
+│    0.0 █████ 45→45                                                                                                                                                                                   │
+│    1.0 █████████░░░░░░░░░░░░░░░░░░░░░░░░░░ 296→80                                                                                                                                                    │
+│    1.1 ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 382→83                                                                                                                                          │
+│    1.2 ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 336→83                                                                                                                                                │
+│    1.3 ████████░░░░░ 107→68                                                                                                                                                                          │
+│    2.0 ██░░░░ 49→21                                                                                                                                                                                  │
+│    3.0 ███░░░ 50→24                                                                                                                                                                                  │
+│    4.0 █████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 375→76                                                                                                                                           │
+│    5.0 ██ 13→13                                                                                                                                                                                      │
+│    6.0 ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 375→82                                                                                                                                           │
+│    7.0 ██ 13→13                                                                                                                                                                                      │
+│    8.0 ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 392→81                                                                                                                                         │
+│    9.0 ██ 13→13                                                                                                                                                                                      │
+│   10.0 ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 373→81                                                                                                                                           │
+│   11.0 ███░░░ 49→23                                                                                                                                                                                  │
+│   12.0 █████████████████████░░░░░░░░░░░░░░░░░░░░░░░ 377→177                                                                                                                                          │
+│   13.0 ███░░░ 50→22                                                                                                                                                                                  │
+│   14.0 ████████████████████░░░░░░░░░░░░░░░░░░░░░░░ 370→174                                                                                                                                           │
+│   15.0 ██░░░ 43→20                                                                                                                                                                                   │
+│   16.0 █████████████████████░░░░░░░░░░░░░░░░░░░░░░░░ 386→183                                                                                                                                         │
+│   17.0 ██░░░ 46→21                                                                                                                                                                                   │
+│   18.0 ████████████████████░░░░░░░░░░░░░░░░░░░░░░ 362→169                                                                                                                                            │
+│   19.0 ██████░ 57→51                                                                                                                                                                                 │
+│   20.0  3→3                                                                                                                                                                                          │
+│   21.0 █ 12→12                                                                                                                                                                                       │
+│                                                                                                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────── sieve_full: prompt diff (red = removed, orange = stub/back-ref, cyan = added) ────────────────────────────────────────────────────────────╮
+│ <system> You are a precise assistant for the Punpamisk team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the       │
+│ conversation, reply exactly: Not mentioned.                                                                                                                                                          │
+│ <user> Notes mentioned.                                                                                                                                                                              │
+│                                                                                                                                                                                                      │
+│ Note: some earlier context was replaced by stubs of the form [ref:ID | kind | size | summary | keys | ...]. If a stub may contain the answer, call the expand_context tool with that ID to read the  │
+│ full text before answering; never guess a stub's contents.                                                                                                                                           │
+│ <user> [ref:646d49f6c6dd | doc | 296t | "Notes from the kickoff meeting:                                                                                                                             │
+│                                                                                                                                                                                                      │
+│ The manual dashboard clarifies the internal migration. In meeting: / topics: practice, our initiative extends the stakeholder alignment whenever the retrospective is delayed. The lightweight       │
+│ cluster clarifies the holistic escalation. Several teams noted that the iterative sprint goal still extends the registry across the cluster. The ticket backlog for another, depends, extends, flow, │
+│ onboarding, platform, repeating" | keys: 728, Vydia was measured at 728 tickets. If the change board stays deprecated, the preliminary process will need another queue. If the feature flag stays    │
+│ blocked, the incremental retrospective will need another registry. As discussed earlier, the vendor assessment streamlines the incremental forecast and the template.                                │
+│                                                                                                                                                                                                      │
+│ Going forward, the budget will improve the holistic platform team for every review. In practice, our checkpoint revisits the cost model whenever the proposal is saturated. If the onboarding flow   │
+│ stays healthy, the quarterly forecast will need another escalation. It is worth repeating that the external module depends on a sustainable support rotation. Most of the feedback suggested that    │
+│ the platform team should document the consolidated deployment before the next module. In practice, our architecture extends the onboarding flow whenever the roadmap is ready. In practice, our      │
+│ initiative stabilizes the feature flag whenever the index is outdated. The general consensus is that the workflow is approved, although the modular vendor assessment remains open. In practice, our │
+│ roadmap accelerates the onboarding flow whenever the report is outdated. It is worth repeating that the regional inventory depends on a scalable change board. It is worth repeating that the        │
+│ consolidated deliverable depends on a downstream platform team.                                                                                                                                      │
+│                                                                                                                                                                                                      │
+│ Most | use expand_context("646d49f6c6dd") to read]                                                                                                                                                   │
+│                                                                                                                                                                                                      │
+│ [ref:9494616fca1a | doc | 382t | "Most of the feedback suggested that the onboarding flow should streamline the strategic checkpoint before the next framework. It is worth repeating that the       │
+│ cross-functional interface depends on a provisional test matrix. We should keep in mind that a resilient contract rarely constrains the sprint goal on its own. It is worth repeating that the       │
+│ manual benchmark depends on a baseline incident review. Going forward, the roadmap will support the legacy stakeholder alignment for every forecast. None of this changes the fact that the          │
+│ consolidated rollout needs a clear release train. It is worth repeating that the holistic architecture depends on a scalable service mesh. It is worth repeating that the upstream deployment        │
+│ depends on a consolidated sprint goal.                                                                                                                                                               │
+│                                                                                                                                                                                                      │
+│ The dedicated migration shapes the quarterly roadmap. None of this changes the fact that the preliminary report needs a clear incident review. Going forward, the integration will unblock the       │
+│ granular support rotation for every migration. The general consensus is that the retrospective is deprecated, although the asynchronous vendor assessment remains open. If the feature flag stays    │
+│ ready, the distributed gateway will need another roadmap. The sustainable gateway streamlines the regional schedule. Several teams noted that the regional onboarding flow still unblocks the        │
+│ deployment across the contract. It is worth repeating that the manual deliverable depends on a modular quality gate. The general consensus is that the interface is approved, although the           │
+│ lightweight test matrix remains open. If the observability stack stays ready, the iterative process will need another forecast.                                                                      │
+│                                                                                                                                                                                                      │
+│ Most of the feedback suggested that the access policy should streamline the scalable dashboard before the next cache. Most of the feedback suggested that the service mesh should streamline the     │
+│ automated pipeline before the next index. It is worth repeating that the adaptive index depends on a sustainable sprint goal. Most of the feedback suggested that the capacity review should support │
+│ the critical audit before the next pipeline. The unified registry informs the tactical proposal. From a streamlined perspective, the handoff unblocks the test matrix more than the review does.     │
+│                                                                                                                                                                                                      │
+│ The ... / topics: depends, repeating, worth, next, review, goal, matrix, roadmap" | keys: - | use expand_context("9494616fca1a") to read]                                                            │
+│                                                                                                                                                                                                      │
+│ [ref:92c7ce853103 | doc | 336t | "The general consensus is that the architecture is deprecated, although the streamlined support rotation remains open. We should keep in mind that a federated      │
+│ cache rarely accelerates the governance model on its own. If the observability stack stays stable, the upstream ledger will need another milestone. Most of the feedback suggested that the sprint   │
+│ goal should improve the legacy framework before the next dashboard. As discussed ... / topics: another, stays, discussed, earlier, the incident review validates the asynchronous pipeline and the   │
+│ template. If the sprint goal stays approved, the sustainable budget will need another framework. If the release train stays delayed, the tactical deployment will need another cluster. From a       │
+│ resilient perspective, the framework clarifies the dependency graph more than the dashboard does. In practice, our handoff clarifies the release train whenever the proposal is approved.            │
+│                                                                                                                                                                                                      │
+│ It is worth repeating that the internal schedule depends on a critical stakeholder alignment. If the vendor assessment stays healthy, the federated cache will need another policy. In practice, our │
+│ registry complicates the incident review whenever the migration is blocked. As discussed earlier, the platform team extends the holistic rollout and the initiative. None of this changes the fact   │
+│ that the upstream policy needs a clear observability stack. The modular proposal improves the lightweight index. Most of the feedback suggested that the service mesh should streamline the legacy   │
+│ index before the next backlog. If the dependency graph stays delayed, the lightweight template will need another scheduler. It is worth repeating that the shared retrospective depends on a modular │
+│ change board. In practice, our interface improves the vendor assessment whenever the deliverable is outdated. As discussed earlier, the access policy documents the baseline budget and the backlog. │
+│ As discussed earlier, the access policy reinforces the modular inventory and the escalation.                                                                                                         │
+│                                                                                                                                                                                                      │
+│ In practice, our policy, framework, modular, practice" | keys: - | use expand_context("92c7ce853103") to read]                                                                                       │
+│                                                                                                                                                                                                      │
+│ practice                                                                                                                                                                                             │
+│ … (diff truncated; full diff in diff.txt)                                                                                                                                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                  sieve_full: verifier                                   
+┏━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ seg  ┃ final ratio ┃ recall ┃ numeric recall ┃ retries ┃ reinflated ┃ lost on 1st try ┃
+┡━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ 1.3  │ 0.7         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 2.0  │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 3.0  │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 11.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 12.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 13.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 14.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 15.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 16.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 17.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 18.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 19.0 │ 0.9         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+└──────┴─────────────┴────────┴────────────────┴─────────┴────────────┴─────────────────┘
+sieve_full: no expansion
+                                                  Q: Who is the on-call owner for the Dogax service?                                                   
+                                                          gold: ['Poxen Vounbev', 'Vounbev']                                                           
+┏━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━┓
+┃ condition  ┃ answer                                           ┃ correct ┃ tokens ┃ Δtok  ┃ TTFT s ┃ total s ┃ processed ┃ reuse % ┃ VRAM MB ┃ tools ┃
+┡━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━┩
+│ baseline   │ Poxen Vounbev.                                   │ ✔       │ 4695   │ +0    │ 6.62   │ 6.91    │ 3569      │ 26      │ 9607    │ 0     │
+│ sieve_full │ The on-call owner for the Dogax service is Poxen │ ✔       │ 2104   │ -2591 │ 3.71   │ 4.36    │ 2086      │ 2       │ 9189    │ 0     │
+│            │ Vounbev.                                         │         │        │       │        │         │           │         │         │       │
+└────────────┴──────────────────────────────────────────────────┴─────────┴────────┴───────┴────────┴─────────┴───────────┴─────────┴─────────┴───────┘
+──────────────────────────────────────────────────────────────────────── demo:externalize — evaluation point 1 (lookup_number) ─────────────────────────────────────────────────────────────────────────
+                                                                    sieve_full: segment decisions                                                                     
+┏━━━━━━┳━━━━━━┳━━━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━┓
+┃ seg  ┃ role ┃ kind   ┃ tok→ ┃ →tok ┃ sys  ┃ last ┃ tok  ┃ rec  ┃ rep  ┃ qsim ┃ dig  ┃ ndup ┃ pexp ┃ p(ca/co/ex) ┃ lane        ┃ ratio ┃ source              ┃ conf ┃
+┡━━━━━━╇━━━━━━╇━━━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━┩
+│ 0.0  │ syst │ system │ 45   │ 45   │ 1.00 │ 0.00 │ 0.11 │ 1.00 │ 0.00 │ 0.10 │ 0.00 │ 0.00 │ 0.00 │ -           │ cache       │ 1.0   │ ledger_replay       │ 1.00 │
+│ 1.0  │ user │ doc    │ 296  │ 80   │ 0.00 │ 0.00 │ 0.74 │ 1.00 │ 0.00 │ 0.28 │ 0.00 │ 0.00 │ 0.00 │ -           │ externalize │ 1.0   │ ledger_replay       │ 1.00 │
+│ 1.1  │ user │ doc    │ 382  │ 83   │ 0.00 │ 0.00 │ 0.95 │ 1.00 │ 0.00 │ 0.09 │ 0.00 │ 0.02 │ 0.00 │ -           │ externalize │ 1.0   │ ledger_replay       │ 1.00 │
+│ 1.2  │ user │ doc    │ 336  │ 83   │ 0.00 │ 0.00 │ 0.84 │ 1.00 │ 0.00 │ 0.06 │ 0.00 │ 0.04 │ 0.00 │ -           │ externalize │ 1.0   │ ledger_replay       │ 1.00 │
+│ 1.3  │ user │ doc    │ 107  │ 68   │ 0.00 │ 0.00 │ 0.27 │ 1.00 │ 0.00 │ 0.15 │ 0.00 │ 0.03 │ 0.00 │ -           │ compress    │ 0.7   │ ledger_replay       │ 1.00 │
+│ 2.0  │ assi │ chat   │ 49   │ 21   │ 0.00 │ 0.00 │ 0.12 │ 1.00 │ 0.00 │ 0.12 │ 0.00 │ 0.02 │ 0.00 │ -           │ compress    │ 0.5   │ ledger_replay       │ 1.00 │
+│ 3.0  │ user │ chat   │ 50   │ 24   │ 0.00 │ 0.00 │ 0.12 │ 1.00 │ 0.00 │ 0.09 │ 0.00 │ 0.01 │ 0.00 │ -           │ compress    │ 0.5   │ ledger_replay       │ 1.00 │
+│ 4.0  │ assi │ chat   │ 375  │ 76   │ 0.00 │ 0.00 │ 0.94 │ 1.00 │ 0.00 │ 0.08 │ 0.00 │ 0.04 │ 0.00 │ -           │ externalize │ 1.0   │ ledger_replay       │ 1.00 │
+│ 5.0  │ user │ chat   │ 13   │ 13   │ 0.00 │ 0.00 │ 0.03 │ 0.90 │ 0.00 │ 0.04 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ ledger_replay       │ 1.00 │
+│ 6.0  │ assi │ chat   │ 375  │ 82   │ 0.00 │ 0.00 │ 0.94 │ 0.90 │ 0.00 │ 0.13 │ 0.00 │ 0.03 │ 0.00 │ -           │ externalize │ 1.0   │ ledger_replay       │ 1.00 │
+│ 7.0  │ user │ chat   │ 13   │ 13   │ 0.00 │ 0.00 │ 0.03 │ 0.80 │ 0.00 │ 0.10 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ ledger_replay       │ 1.00 │
+│ 8.0  │ assi │ chat   │ 392  │ 81   │ 0.00 │ 0.00 │ 0.98 │ 0.80 │ 0.00 │ 0.08 │ 0.00 │ 0.04 │ 0.00 │ -           │ externalize │ 1.0   │ ledger_replay       │ 1.00 │
+│ 9.0  │ user │ chat   │ 13   │ 13   │ 0.00 │ 0.00 │ 0.03 │ 0.70 │ 0.00 │ 0.09 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ ledger_replay       │ 1.00 │
+│ 10.0 │ assi │ chat   │ 373  │ 81   │ 0.00 │ 0.00 │ 0.93 │ 0.70 │ 0.00 │ 0.08 │ 0.00 │ 0.04 │ 0.00 │ -           │ externalize │ 1.0   │ ledger_replay       │ 1.00 │
+│ 11.0 │ user │ chat   │ 49   │ 23   │ 0.00 │ 0.00 │ 0.12 │ 0.60 │ 0.00 │ 0.01 │ 0.00 │ 0.04 │ 0.00 │ -           │ compress    │ 0.5   │ ledger_replay       │ 1.00 │
+│ 12.0 │ assi │ chat   │ 377  │ 177  │ 0.00 │ 0.00 │ 0.94 │ 0.60 │ 0.00 │ 0.06 │ 0.00 │ 0.04 │ 0.00 │ -           │ compress    │ 0.5   │ ledger_replay       │ 1.00 │
+│ 13.0 │ user │ chat   │ 50   │ 22   │ 0.00 │ 0.00 │ 0.12 │ 0.50 │ 0.00 │ 0.26 │ 0.00 │ 0.00 │ 0.00 │ -           │ compress    │ 0.5   │ ledger_replay       │ 1.00 │
+│ 14.0 │ assi │ chat   │ 370  │ 174  │ 0.00 │ 0.00 │ 0.93 │ 0.50 │ 0.00 │ 0.07 │ 0.00 │ 0.03 │ 0.00 │ -           │ compress    │ 0.5   │ ledger_replay       │ 1.00 │
+│ 15.0 │ user │ chat   │ 43   │ 20   │ 0.00 │ 0.00 │ 0.11 │ 0.40 │ 0.00 │ 0.06 │ 0.00 │ 0.03 │ 0.00 │ -           │ compress    │ 0.5   │ ledger_replay       │ 1.00 │
+│ 16.0 │ assi │ chat   │ 386  │ 183  │ 0.00 │ 0.00 │ 0.96 │ 0.40 │ 0.00 │ 0.05 │ 0.00 │ 0.04 │ 0.00 │ -           │ compress    │ 0.5   │ ledger_replay       │ 1.00 │
+│ 17.0 │ user │ chat   │ 46   │ 21   │ 0.00 │ 0.00 │ 0.12 │ 0.30 │ 0.00 │ 0.00 │ 0.00 │ 0.06 │ 0.00 │ -           │ compress    │ 0.5   │ ledger_replay       │ 1.00 │
+│ 18.0 │ assi │ chat   │ 362  │ 169  │ 0.00 │ 0.00 │ 0.91 │ 0.30 │ 0.00 │ 0.12 │ 0.00 │ 0.03 │ 0.00 │ -           │ compress    │ 0.5   │ ledger_replay       │ 1.00 │
+│ 19.0 │ user │ chat   │ 57   │ 51   │ 0.00 │ 0.00 │ 0.14 │ 0.20 │ 0.00 │ 0.39 │ 0.00 │ 0.03 │ 0.00 │ -           │ compress    │ 0.9   │ ledger_replay       │ 1.00 │
+│ 20.0 │ assi │ chat   │ 3    │ 3    │ 0.00 │ 0.00 │ 0.01 │ 0.20 │ 0.00 │ 0.08 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ ledger_replay       │ 1.00 │
+│ 21.0 │ user │ query  │ 12   │ 12   │ 0.00 │ 1.00 │ 0.03 │ 0.10 │ 0.00 │ 0.30 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ ledger_replay       │ 1.00 │
+│ 22.0 │ assi │ chat   │ 16   │ 16   │ 0.00 │ 1.00 │ 0.04 │ 0.10 │ 0.00 │ 0.27 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ R:short_passthrough │ 1.00 │
+│ 23.0 │ user │ query  │ 10   │ 10   │ 0.00 │ 1.00 │ 0.03 │ 0.00 │ 0.00 │ 1.00 │ 0.00 │ 0.00 │ 0.00 │ -           │ passthrough │ 1.0   │ R:current_query     │ 1.00 │
+└──────┴──────┴────────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴─────────────┴─────────────┴───────┴─────────────────────┴──────┘
+╭────────────────────────────────────────────────────────────────────────── sieve_full: token waterfall (before ░ / after █) ──────────────────────────────────────────────────────────────────────────╮
+│    0.0 █████ 45→45                                                                                                                                                                                   │
+│    1.0 █████████░░░░░░░░░░░░░░░░░░░░░░░░░░ 296→80                                                                                                                                                    │
+│    1.1 ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 382→83                                                                                                                                          │
+│    1.2 ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 336→83                                                                                                                                                │
+│    1.3 ████████░░░░░ 107→68                                                                                                                                                                          │
+│    2.0 ██░░░░ 49→21                                                                                                                                                                                  │
+│    3.0 ███░░░ 50→24                                                                                                                                                                                  │
+│    4.0 █████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 375→76                                                                                                                                           │
+│    5.0 ██ 13→13                                                                                                                                                                                      │
+│    6.0 ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 375→82                                                                                                                                           │
+│    7.0 ██ 13→13                                                                                                                                                                                      │
+│    8.0 ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 392→81                                                                                                                                         │
+│    9.0 ██ 13→13                                                                                                                                                                                      │
+│   10.0 ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 373→81                                                                                                                                           │
+│   11.0 ███░░░ 49→23                                                                                                                                                                                  │
+│   12.0 █████████████████████░░░░░░░░░░░░░░░░░░░░░░░ 377→177                                                                                                                                          │
+│   13.0 ███░░░ 50→22                                                                                                                                                                                  │
+│   14.0 ████████████████████░░░░░░░░░░░░░░░░░░░░░░░ 370→174                                                                                                                                           │
+│   15.0 ██░░░ 43→20                                                                                                                                                                                   │
+│   16.0 █████████████████████░░░░░░░░░░░░░░░░░░░░░░░░ 386→183                                                                                                                                         │
+│   17.0 ██░░░ 46→21                                                                                                                                                                                   │
+│   18.0 ████████████████████░░░░░░░░░░░░░░░░░░░░░░ 362→169                                                                                                                                            │
+│   19.0 ██████░ 57→51                                                                                                                                                                                 │
+│   20.0  3→3                                                                                                                                                                                          │
+│   21.0 █ 12→12                                                                                                                                                                                       │
+│   22.0 ██ 16→16                                                                                                                                                                                      │
+│   23.0 █ 10→10                                                                                                                                                                                       │
+│                                                                                                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────── sieve_full: prompt diff (red = removed, orange = stub/back-ref, cyan = added) ────────────────────────────────────────────────────────────╮
+│ <system> You are a precise assistant for the Punpamisk team. Answer the user's question in one short sentence using only information in this conversation. If the answer is not present in the       │
+│ conversation, reply exactly: Not mentioned.                                                                                                                                                          │
+│ <user> Notes mentioned.                                                                                                                                                                              │
+│                                                                                                                                                                                                      │
+│ Note: some earlier context was replaced by stubs of the form [ref:ID | kind | size | summary | keys | ...]. If a stub may contain the answer, call the expand_context tool with that ID to read the  │
+│ full text before answering; never guess a stub's contents.                                                                                                                                           │
+│ <user> [ref:646d49f6c6dd | doc | 296t | "Notes from the kickoff meeting:                                                                                                                             │
+│                                                                                                                                                                                                      │
+│ The manual dashboard clarifies the internal migration. In meeting: / topics: practice, our initiative extends the stakeholder alignment whenever the retrospective is delayed. The lightweight       │
+│ cluster clarifies the holistic escalation. Several teams noted that the iterative sprint goal still extends the registry across the cluster. The ticket backlog for another, depends, extends, flow, │
+│ onboarding, platform, repeating" | keys: 728, Vydia was measured at 728 tickets. If the change board stays deprecated, the preliminary process will need another queue. If the feature flag stays    │
+│ blocked, the incremental retrospective will need another registry. As discussed earlier, the vendor assessment streamlines the incremental forecast and the template.                                │
+│                                                                                                                                                                                                      │
+│ Going forward, the budget will improve the holistic platform team for every review. In practice, our checkpoint revisits the cost model whenever the proposal is saturated. If the onboarding flow   │
+│ stays healthy, the quarterly forecast will need another escalation. It is worth repeating that the external module depends on a sustainable support rotation. Most of the feedback suggested that    │
+│ the platform team should document the consolidated deployment before the next module. In practice, our architecture extends the onboarding flow whenever the roadmap is ready. In practice, our      │
+│ initiative stabilizes the feature flag whenever the index is outdated. The general consensus is that the workflow is approved, although the modular vendor assessment remains open. In practice, our │
+│ roadmap accelerates the onboarding flow whenever the report is outdated. It is worth repeating that the regional inventory depends on a scalable change board. It is worth repeating that the        │
+│ consolidated deliverable depends on a downstream platform team.                                                                                                                                      │
+│                                                                                                                                                                                                      │
+│ Most | use expand_context("646d49f6c6dd") to read]                                                                                                                                                   │
+│                                                                                                                                                                                                      │
+│ [ref:9494616fca1a | doc | 382t | "Most of the feedback suggested that the onboarding flow should streamline the strategic checkpoint before the next framework. It is worth repeating that the       │
+│ cross-functional interface depends on a provisional test matrix. We should keep in mind that a resilient contract rarely constrains the sprint goal on its own. It is worth repeating that the       │
+│ manual benchmark depends on a baseline incident review. Going forward, the roadmap will support the legacy stakeholder alignment for every forecast. None of this changes the fact that the          │
+│ consolidated rollout needs a clear release train. It is worth repeating that the holistic architecture depends on a scalable service mesh. It is worth repeating that the upstream deployment        │
+│ depends on a consolidated sprint goal.                                                                                                                                                               │
+│                                                                                                                                                                                                      │
+│ The dedicated migration shapes the quarterly roadmap. None of this changes the fact that the preliminary report needs a clear incident review. Going forward, the integration will unblock the       │
+│ granular support rotation for every migration. The general consensus is that the retrospective is deprecated, although the asynchronous vendor assessment remains open. If the feature flag stays    │
+│ ready, the distributed gateway will need another roadmap. The sustainable gateway streamlines the regional schedule. Several teams noted that the regional onboarding flow still unblocks the        │
+│ deployment across the contract. It is worth repeating that the manual deliverable depends on a modular quality gate. The general consensus is that the interface is approved, although the           │
+│ lightweight test matrix remains open. If the observability stack stays ready, the iterative process will need another forecast.                                                                      │
+│                                                                                                                                                                                                      │
+│ Most of the feedback suggested that the access policy should streamline the scalable dashboard before the next cache. Most of the feedback suggested that the service mesh should streamline the     │
+│ automated pipeline before the next index. It is worth repeating that the adaptive index depends on a sustainable sprint goal. Most of the feedback suggested that the capacity review should support │
+│ the critical audit before the next pipeline. The unified registry informs the tactical proposal. From a streamlined perspective, the handoff unblocks the test matrix more than the review does.     │
+│                                                                                                                                                                                                      │
+│ The ... / topics: depends, repeating, worth, next, review, goal, matrix, roadmap" | keys: - | use expand_context("9494616fca1a") to read]                                                            │
+│                                                                                                                                                                                                      │
+│ [ref:92c7ce853103 | doc | 336t | "The general consensus is that the architecture is deprecated, although the streamlined support rotation remains open. We should keep in mind that a federated      │
+│ cache rarely accelerates the governance model on its own. If the observability stack stays stable, the upstream ledger will need another milestone. Most of the feedback suggested that the sprint   │
+│ goal should improve the legacy framework before the next dashboard. As discussed ... / topics: another, stays, discussed, earlier, the incident review validates the asynchronous pipeline and the   │
+│ template. If the sprint goal stays approved, the sustainable budget will need another framework. If the release train stays delayed, the tactical deployment will need another cluster. From a       │
+│ resilient perspective, the framework clarifies the dependency graph more than the dashboard does. In practice, our handoff clarifies the release train whenever the proposal is approved.            │
+│                                                                                                                                                                                                      │
+│ It is worth repeating that the internal schedule depends on a critical stakeholder alignment. If the vendor assessment stays healthy, the federated cache will need another policy. In practice, our │
+│ registry complicates the incident review whenever the migration is blocked. As discussed earlier, the platform team extends the holistic rollout and the initiative. None of this changes the fact   │
+│ that the upstream policy needs a clear observability stack. The modular proposal improves the lightweight index. Most of the feedback suggested that the service mesh should streamline the legacy   │
+│ index before the next backlog. If the dependency graph stays delayed, the lightweight template will need another scheduler. It is worth repeating that the shared retrospective depends on a modular │
+│ change board. In practice, our interface improves the vendor assessment whenever the deliverable is outdated. As discussed earlier, the access policy documents the baseline budget and the backlog. │
+│ As discussed earlier, the access policy reinforces the modular inventory and the escalation.                                                                                                         │
+│                                                                                                                                                                                                      │
+│ In practice, our policy, framework, modular, practice" | keys: - | use expand_context("92c7ce853103") to read]                                                                                       │
+│                                                                                                                                                                                                      │
+│ practice                                                                                                                                                                                             │
+│ … (diff truncated; full diff in diff.txt)                                                                                                                                                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                  sieve_full: verifier                                   
+┏━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ seg  ┃ final ratio ┃ recall ┃ numeric recall ┃ retries ┃ reinflated ┃ lost on 1st try ┃
+┡━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ 1.3  │ 0.7         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 2.0  │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 3.0  │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 11.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 12.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 13.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 14.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 15.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 16.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 17.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 18.0 │ 0.5         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+│ 19.0 │ 0.9         │ 1.00   │ 1.00           │ 0       │ False      │                 │
+└──────┴─────────────┴────────┴────────────────┴─────────┴────────────┴─────────────────┘
+sieve_full: expansions [{'seg': '646d49f6c6dd', 'tokens': 296, 'needed': True, 'valid': True}] prefetched []
+                                                  Q: What was the ticket backlog measured for Vydia?                                                   
+                                                                 gold: ['728', '728']                                                                  
+┏━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━┳━━━━━━━┓
+┃ condition  ┃ answer                                           ┃ correct ┃ tokens ┃ Δtok  ┃ TTFT s ┃ total s ┃ processed ┃ reuse % ┃ VRAM MB ┃ tools ┃
+┡━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━╇━━━━━━━┩
+│ baseline   │ Not mentioned.                                   │ ✘       │ 4731   │ +0    │ 0.24   │ 0.35    │ 3605      │ 98      │ 9607    │ 0     │
+│ sieve_full │ The ticket backlog for Vydia was measured at 728 │ ✔       │ 2140   │ -2591 │ 2.27   │ 2.81    │ 4598      │ 88      │ 9189    │ 1     │
+│            │ tickets.                                         │         │        │       │        │         │           │         │         │       │
+└────────────┴──────────────────────────────────────────────────┴─────────┴────────┴───────┴────────┴─────────┴───────────┴─────────┴─────────┴───────┘
+        baseline per-turn TTFT ▇▁ 6.62s 0.24s
+                                  Ledger (per evaluation turn)                                   
+┏━━━━━━┳━━━━━━━━━━┳━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓
+┃ turn ┃ replayed ┃ new ┃ epoch ┃ reason        ┃ epoch_id ┃ first changed msg ┃ rebuild tokens ┃
+┡━━━━━━╇━━━━━━━━━━╇━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩
+│ 11   │ 0        │ 25  │ ●     │ session_start │ 0        │ 0                 │ 2104           │
+│ 12   │ 25       │ 2   │       │               │ 0        │ 22                │ 182            │
+└──────┴──────────┴─────┴───────┴───────────────┴──────────┴───────────────────┴────────────────┘
+      sieve_full per-turn TTFT ▇▁ 3.71s 2.27s
